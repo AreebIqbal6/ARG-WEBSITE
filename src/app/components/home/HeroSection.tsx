@@ -1,26 +1,12 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck } from 'lucide-react';
-import Image from 'next/image';
-
 const appleEase: any = [0.16, 1, 0.3, 1];
 const fadeInUp = { hidden: { opacity: 0, y: 35 }, visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: appleEase } } };
 
-const heroLogos = [
-  { name: "ISO 17025", src: "/certifications/card/iso_17025.png" },
-  { name: "ISO 9001:2015", src: "/certifications/card/iso_9001_2015.png" },
-  { name: "ZDHC", src: "/certifications/card/zdhc.png" },
-  { name: "GOTS", src: "/certifications/card/gots.png" },
-  { name: "GRS", src: "/certifications/card/grs.png" },
-  { name: "PPWR", src: "/certifications/card/ppwr.png" },
-  { name: "EN 15343", src: "/certifications/card/en_15343.png" },
-  { name: "CE Marking", src: "/certifications/card/ce_marking.png" }
-];
-
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between pt-28 pb-12 overflow-hidden bg-pqs-dark">
+    <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 overflow-hidden bg-pqs-dark">
       {/* Background Image & Overlays */}
       <div className="absolute inset-0 z-0 bg-[url('/unsplash_0.jpg')] bg-cover bg-center opacity-30 mix-blend-luminosity scale-105"></div>
       <div className="absolute inset-0 z-10 hero-overlay"></div>
@@ -77,37 +63,6 @@ export default function HeroSection() {
           </motion.p>
         </motion.div>
       </div>
-
-      {/* Trust Badges Bar directly in Hero */}
-      <div className="relative z-20 border-t border-white/10 bg-black/30 backdrop-blur-md pt-4 pb-4">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-center gap-2 mb-3 text-gray-400 font-montserrat text-[11px] tracking-[0.2em] uppercase font-bold text-center">
-            <ShieldCheck size={14} className="text-pqs-gold shrink-0" />
-            <span>Accredited Standards &bull; Global Frameworks</span>
-          </div>
-
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-3 items-center justify-items-center max-w-5xl mx-auto">
-            {heroLogos.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="w-full bg-white rounded-lg p-1.5 flex items-center justify-center shadow-sm hover:scale-105 transition-transform duration-300 border border-gray-100"
-                title={item.name}
-              >
-                <div className="relative w-full h-8">
-                  <Image 
-                    src={item.src} 
-                    alt={item.name} 
-                    fill 
-                    sizes="(max-width: 768px) 25vw, 12vw"
-                    className="object-contain" 
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
     </section>
   );
 }
