@@ -1,8 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, MessageCircle } from 'lucide-react';
-import Link from 'next/link';
+import { ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 
 const appleEase: any = [0.16, 1, 0.3, 1];
@@ -76,30 +75,6 @@ export default function HeroSection() {
           <motion.p variants={fadeInUp} className="text-gray-300 font-lato text-base sm:text-lg md:text-2xl max-w-3xl mb-10 font-light leading-relaxed">
             Accredited <strong className="text-white font-medium">ISO 17025</strong> testing protocols, sustainability certifications (<strong className="text-white font-medium">GOTS, GRS, ZDHC, PPWR, EN 15343</strong>), and factory-floor quality management tailored for international supply chains.
           </motion.p>
-
-          {/* Action Buttons */}
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-5 mb-14">
-            <Link 
-              href="#accreditations" 
-              className="group relative inline-flex items-center justify-center gap-4 bg-pqs-gold text-pqs-navy rounded-full px-8 py-4 overflow-hidden transition-all duration-500 hover:bg-white shadow-[0_0_40px_rgba(200,169,81,0.35)] hover:-translate-y-1"
-            >
-              <span className="relative z-10 font-montserrat font-bold text-xs md:text-sm tracking-widest">VIEW ACCREDITED LOGOS</span>
-              <div className="relative z-10 w-7 h-7 rounded-full bg-pqs-navy/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                <ArrowRight size={15} className="text-pqs-navy" />
-              </div>
-            </Link>
-            
-            <a 
-              href="https://wa.me/923009260495?text=Hello%20PQS,%20I%20would%20like%20to%20inquire%20about%20your%20testing%20and%20compliance%20services." 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center gap-3 bg-white/5 border border-white/30 text-white rounded-full px-8 py-4 overflow-hidden transition-all duration-500 hover:border-pqs-gold hover:bg-pqs-gold/10 hover:shadow-[0_0_30px_rgba(200,169,81,0.2)]"
-            >
-              <MessageCircle size={18} className="text-emerald-400 group-hover:scale-110 transition-transform" />
-              <span className="relative z-10 font-montserrat font-bold text-xs md:text-sm tracking-widest">WHATSAPP DESK</span>
-            </a>
-          </motion.div>
-
         </motion.div>
       </div>
 
