@@ -22,7 +22,7 @@ const team = [
     name: "Syed Muhammad Areeb Iqbal",
     role: "Business Development Officer",
     phone: "0332-2673373",
-    whatsapp: "0300-9260495",
+    whatsapp: "0332-2673373",
     email: "areeb.jpg@gmail.com",
     focus: "Client onboarding, laboratory testing scopes, regulatory standard assessments, and operational follow-ups."
   }
@@ -136,22 +136,24 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {team.map((member, idx) => (
                 <motion.div 
                   key={idx}
                   variants={fadeInUp}
-                  className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-pqs-gold/40 transition-all duration-300"
+                  className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-pqs-gold/40 transition-all duration-300"
                 >
                   <div>
-                    <h4 className="text-2xl font-montserrat font-black text-pqs-navy mb-1">{member.name}</h4>
+                    <h4 className="text-lg sm:text-xl md:text-2xl font-montserrat font-black text-pqs-navy mb-1 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
+                      {member.name}
+                    </h4>
                     <div className="text-pqs-gold font-montserrat font-bold text-xs uppercase tracking-wider mb-4">{member.role}</div>
                     <p className="text-gray-600 font-lato text-sm leading-relaxed mb-6 font-light">{member.focus}</p>
                   </div>
 
                   <div className="border-t border-gray-100 pt-5 flex flex-col gap-2 text-xs font-lato text-gray-700">
                     <div><strong>Direct:</strong> <a href={`tel:${member.phone.replace(/[^0-9]/g, '')}`} className="text-pqs-navy hover:text-pqs-gold font-semibold">{member.phone}</a></div>
-                    <div><strong>WhatsApp:</strong> <a href={`https://wa.me/${member.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 font-semibold">{member.whatsapp}</a></div>
+                    <div><strong>WhatsApp:</strong> <a href={`https://wa.me/${member.whatsapp.replace(/[^0-9]/g, '').replace(/^0/, '92')}`} target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 font-semibold">{member.whatsapp}</a></div>
                     <div><strong>Email:</strong> <a href={`mailto:${member.email}`} className="text-pqs-navy hover:text-pqs-gold font-semibold">{member.email}</a></div>
                   </div>
                 </motion.div>
