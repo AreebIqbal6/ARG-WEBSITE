@@ -37,7 +37,7 @@ export default function Contact() {
             </motion.p>
           </motion.div>
 
-          <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-stretch gap-12 max-w-6xl mx-auto">
             
             {/* INFO PANEL */}
             <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="lg:w-1/3 flex flex-col gap-6">
@@ -79,8 +79,8 @@ export default function Contact() {
             </motion.div>
 
             {/* FORM PANEL */}
-            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="lg:w-2/3">
-              <motion.div variants={fadeInUp} className="bg-white/5 backdrop-blur-3xl saturate-200 border border-white/20 p-10 md:p-14 rounded-3xl relative overflow-hidden">
+            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="lg:w-2/3 flex flex-col">
+              <motion.div variants={fadeInUp} className="bg-white/5 backdrop-blur-3xl saturate-200 border border-white/20 p-10 md:p-14 rounded-3xl relative overflow-hidden flex-1 flex flex-col justify-between">
                 {state?.success ? (
                   <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center justify-center text-center py-12 h-full">
                     <CheckCircle2 className="text-pqs-gold w-20 h-20 mb-6" />
@@ -88,8 +88,8 @@ export default function Contact() {
                     <p className="text-gray-400 font-lato text-lg">Thank you for reaching out. We will get back to you shortly.</p>
                   </motion.div>
                 ) : (
-                  <form action={formAction} className="flex flex-col gap-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <form action={formAction} className="flex flex-col justify-between flex-1 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                       <div className="flex flex-col gap-2">
                         <label className="text-xs font-montserrat font-bold tracking-widest text-gray-400 uppercase">First Name</label>
                         <input name="firstName" required type="text" className="bg-white/5 border-b-2 border-white/10 focus:border-pqs-gold text-white px-4 py-3 rounded-t-lg outline-none transition-colors font-lato" />
@@ -105,16 +105,16 @@ export default function Contact() {
                       <input name="email" required type="email" className="bg-white/5 border-b-2 border-white/10 focus:border-pqs-gold text-white px-4 py-3 rounded-t-lg outline-none transition-colors font-lato" />
                     </div>
 
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 flex-1">
                       <label className="text-xs font-montserrat font-bold tracking-widest text-gray-400 uppercase">Your Message</label>
-                      <textarea name="message" required rows={4} className="bg-white/5 border-b-2 border-white/10 focus:border-pqs-gold text-white px-4 py-3 rounded-t-lg outline-none transition-colors font-lato resize-none"></textarea>
+                      <textarea name="message" required className="bg-white/5 border-b-2 border-white/10 focus:border-pqs-gold text-white px-4 py-3 rounded-t-lg outline-none transition-colors font-lato resize-none flex-1 min-h-[160px]"></textarea>
                     </div>
 
                     {state?.error && (
                       <p className="text-red-400 text-sm font-lato">{state.error}</p>
                     )}
 
-                    <div className="mt-4">
+                    <div className="mt-2">
                       <button disabled={isPending} type="submit" className="group relative inline-flex items-center justify-center gap-4 bg-pqs-gold text-pqs-navy rounded-full px-10 py-5 overflow-hidden transition-all duration-500 hover:bg-white shadow-xl w-full md:w-auto disabled:opacity-70 disabled:cursor-not-allowed">
                         <span className="relative z-10 font-montserrat font-bold text-sm tracking-widest">
                           {isPending ? 'SENDING...' : 'SEND MESSAGE'}
