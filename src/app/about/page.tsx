@@ -104,11 +104,23 @@ export default function About() {
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} variants={staggerContainer} className="lg:w-1/2">
               <div className="grid grid-cols-2 gap-4">
-                <motion.div variants={fadeInUp} className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
-                  <div className="w-full h-full bg-[url('/unsplash_0.jpg')] bg-cover bg-center hover:scale-105 transition-transform duration-1000"></div>
+                <motion.div variants={fadeInUp} className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl group">
+                  <Image 
+                    src="/unsplash_0.jpg" 
+                    alt="Textile materials on factory floor" 
+                    fill 
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                  />
                 </motion.div>
-                <motion.div variants={fadeInUp} className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl translate-y-12">
-                  <div className="w-full h-full bg-[url('/microscope.jpg')] bg-cover bg-center hover:scale-105 transition-transform duration-1000"></div>
+                <motion.div variants={fadeInUp} className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl translate-y-12 group">
+                  <Image 
+                    src="/microscope.jpg" 
+                    alt="Laboratory inspection and testing equipment" 
+                    fill 
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                  />
                 </motion.div>
               </div>
             </motion.div>
