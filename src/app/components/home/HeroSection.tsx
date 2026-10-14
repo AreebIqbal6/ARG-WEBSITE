@@ -50,8 +50,8 @@ export default function HeroSection() {
           {/* Top Tagline Pill */}
           <motion.div variants={fadeInUp} className="flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-pqs-gold/30 backdrop-blur-md mb-8">
             <div className="h-[2px] w-8 bg-pqs-gold"></div>
-            <h2 className="text-pqs-gold font-montserrat font-bold tracking-[0.25em] uppercase text-xs md:text-sm">
-              Precision Quality Services &bull; <span className="italic normal-case text-white">Making Compliance Real</span>
+            <h2 className="font-montserrat font-bold tracking-[0.2em] text-xs md:text-sm italic text-white">
+              Making Compliance Real
             </h2>
             <div className="h-[2px] w-8 bg-pqs-gold"></div>
           </motion.div>
