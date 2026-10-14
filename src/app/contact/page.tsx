@@ -46,7 +46,13 @@ export default function Contact() {
                   <Phone className="text-pqs-gold" size={20} />
                 </div>
                 <h3 className="text-xl font-montserrat font-bold text-white mb-2">Call Us</h3>
-                <p className="text-gray-400 font-lato">+1 234 567 890</p>
+                <p className="text-gray-300 font-lato leading-relaxed">
+                  <a href="tel:03112226714" className="hover:text-pqs-gold transition-colors">0311-2226714</a><br />
+                  <a href="tel:03322673373" className="hover:text-pqs-gold transition-colors">0332-2673373</a><br />
+                  <a href="https://wa.me/923009260495" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 transition-colors inline-flex items-center gap-1.5 mt-1">
+                    WhatsApp: 0300-9260495
+                  </a>
+                </p>
               </motion.div>
 
               <motion.div variants={fadeInUp} className="bg-white/5 backdrop-blur-3xl saturate-200 border border-white/20 p-8 rounded-3xl">
@@ -54,7 +60,11 @@ export default function Contact() {
                   <Mail className="text-pqs-gold" size={20} />
                 </div>
                 <h3 className="text-xl font-montserrat font-bold text-white mb-2">Email Us</h3>
-                <p className="text-gray-400 font-lato">info@pqs-textiles.com</p>
+                <p className="text-gray-300 font-lato break-all">
+                  <a href="mailto:precisionqualityserviceslabs@gmail.com" className="hover:text-pqs-gold transition-colors">
+                    precisionqualityserviceslabs@gmail.com
+                  </a>
+                </p>
               </motion.div>
 
               <motion.div variants={fadeInUp} className="bg-white/5 backdrop-blur-3xl saturate-200 border border-white/20 p-8 rounded-3xl">
@@ -62,7 +72,9 @@ export default function Contact() {
                   <MapPin className="text-pqs-gold" size={20} />
                 </div>
                 <h3 className="text-xl font-montserrat font-bold text-white mb-2">Location</h3>
-                <p className="text-gray-400 font-lato leading-relaxed">123 Textile Avenue,<br/>Industrial Zone</p>
+                <p className="text-gray-300 font-lato leading-relaxed">
+                  R-332/9, Dastagir, F.B Area,<br />Karachi, 75950, Pakistan.
+                </p>
               </motion.div>
             </motion.div>
 

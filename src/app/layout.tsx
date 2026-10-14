@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SmoothScrolling from "./components/SmoothScrolling";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const headingFont = Plus_Jakarta_Sans({
   variable: "--font-montserrat",
@@ -16,8 +17,8 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Precision Quality Services | Textile Consultancy",
-  description: "Textile Training, Consultancy, and Troubleshooting",
+  title: "Precision Quality Services (PQS) | Making Compliance Real",
+  description: "Accredited ISO 17025 laboratory verification, sustainability certifications (GOTS, GRS, ZDHC, PPWR, EN 15343), quality audits, and technical consultancy.",
   icons: {
     icon: '/favicon.png?v=2',
   },
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Header />
           <main id="page-wrapper" className="flex-grow">{children}</main>
           <Footer />
+          <FloatingWhatsApp />
         </SmoothScrolling>
       </body>
     </html>
