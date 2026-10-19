@@ -36,13 +36,15 @@ export default function About() {
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6">
-              <ShieldCheck size={14} />
-              <span>WHO WE ARE &bull; ARG REGISTRARS PAKISTAN</span>
+            <div className="flex items-center gap-3 mb-6 text-xs font-mono tracking-widest uppercase border-b border-white/10 pb-2">
+              <span className="text-[#34D399] font-bold">SEC. 02 //</span>
+              <span className="text-gray-200">INSTITUTIONAL PROFILE</span>
+              <span className="text-gray-600">&bull;</span>
+              <span className="text-gray-400">ARG REGISTRARS</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">
               Certified Rigor. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+              <span className="text-[#34D399]">
                 Global Trust.
               </span>
             </h1>
@@ -59,9 +61,9 @@ export default function About() {
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             
             <div className="lg:w-1/2">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6 border border-emerald-500/20">
-                <Award size={14} />
-                <span>Our Registrar Philosophy</span>
+              <div className="flex items-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-6">
+                <span className="w-1.5 h-1.5 bg-[#34D399]" />
+                <span>REGISTRAR PHILOSOPHY &amp; GOVERNANCE</span>
               </div>
 
               <h2 className="text-3xl md:text-5xl font-display font-black text-white mb-8 leading-tight">
@@ -77,7 +79,7 @@ export default function About() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-display font-bold text-xs tracking-widest bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:scale-105 transition-all duration-300 border border-emerald-400/40">
+                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:-translate-y-0.5 transition-all duration-300 border border-emerald-400/40">
                   <span>VIEW ACCREDITED SCOPES</span>
                   <ArrowUpRight size={16} />
                 </Link>
@@ -86,7 +88,7 @@ export default function About() {
                   href="https://wa.me/9231459101614"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-8 py-4 rounded-full hover:border-emerald-400/40 hover:bg-white/[0.08] transition-all"
+                  className="inline-flex items-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-8 py-4 rounded-xl hover:border-emerald-400/40 hover:bg-white/[0.08] transition-all"
                 >
                   <span>WHATSAPP DESK</span>
                 </a>

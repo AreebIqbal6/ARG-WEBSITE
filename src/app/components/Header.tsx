@@ -88,7 +88,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setIsVerifyOpen(true)}
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full font-medium font-sans text-xs tracking-wider transition-all duration-300 text-gray-300 hover:text-white glass-panel hover:border-emerald-400/40 hover:bg-white/[0.06] cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-medium font-sans text-xs tracking-wider transition-all duration-300 text-gray-300 hover:text-white glass-panel hover:border-emerald-400/40 hover:bg-white/[0.06] cursor-pointer"
             >
               <ShieldCheck size={14} className="text-[#34D399]" />
               <span>VERIFY CERTIFICATE</span>
@@ -96,7 +96,7 @@ export default function Header() {
 
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-bold font-sans text-xs tracking-wider transition-all duration-300 bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_25px_rgba(0,135,62,0.6)] hover:scale-105 border border-emerald-400/30"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold font-sans text-xs tracking-wider transition-all duration-300 bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_25px_rgba(0,135,62,0.6)] hover:scale-105 border border-emerald-400/30"
             >
               <span>GET QUOTE</span>
               <ArrowUpRight size={14} />
@@ -136,14 +136,14 @@ export default function Header() {
                   setMobileMenuOpen(false);
                   setIsVerifyOpen(true);
                 }}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-bold tracking-wider glass-panel text-white hover:border-emerald-400/40"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold tracking-wider glass-panel text-white hover:border-emerald-400/40"
               >
                 <ShieldCheck size={15} className="text-[#34D399]" />
                 <span>VERIFY CERTIFICATE</span>
               </button>
               <Link 
                 href="/contact" 
-                className="w-full text-center px-7 py-3 rounded-full font-bold text-xs tracking-widest transition-all bg-[#00873E] text-white hover:bg-[#059669] shadow-[0_0_20px_rgba(0,135,62,0.5)]" 
+                className="w-full text-center px-7 py-3 rounded-xl font-bold text-xs tracking-widest transition-all bg-[#00873E] text-white hover:bg-[#059669] shadow-[0_0_20px_rgba(0,135,62,0.5)]" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 REQUEST AN AUDIT

@@ -21,13 +21,15 @@ export default function Contact() {
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6">
-              <ShieldCheck size={14} />
-              <span>ARG REGISTRARS &bull; CONTACT &amp; OFFICES</span>
+            <div className="inline-flex items-center gap-3 mb-6 text-xs font-mono tracking-widest uppercase border-b border-white/10 pb-2">
+              <span className="text-[#34D399] font-bold">SEC. 05 //</span>
+              <span className="text-gray-200">REGISTRAR DESK &amp; OFFICES</span>
+              <span className="text-gray-600">&bull;</span>
+              <span className="text-gray-400">RIYADH &bull; FAISALABAD</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-6">
               Connect With Our <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+              <span className="text-[#34D399]">
                 Lead Registrars
               </span>
             </h1>
@@ -105,7 +107,7 @@ export default function Contact() {
                     <div className="w-20 h-20 rounded-3xl bg-[#00873E]/20 border border-emerald-400/30 flex items-center justify-center mb-6 text-[#34D399] shadow-[0_0_30px_rgba(0,135,62,0.4)]">
                       <CheckCircle2 size={40} />
                     </div>
-                    <span className="text-xs font-mono text-[#34D399] uppercase tracking-wider mb-2 bg-[#00873E]/20 px-3 py-1 rounded-full border border-emerald-500/30">
+                    <span className="text-xs font-mono text-[#34D399] uppercase tracking-wider mb-2 bg-[#00873E]/20 px-3 py-1 rounded-md border border-emerald-500/30">
                       OFFICIAL REGISTRAR RECEIPT
                     </span>
                     <h3 className="text-3xl md:text-4xl font-display font-black text-white mb-3">
@@ -132,7 +134,7 @@ export default function Contact() {
 
                     <a
                       href="/"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.08] hover:bg-white/[0.15] text-white font-display font-bold text-xs tracking-wider border border-white/10 transition-all"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white font-display font-bold text-xs tracking-wider border border-white/10 transition-all"
                     >
                       <span>RETURN TO OVERVIEW</span>
                     </a>
@@ -171,7 +173,7 @@ export default function Contact() {
                     )}
 
                     <div className="mt-2">
-                      <button disabled={isPending} type="submit" className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00873E] to-[#059669] text-white rounded-full px-10 py-5 overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(0,135,62,0.5)] w-full md:w-auto disabled:opacity-70 disabled:cursor-not-allowed font-display font-bold text-xs tracking-widest border border-emerald-400/40">
+                      <button disabled={isPending} type="submit" className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00873E] to-[#059669] text-white rounded-xl px-10 py-5 overflow-hidden transition-all duration-300 hover:scale-[1.02] shadow-[0_0_30px_rgba(0,135,62,0.5)] w-full md:w-auto disabled:opacity-70 disabled:cursor-not-allowed font-display font-bold text-xs tracking-widest border border-emerald-400/40">
                         <span>{isPending ? 'TRANSMITTING...' : 'SUBMIT AUDIT REQUEST'}</span>
                         {!isPending && <ArrowUpRight size={15} />}
                       </button>

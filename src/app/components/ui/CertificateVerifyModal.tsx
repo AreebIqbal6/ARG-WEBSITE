@@ -244,7 +244,7 @@ export default function CertificateVerifyModal({
                   >
                     {/* Status Badge */}
                     <div className="flex flex-wrap items-center justify-between gap-3">
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-[#34D399] text-xs font-sans font-bold uppercase tracking-wider">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-500/20 border border-emerald-400/40 text-[#34D399] text-xs font-mono font-semibold uppercase tracking-wider">
                         <CheckCircle2 size={14} />
                         <span>ACTIVE &amp; ACCREDITED CERTIFICATE</span>
                       </div>

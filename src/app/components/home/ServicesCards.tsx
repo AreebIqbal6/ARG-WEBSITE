@@ -35,12 +35,13 @@ export default function ServicesCards() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-4 border border-emerald-500/20">
+          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4">
+            <span className="w-1.5 h-1.5 bg-[#34D399]" />
             <span>CORE REGISTRAR CAPABILITIES</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight">
             Comprehensive Registrar &amp; <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">Audit Operations</span>
+            <span className="text-[#34D399]">Audit Operations</span>
           </h2>
         </div>
 

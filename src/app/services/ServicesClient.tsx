@@ -99,13 +99,15 @@ export default function Services() {
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6">
-              <ShieldCheck size={14} />
-              <span>WHAT WE DO &bull; ARG REGISTRARS PAKISTAN</span>
+            <div className="flex items-center gap-3 mb-6 text-xs font-mono tracking-widest uppercase border-b border-white/10 pb-2">
+              <span className="text-[#34D399] font-bold">SEC. 03 //</span>
+              <span className="text-gray-200">ACCREDITED SCOPES</span>
+              <span className="text-gray-600">&bull;</span>
+              <span className="text-gray-400">ARG REGISTRARS</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">
               Certification &amp; <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+              <span className="text-[#34D399]">
                 Registrar Services
               </span>
             </h1>
@@ -136,7 +138,7 @@ export default function Services() {
             <button
               type="button"
               onClick={() => setIsVerifyOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/40 hover:shadow-[0_0_25px_rgba(0,135,62,0.5)] transition-all cursor-pointer shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/40 hover:shadow-[0_0_25px_rgba(0,135,62,0.5)] transition-all cursor-pointer shrink-0"
             >
               <Search size={15} />
               <span>SEARCH CERTIFICATE REGISTRY</span>
@@ -167,7 +169,7 @@ export default function Services() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#06150D] via-[#06150D]/40 to-transparent" />
                   <div className="absolute bottom-4 left-6 right-6">
-                    <span className="inline-block bg-[#00873E]/90 backdrop-blur-md text-white font-sans text-[10px] font-bold tracking-widest uppercase px-3.5 py-1 rounded-full border border-emerald-400/30">
+                    <span className="inline-block bg-[#00873E]/90 backdrop-blur-md text-white font-mono text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md border border-emerald-400/30">
                       {srv.badge}
                     </span>
                   </div>
@@ -198,7 +200,7 @@ export default function Services() {
 
                     <Link
                       href={srv.ctaLink}
-                      className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full glass-panel hover:bg-[#00873E] text-white font-sans font-bold text-xs tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent"
+                      className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl glass-panel hover:bg-[#00873E] text-white font-sans font-bold text-xs tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent"
                     >
                       <span>{srv.ctaText}</span>
                       <ArrowUpRight size={14} />
@@ -223,7 +225,7 @@ export default function Services() {
               href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20discuss%20a%20certification%20scope."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all shrink-0 shadow-lg hover:scale-105"
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-xl transition-all shrink-0 shadow-lg hover:scale-105"
             >
               <MessageCircle size={18} />
               <span>WHATSAPP TECHNICAL DESK</span>

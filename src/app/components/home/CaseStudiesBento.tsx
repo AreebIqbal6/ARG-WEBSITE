@@ -13,12 +13,13 @@ export default function CaseStudiesBento() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-4 border border-emerald-500/20">
+          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4">
+            <span className="w-1.5 h-1.5 bg-[#34D399]" />
             <span>PROVEN ACCREDITATION TRACK RECORD</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight mb-4">
             Auditing Impact &amp; <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+            <span className="text-[#34D399]">
               Enterprise Trust Metrics
             </span>
           </h2>
@@ -37,7 +38,7 @@ export default function CaseStudiesBento() {
               
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono text-[#34D399] uppercase tracking-wider bg-[#00873E]/20 px-3 py-1 rounded-full border border-emerald-500/30">
+                  <span className="text-xs font-mono text-[#34D399] uppercase tracking-wider bg-[#00873E]/20 px-3 py-1 rounded-md border border-emerald-500/30">
                     CASE STUDY &bull; SUPPLY CHAIN
                   </span>
                   <span className="text-gray-400 font-sans text-xs">Tier-3 US Trade</span>
@@ -118,7 +119,7 @@ export default function CaseStudiesBento() {
             <SpotlightCard className="p-8 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono text-[#34D399] uppercase tracking-wider bg-[#00873E]/20 px-3 py-1 rounded-full border border-emerald-500/30">
+                  <span className="text-xs font-mono text-[#34D399] uppercase tracking-wider bg-[#00873E]/20 px-3 py-1 rounded-md border border-emerald-500/30">
                     CASE STUDY &bull; ISO 14001:2015
                   </span>
                   <span className="text-gray-400 font-sans text-xs">Chemicals &amp; Plastics</span>

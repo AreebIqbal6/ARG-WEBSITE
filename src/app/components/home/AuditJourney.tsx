@@ -51,12 +51,13 @@ export default function AuditJourney() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-4 border border-emerald-500/20">
+          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4">
+            <span className="w-1.5 h-1.5 bg-[#34D399]" />
             <span>AUDITING METHODOLOGY</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight mb-4">
             The 4-Stage Accredited <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+            <span className="text-[#34D399]">
               Certification Roadmap
             </span>
           </h2>
@@ -81,7 +82,7 @@ export default function AuditJourney() {
                   <div>
                     {/* Top Step Number & Tag */}
                     <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
-                      <span className="text-3xl font-display font-black text-transparent bg-clip-text bg-gradient-to-br from-[#34D399] to-[#00873E]">
+                      <span className="text-3xl font-display font-black text-[#34D399]">
                         {item.step}
                       </span>
                       <span className="text-[11px] font-mono text-gray-400 bg-white/[0.05] px-2.5 py-1 rounded-md border border-white/10">

@@ -98,12 +98,10 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-emerald-500/30 mb-6"
+            className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4"
           >
-            <ShieldCheck size={14} className="text-[#34D399]" />
-            <span className="text-[#34D399] font-sans font-bold text-xs tracking-[0.25em] uppercase">
-              RECOGNIZED GLOBAL CONFORMITY
-            </span>
+            <span className="w-1.5 h-1.5 bg-[#34D399]" />
+            <span>RECOGNIZED GLOBAL CONFORMITY</span>
           </motion.div>
 
           <motion.h2 
@@ -114,7 +112,7 @@ export default function AccreditationsSection() {
             className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-white leading-tight tracking-tight mb-6"
           >
             Accredited Registrar Scopes &amp; <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+            <span className="text-[#34D399]">
               International Standards
             </span>
           </motion.h2>
@@ -158,9 +156,9 @@ export default function AccreditationsSection() {
                       />
                     </div>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-sans font-bold tracking-wider uppercase bg-emerald-500/10 border border-emerald-500/20 text-[#34D399]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] animate-pulse" />
-                    Verified
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono tracking-wider uppercase bg-emerald-500/10 border border-emerald-500/20 text-[#34D399]">
+                    <span className="w-1.5 h-1.5 bg-[#34D399]" />
+                    VERIFIED
                   </span>
                 </div>
 
@@ -211,7 +209,7 @@ export default function AccreditationsSection() {
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link 
               href="/services" 
-              className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:scale-105 border border-emerald-400/40"
+              className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:-translate-y-0.5 border border-emerald-400/40"
             >
               <span>EXPLORE ACCREDITED SCOPES</span>
               <ArrowUpRight size={15} />
@@ -221,7 +219,7 @@ export default function AccreditationsSection() {
               href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20am%20interested%20in%20ISO%20certification." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-full transition-all duration-300 hover:border-emerald-400/40 hover:bg-white/[0.08]"
+              className="inline-flex items-center justify-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 hover:border-emerald-400/40 hover:bg-white/[0.08]"
             >
               <span>WHATSAPP INQUIRY</span>
             </a>

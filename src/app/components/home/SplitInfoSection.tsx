@@ -27,9 +27,9 @@ export default function SplitInfoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6"
+              className="flex items-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-6"
             >
-              <ShieldCheck size={14} />
+              <span className="w-1.5 h-1.5 bg-[#34D399]" />
               <span>THE ARG REGISTRARS ADVANTAGE</span>
             </motion.div>
 
@@ -41,7 +41,7 @@ export default function SplitInfoSection() {
               className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-white mb-8 tracking-tight leading-[1.08]"
             >
               Uncompromising rigor. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
+              <span className="text-[#34D399]">
                 Global market access.
               </span>
             </motion.h2>

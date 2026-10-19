@@ -109,7 +109,7 @@ export default function InteractiveHeroAudit() {
                   transition={{ type: "spring", damping: 25, stiffness: 200 }}
                 />
               )}
-              <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-[#34D399] animate-pulse' : 'bg-gray-500'}`} />
+              <span className={`w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-gray-500'}`} />
               <span>{s.code}</span>
             </button>
           );
@@ -133,7 +133,7 @@ export default function InteractiveHeroAudit() {
             {/* Left Info Column */}
             <div className="lg:w-7/12 text-left">
               <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-sans font-bold uppercase tracking-wider text-[#34D399] bg-[#00873E]/20 border border-emerald-500/30">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold uppercase tracking-wider text-[#34D399] bg-[#00873E]/20 border border-emerald-500/30">
                   <ShieldCheck size={12} />
                   <span>{activeStandard.category}</span>
                 </span>
