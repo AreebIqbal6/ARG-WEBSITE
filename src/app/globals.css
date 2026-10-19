@@ -1,29 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  --color-pqs-navy: #0A1E35;
-  --color-pqs-navy-light: #153254;
-  --color-pqs-gold: #C8A951;
-  --color-pqs-gold-light: #d8be75;
-  --color-pqs-dark: #061221;
+  --color-arg-green: #00873E;
+  --color-arg-emerald: #059669;
+  --color-arg-accent: #10B981;
+  --color-arg-mint: #34D399;
+  --color-arg-dark: #06150D;
+  --color-arg-dark-deep: #030D08;
+  --color-arg-forest: #0A2316;
+  --color-arg-forest-light: #0F3824;
+
+  /* Legacy mapping so existing components render in ARG brand colors immediately */
+  --color-pqs-navy: #0A2316;
+  --color-pqs-navy-light: #0F3824;
+  --color-pqs-gold: #00873E;
+  --color-pqs-gold-light: #10B981;
+  --color-pqs-dark: #06150D;
 }
 
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #0A1E35;
+    --foreground: #06150D;
   }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
 .hero-overlay {
-  background: linear-gradient(135deg, rgba(10,30,53,0.85) 0%, rgba(10,30,53,0.5) 100%);
+  background: linear-gradient(135deg, rgba(6, 21, 13, 0.92) 0%, rgba(10, 35, 22, 0.65) 100%);
 }
 
 .liquid-glass {
@@ -35,10 +45,10 @@ body {
 }
 
 .liquid-glass-dark {
-  background: rgba(15, 25, 45, 0.4);
+  background: rgba(6, 21, 13, 0.55);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 135, 62, 0.25);
   border-radius: 8px;
 }
 
@@ -49,7 +59,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.035;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E");
 }

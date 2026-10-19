@@ -9,18 +9,20 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 const headingFont = Plus_Jakarta_Sans({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const bodyFont = Inter({
   variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Precision Quality Services (PQS) | Making Compliance Real",
-  description: "Accredited ISO 17025 laboratory verification, sustainability certifications (GOTS, GRS, ZDHC, PPWR, EN 15343), quality audits, and technical consultancy.",
+  title: "ARG REGISTRARS PAKISTAN | Global ISO Certifications & Audits",
+  description: "ARG REGISTRARS PAKISTAN provides accredited ISO management certifications (ISO 9001, ISO 14001, ISO 45001), C-TPAT security audits, technical factory evaluations, and international registrar solutions. Head Office: Riyadh, KSA | Local Office: Faisalabad, Pakistan.",
   icons: {
-    icon: '/favicon.png?v=2',
+    icon: '/favicon.png?v=3',
   },
 };
 
@@ -32,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} antialiased font-sans flex flex-col min-h-screen`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased font-sans flex flex-col min-h-screen selection:bg-emerald-500 selection:text-white`}
       >
         <SmoothScrolling>
           <Header />

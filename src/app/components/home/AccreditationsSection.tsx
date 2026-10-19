@@ -26,77 +26,77 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
+    id: "iso-9001",
+    name: "ISO 9001:2015",
+    badgeImg: "/certifications/card/iso-9001.png",
+    tagline: "Quality Management Systems (QMS)",
+    scope: "Standardized quality management implementation, risk-based operational auditing, defect reduction, and continuous improvement.",
+    features: ["Risk-Based Process Audits", "Zero-Defect Quality Controls", "Supplier Verification & Evaluation"]
+  },
+  {
+    id: "iso-14001",
+    name: "ISO 14001:2015",
+    badgeImg: "/certifications/card/iso-14001.jpg",
+    tagline: "Environmental Management Systems (EMS)",
+    scope: "Systematic environmental impact mitigation, resource efficiency, regulatory compliance, and carbon footprint accountability.",
+    features: ["Waste & Emissions Monitoring", "Resource Optimization", "Environmental Regulatory Audits"]
+  },
+  {
+    id: "iso-45001",
+    name: "ISO 45001:2018",
+    badgeImg: "/certifications/card/iso-45001.jpg",
+    tagline: "Occupational Health & Safety (OH&S)",
+    scope: "Proactive hazard identification, workplace risk reduction, employee safety management, and industrial health safeguards.",
+    features: ["Hazard Identification & Controls", "Accident Prevention Systems", "Safe Working Environments"]
+  },
+  {
+    id: "ctpat",
+    name: "C-TPAT Certified",
+    badgeImg: "/certifications/card/ctpat.jpg",
+    tagline: "Customs-Trade Partnership Against Terrorism",
+    scope: "Global supply chain security audits adhering to US Customs and Border Protection standards for expedited trade clearance.",
+    features: ["Cargo & Physical Security", "Access Control & Container Integrity", "Supply Chain Risk Assessment"]
+  },
+  {
+    id: "technical-audit",
+    name: "Technical Audit Compliance",
+    badgeImg: "/certifications/card/technical-audit.png",
+    tagline: "Factory Floor & Process Capability",
+    scope: "Rigorous factory evaluation assessing production machinery, operational capacity, quality assurance protocols, and labor standards.",
+    features: ["Machinery & Line Verification", "Quality Control Benchmarks", "Capacity & Traceability Auditing"]
+  },
+  {
+    id: "fsns-sqf",
+    name: "FSNS & SQF Benchmarks",
+    badgeImg: "/certifications/card/fsns-sqf.png",
+    tagline: "Global Safety & Quality Certification",
+    scope: "Recognized international safety and quality certification ensuring rigorous standard compliance and buyer trust.",
+    features: ["Hygiene & Sanitation Control", "HACCP Principles Integration", "Buyer-Approved Compliance"]
+  },
+  {
     id: "iso-17025",
     name: "ISO 17025 Accredited",
     badgeImg: "/certifications/card/iso_17025.png",
     tagline: "Testing & Calibration Laboratories",
-    scope: "International standard demonstrating technical competence, precision measurement, and validated laboratory test data.",
+    scope: "Demonstrated technical competence, precision measurement calibrations, and internationally accepted laboratory validation data.",
     features: ["Physical & Chemical Testing", "Calibration Traceability", "Globally Accepted Reports"]
   },
   {
-    id: "iso-9001",
-    name: "ISO 9001:2015",
-    badgeImg: "/certifications/card/iso_9001_2015.png",
-    tagline: "Quality Management Systems",
-    scope: "Standardized QMS implementation, CAPA defect elimination, and continuous process optimization across factories.",
-    features: ["Risk-Based Process Audits", "Zero-Defect Quality Control", "Supplier Evaluation"]
-  },
-  {
-    id: "zdhc",
-    name: "ZDHC Gateway & MRSL",
-    badgeImg: "/certifications/card/zdhc.png",
-    tagline: "Roadmap to Zero Hazardous Chemicals",
-    scope: "Elimination of hazardous substances in textile processing, chemical inventory compliance, and wastewater testing.",
-    features: ["MRSL Level Conformance", "Wastewater Discharge Testing", "Chemical Management Audits"]
-  },
-  {
-    id: "gots",
-    name: "GOTS Certified",
-    badgeImg: "/certifications/card/gots.png",
-    tagline: "Global Organic Textile Standard",
-    scope: "World-leading textile processing standard for organic fibers, integrating environmental and strict social criteria.",
-    features: ["Organic Chain of Custody", "Residue & Toxin Screening", "Transaction Verification"]
-  },
-  {
-    id: "grs",
-    name: "GRS Standard",
-    badgeImg: "/certifications/card/grs.png",
-    tagline: "Global Recycled Standard",
-    scope: "Verification of recycled material content, chain of custody, chemical restrictions, and responsible manufacturing.",
-    features: ["Recycled Input Tracking", "Environmental Management", "Supply Chain Transparency"]
-  },
-  {
-    id: "ppwr",
-    name: "EU PPWR Compliance",
-    badgeImg: "/certifications/card/ppwr.png",
-    tagline: "Packaging & Packaging Waste Regulation",
-    scope: "European Union circularity regulations enforcing packaging reduction, recyclability grades, and recycled plastic quotas.",
-    features: ["Circularity Assessment", "Design for Recyclability", "Substance Restriction Checks"]
-  },
-  {
-    id: "en-15343",
-    name: "EN 15343 Recycled Plastics",
-    badgeImg: "/certifications/card/en_15343.png",
-    tagline: "Traceability & Recycled Content",
-    scope: "European standard specifying procedures needed for traceability of recycled plastics and conformity assessment.",
-    features: ["Post-Consumer Traceability", "Recycled Content % Auditing", "Batch Verification"]
-  },
-  {
     id: "ce-marking",
-    name: "CE Marking",
+    name: "CE Marking Conformity",
     badgeImg: "/certifications/card/ce_marking.png",
-    tagline: "European Conformity",
-    scope: "Validation that industrial, PPE, and textile products comply with European safety, health, and environmental directives.",
-    features: ["Technical File Documentation", "Essential Safety Assessment", "Declaration of Conformity"]
+    tagline: "European Health & Safety Directives",
+    scope: "Validation that manufactured industrial goods and textiles meet European Union health, safety, and environmental protection requirements.",
+    features: ["Technical File Documentation", "Essential Safety Assessment", "EU Declaration of Conformity"]
   }
 ];
 
 export default function AccreditationsSection() {
   return (
-    <section id="accreditations" className="py-28 relative z-20 bg-pqs-dark noise-bg border-t border-b border-pqs-gold/20 overflow-hidden">
+    <section id="accreditations" className="py-28 relative z-20 bg-[#06150D] noise-bg border-t border-b border-emerald-500/20 overflow-hidden">
       {/* Background Ambient Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-pqs-gold/10 rounded-full blur-[140px] pointer-events-none mix-blend-screen" />
-      <div className="absolute -bottom-20 right-0 w-[600px] h-[600px] bg-[#0A1E35]/80 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#00873E]/15 rounded-full blur-[140px] pointer-events-none mix-blend-screen" />
+      <div className="absolute -bottom-20 right-0 w-[600px] h-[600px] bg-emerald-950/70 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
@@ -108,10 +108,10 @@ export default function AccreditationsSection() {
           variants={staggerContainer}
           className="text-center max-w-4xl mx-auto mb-20"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-pqs-gold/30 backdrop-blur-md mb-6">
-            <ShieldCheck size={16} className="text-pqs-gold" />
-            <span className="text-pqs-gold font-montserrat font-bold text-xs tracking-[0.25em] uppercase">
-              ACCREDITED COMPLIANCE FRAMEWORKS &bull; GLOBAL STANDARDS
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-emerald-500/30 backdrop-blur-md mb-6">
+            <ShieldCheck size={16} className="text-[#34D399]" />
+            <span className="text-[#34D399] font-montserrat font-bold text-xs tracking-[0.25em] uppercase">
+              ACCREDITED CERTIFICATION REGISTRARS &bull; GLOBAL STANDARDS
             </span>
           </motion.div>
 
@@ -119,14 +119,14 @@ export default function AccreditationsSection() {
             variants={fadeInUp} 
             className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-black text-white leading-tight tracking-tight mb-6"
           >
-            Making Compliance Real Across <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pqs-gold via-[#e8d28a] to-white italic font-normal">
-              8 International Standards
+            Accredited Compliance Across <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34D399] via-[#10B981] to-white italic font-normal">
+              Premier Global Frameworks
             </span>
           </motion.h2>
 
           <motion.p variants={fadeInUp} className="text-gray-300 font-lato text-lg md:text-xl font-light leading-relaxed">
-            Precision Quality Services (PQS) bridges factory floor execution with rigorous international accreditation. We prepare, audit, test, and certify your operations for premier global buyers.
+            ARG Registrars Pakistan certifies, audits, and validates organizations against recognized ISO standards and international security frameworks, enabling seamless market entry across Saudi Arabia, Pakistan, the US, and Europe.
           </motion.p>
         </motion.div>
 
@@ -144,10 +144,10 @@ export default function AccreditationsSection() {
               variants={fadeInUp}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="group relative rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-pqs-gold/50 p-6 flex flex-col justify-between transition-all duration-500 hover:shadow-[0_12px_40px_rgba(200,169,81,0.15)]"
+              className="group relative rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-emerald-500/50 p-6 flex flex-col justify-between transition-all duration-500 hover:shadow-[0_12px_40px_rgba(0,135,62,0.2)]"
             >
               {/* Top Accent Gradient on Hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-pqs-gold/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#34D399]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl" />
 
               <div>
                 {/* Badge Card Wrapper */}
@@ -164,15 +164,15 @@ export default function AccreditationsSection() {
                 </div>
 
                 {/* Title & Tagline */}
-                <h3 className="text-xl font-montserrat font-bold text-white group-hover:text-pqs-gold transition-colors mb-1">
+                <h3 className="text-xl font-montserrat font-bold text-white group-hover:text-[#34D399] transition-colors mb-1">
                   {cert.name}
                 </h3>
-                <div className="text-pqs-gold font-lato text-xs font-semibold tracking-wider uppercase mb-3">
+                <div className="text-[#34D399] font-lato text-xs font-semibold tracking-wider uppercase mb-3">
                   {cert.tagline}
                 </div>
 
                 {/* Scope Description */}
-                <p className="text-gray-400 font-lato text-sm leading-relaxed mb-6 font-light">
+                <p className="text-gray-300 font-lato text-sm leading-relaxed mb-6 font-light">
                   {cert.scope}
                 </p>
               </div>
@@ -182,7 +182,7 @@ export default function AccreditationsSection() {
                 <ul className="flex flex-col gap-2">
                   {cert.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-xs text-gray-300 font-lato">
-                      <CheckCircle2 size={13} className="text-pqs-gold shrink-0" />
+                      <CheckCircle2 size={13} className="text-[#34D399] shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -198,31 +198,31 @@ export default function AccreditationsSection() {
           whileInView="visible" 
           viewport={{ once: true }} 
           variants={fadeInUp}
-          className="mt-16 rounded-3xl bg-gradient-to-r from-white/10 via-white/5 to-white/10 border border-pqs-gold/30 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-2xl"
+          className="mt-16 rounded-3xl bg-gradient-to-r from-white/10 via-emerald-950/40 to-white/10 border border-emerald-500/30 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-2xl"
         >
           <div className="max-w-2xl text-center md:text-left">
             <h4 className="text-2xl md:text-3xl font-montserrat font-black text-white mb-2">
-              Need Verification or Audit Preparation for Your Facility?
+              Ready for ISO Certification or Facility Audits?
             </h4>
             <p className="text-gray-300 font-lato text-base font-light">
-              Our certified auditors and technical consultants review your readiness, manage testing submissions, and align your operations with buyer compliance protocols.
+              Connect with ARG Registrars Pakistan in Riyadh, KSA or Faisalabad, Pakistan for auditor scheduling, gap evaluations, and official registrar certification.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link 
               href="/contact" 
-              className="inline-flex items-center justify-center gap-3 bg-pqs-gold text-pqs-navy font-montserrat font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all duration-300 hover:bg-white shadow-[0_0_30px_rgba(200,169,81,0.3)] hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-3 bg-[#00873E] text-white font-montserrat font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all duration-300 hover:bg-[#059669] shadow-[0_0_30px_rgba(0,135,62,0.4)] hover:-translate-y-0.5"
             >
               <span>SCHEDULE AN AUDIT</span>
               <ArrowRight size={15} />
             </Link>
 
             <a 
-              href="https://wa.me/923009260495?text=Hello%20PQS,%20I%20am%20interested%20in%20certification%20and%20audit%20readiness%20services." 
+              href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20am%20interested%20in%20ISO%20certification%20and%20audit%20readiness%20services." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-transparent border border-white/30 text-white font-montserrat font-bold text-xs tracking-widest px-7 py-4 rounded-full transition-all duration-300 hover:border-pqs-gold hover:bg-pqs-gold/10"
+              className="inline-flex items-center justify-center gap-3 bg-transparent border border-white/30 text-white font-montserrat font-bold text-xs tracking-widest px-7 py-4 rounded-full transition-all duration-300 hover:border-[#34D399] hover:bg-[#00873E]/15"
             >
               <span>WHATSAPP INQUIRY</span>
             </a>
