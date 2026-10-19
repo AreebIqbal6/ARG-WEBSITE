@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight, ShieldCheck, CheckCircle2, MapPin, Sparkles } from 'lucide-react';
+import InteractiveHeroAudit from './InteractiveHeroAudit';
 
 const springTransition: any = { type: "spring", damping: 26, stiffness: 120 };
 
@@ -99,29 +100,14 @@ export default function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Floating Glass Badges Row */}
+          {/* Interactive Registrar Verification Console */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl"
+            className="w-full"
           >
-            {heroCertPills.map((pill, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -5, scale: 1.02 }}
-                transition={springTransition}
-                className="glass-panel rounded-2xl p-4 flex items-center gap-3.5 border border-white/10 hover:border-emerald-400/30 transition-all text-left"
-              >
-                <div className="relative w-10 h-10 bg-white rounded-xl p-1 shrink-0 flex items-center justify-center shadow-md">
-                  <Image src={pill.icon} alt={pill.name} fill className="object-contain p-0.5" />
-                </div>
-                <div>
-                  <div className="font-display font-bold text-sm text-white leading-tight">{pill.name}</div>
-                  <div className="text-[11px] font-sans text-[#34D399] tracking-wide">{pill.label}</div>
-                </div>
-              </motion.div>
-            ))}
+            <InteractiveHeroAudit />
           </motion.div>
 
           {/* Corporate Hubs Footer Note */}
