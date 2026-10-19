@@ -17,7 +17,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
 
     const { data, error } = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: 'areeb.jpg@gmail.com', // Resend free tier requires sending to the verified registered email
+      to: 'info@argregistrars.com',
       subject: `New Lead: ${firstName} ${lastName} - ARG REGISTRARS PAKISTAN`,
       text: `
         New Contact Form Submission:
