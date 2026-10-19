@@ -114,7 +114,7 @@ export default function AccreditationsSection() {
             className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-white leading-tight tracking-tight mb-6"
           >
             Accredited Registrar Scopes &amp; <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white italic font-normal">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
               International Standards
             </span>
           </motion.h2>

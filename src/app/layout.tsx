@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Syne, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SmoothScrolling from "./components/SmoothScrolling";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
-// Ultra-premium Display font for titles and impact headers
-const displayFont = Syne({
-  variable: "--font-syne",
+// High-authority, precision-engineered geometric display font
+const displayFont = Outfit({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700", "800", "900"],
 });
 
 // Modern, high-trust font for body, navigation and data

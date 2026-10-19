@@ -41,7 +41,7 @@ export default function SplitInfoSection() {
               className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-white mb-8 tracking-tight leading-[1.08]"
             >
               Uncompromising rigor. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white italic">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">
                 Global market access.
               </span>
             </motion.h2>

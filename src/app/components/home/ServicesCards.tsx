@@ -40,7 +40,7 @@ export default function ServicesCards() {
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight">
             Comprehensive Registrar &amp; <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white italic">Audit Operations</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white">Audit Operations</span>
           </h2>
         </div>
 
