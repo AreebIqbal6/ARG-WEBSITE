@@ -1,8 +1,9 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2, ShieldCheck, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ShieldCheck, MessageCircle, Search, Award } from 'lucide-react';
 import Link from 'next/link';
+import CertificateVerifyModal from '../components/ui/CertificateVerifyModal';
 
 const services = [
   {
@@ -10,6 +11,8 @@ const services = [
     badge: "Accredited QMS Registrar",
     desc: "End-to-end certification and surveillance auditing for ISO 9001:2015. We verify organizational risk management, defect reduction frameworks, standardized operational processes, and customer satisfaction loops.",
     img: "/images/quality_assurance.jpg",
+    ctaText: "VIEW QMS AUDIT METHODOLOGY",
+    ctaLink: "/audits#four-stage-protocol",
     deliverables: [
       "ISO 9001 gap analysis and readiness auditing",
       "Corrective & Preventive Action (CAPA) tracking loops",
@@ -21,6 +24,8 @@ const services = [
     badge: "Accredited EMS Certification",
     desc: "Rigorous verification of environmental safeguards, industrial waste reduction, energy efficiency, and chemical management to fulfill stringent multinational buyer sustainability criteria.",
     img: "/images/environmental_sustainability.jpg",
+    ctaText: "ENVIRONMENTAL AUDIT CRITERIA",
+    ctaLink: "/audits#four-stage-protocol",
     deliverables: [
       "Environmental impact risk assessment and legal audits",
       "Effluent, emissions, and hazardous waste monitoring",
@@ -32,6 +37,8 @@ const services = [
     badge: "Occupational Safety Standard",
     desc: "Workplace hazard identification, emergency preparedness, machinery guarding, and employee wellness systems required by global brands and international labor conventions.",
     img: "/images/occupational_safety.jpg",
+    ctaText: "WORKPLACE SAFETY PROTOCOL",
+    ctaLink: "/audits#four-stage-protocol",
     deliverables: [
       "Occupational hazard & risk mitigation reviews",
       "Factory fire safety & emergency exit inspections",
@@ -43,6 +50,8 @@ const services = [
     badge: "US Customs & Border Protection",
     desc: "Comprehensive supply chain security audits certifying container security, physical perimeter control, personnel screening, and procedural security for streamlined export into North America.",
     img: "/images/supply_chain_security.jpg",
+    ctaText: "C-TPAT SECURITY AUDIT",
+    ctaLink: "/audits#four-stage-protocol",
     deliverables: [
       "7-point container inspection validation",
       "Factory physical perimeter & cyber security audits",
@@ -54,6 +63,8 @@ const services = [
     badge: "Operational Capability",
     desc: "On-site scrutiny of machinery capacity, calibration logs, lab quality control procedures, and inline production defect mapping to prove capability to international buyers.",
     img: "/images/technical_testing_lab.jpg",
+    ctaText: "TECHNICAL AUDIT PROTOCOL",
+    ctaLink: "/audits#four-stage-protocol",
     deliverables: [
       "Machine capacity and maintenance record verification",
       "In-line defect mapping & statistical process control",
@@ -65,6 +76,8 @@ const services = [
     badge: "Hygiene & Food Safety",
     desc: "Specialized auditing for food packaging, hygiene-critical consumer goods, and HACCP compliance to guarantee international retail acceptance.",
     img: "/images/logistics_warehouse.jpg",
+    ctaText: "HYGIENE & SAFETY PROTOCOLS",
+    ctaLink: "/audits#four-stage-protocol",
     deliverables: [
       "HACCP standard alignment & hygiene audits",
       "Packaging safety & contamination barrier verification",
@@ -74,6 +87,7 @@ const services = [
 ];
 
 export default function Services() {
+  const [isVerifyOpen, setIsVerifyOpen] = useState(false);
   return (
     <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay">
       
@@ -102,8 +116,37 @@ export default function Services() {
         </div>
       </section>
 
+      {/* REGISTRY VERIFICATION BANNER */}
+      <section className="relative z-30 -mt-10 mb-4">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="p-6 md:p-8 rounded-3xl glass-panel border border-emerald-500/30 bg-[#06150D]/85 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div className="flex items-center gap-4 text-left">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-[#34D399] shrink-0">
+                <Award size={24} />
+              </div>
+              <div>
+                <div className="text-white font-display font-bold text-base md:text-lg">
+                  Official Accredited Registrar Certificate Registry
+                </div>
+                <div className="text-gray-400 font-sans text-xs md:text-sm">
+                  Validate client certificates, active validity status, and accredited scope in real-time.
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsVerifyOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/40 hover:shadow-[0_0_25px_rgba(0,135,62,0.5)] transition-all cursor-pointer shrink-0"
+            >
+              <Search size={15} />
+              <span>SEARCH CERTIFICATE REGISTRY</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* CONTENT */}
-      <section className="py-28 relative z-30">
+      <section className="py-20 relative z-30">
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,10 +197,10 @@ export default function Services() {
                     </ul>
 
                     <Link
-                      href="/contact"
+                      href={srv.ctaLink}
                       className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full glass-panel hover:bg-[#00873E] text-white font-sans font-bold text-xs tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent"
                     >
-                      <span>INQUIRE ABOUT THIS SCOPE</span>
+                      <span>{srv.ctaText}</span>
                       <ArrowUpRight size={14} />
                     </Link>
                   </div>
@@ -190,6 +233,11 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Official Certificate Verification Modal */}
+      <CertificateVerifyModal
+        isOpen={isVerifyOpen}
+        onClose={() => setIsVerifyOpen(false)}
+      />
     </div>
   );
 }

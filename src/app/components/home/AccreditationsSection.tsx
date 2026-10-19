@@ -210,10 +210,10 @@ export default function AccreditationsSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link 
-              href="/contact" 
+              href="/services" 
               className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:scale-105 border border-emerald-400/40"
             >
-              <span>SCHEDULE AUDIT</span>
+              <span>EXPLORE ACCREDITED SCOPES</span>
               <ArrowUpRight size={15} />
             </Link>
 

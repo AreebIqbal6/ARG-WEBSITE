@@ -124,10 +124,10 @@ export default function FaqSection() {
               Have a specific standard or regulatory requirement not listed here?
             </span>
             <Link
-              href="/contact"
+              href="/about"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/30 hover:scale-105 transition-all"
             >
-              <span>CONSULT AN AUDITOR</span>
+              <span>VIEW REGIONAL DIRECTORY</span>
               <ArrowUpRight size={14} />
             </Link>
           </div>

@@ -68,3 +68,27 @@ This journal details the design philosophy, architectural structure, technical s
 - [x] **Zero personal identifiers:** Official corporate email `info@argregistrars.com` used for intake.
 - [x] **Strict Content Security:** All external links utilize `rel="noopener noreferrer"`.
 - [x] **CORS & Crawler Integrity:** OpenGraph metadata and robots explicitly configured for search engines and verified AI crawlers.
+
+---
+
+## 5. De-Funneling Architecture & Institutional Registrar Tooling
+
+### The Problem
+Auditing revealed an aggressive, repetitive "conversion-bro" pattern where over 10 buttons across all sections redirected indiscriminately to `/contact`. For an accredited corporate registrar (serving multinational buyers, customs authorities, and industrial manufacturers), this eroded institutional trust and felt like an aggressive lead-capture funnel.
+
+### The Remediation & Tooling Added
+1. **Interactive Accredited Certificate Registry (`CertificateVerifyModal.tsx`):**
+   - Implemented a searchable registry modal accessible from the global navigation bar and `/services`.
+   - Allows buyers, suppliers, and customs authorities to input certificate IDs (e.g., `ARG-9001-KSA-041`, `ARG-14001-PK-882`, `ARG-45001-PK-319`, `ARG-CTPAT-USA-109`).
+   - Renders verified live status (`ACTIVE & ACCREDITED`), certified organization, city/country, standard, IAF/EIAC/IAS accreditation authority, surveillance milestones, certified technical scope, and cryptographic verification hash with shareable verification links.
+2. **Interactive Audit Criteria & Specification Modal (`AuditSpecModal.tsx`):**
+   - Transformed the hero console CTA into an educational, technical tool ("VIEW SPECIFICATION").
+   - Displays IAF MD5 person-day calculation formulas, Stage 1 documentation pre-audit checklists, Stage 2 on-site audit checkpoints, and provides a 1-click criteria sheet export (`.txt`).
+3. **Contextual In-Depth Routing Across All Pages:**
+   - **Audit Journey:** Replaced "START APPLICATION" with deep link to `/audits#four-stage-protocol`.
+   - **FAQ Section:** Replaced "CONSULT AN AUDITOR" with deep link to `/about` (Regional Bureau Directory).
+   - **Accreditations Banner:** Replaced "SCHEDULE AUDIT" with link to `/services` (Accredited Scopes).
+   - **About Page:** Replaced contact redirect with `/services` and `/audits`.
+   - **Audits Page:** Replaced contact redirect with `/services` (Compare ISO Scopes).
+   - **Services Cards:** Replaced uniform "INQUIRE ABOUT THIS SCOPE" with bespoke methodology links (`VIEW QMS AUDIT METHODOLOGY`, `ENVIRONMENTAL AUDIT CRITERIA`, `WORKPLACE SAFETY PROTOCOL`, etc.) and integrated the Certificate Registry Search banner.
+

@@ -1,13 +1,15 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import CertificateVerifyModal from './ui/CertificateVerifyModal';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVerifyOpen, setIsVerifyOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +84,16 @@ export default function Header() {
           </nav>
 
           {/* Right Action */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setIsVerifyOpen(true)}
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full font-medium font-sans text-xs tracking-wider transition-all duration-300 text-gray-300 hover:text-white glass-panel hover:border-emerald-400/40 hover:bg-white/[0.06] cursor-pointer"
+            >
+              <ShieldCheck size={14} className="text-[#34D399]" />
+              <span>VERIFY CERTIFICATE</span>
+            </button>
+
             <Link 
               href="/contact" 
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-bold font-sans text-xs tracking-wider transition-all duration-300 bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_25px_rgba(0,135,62,0.6)] hover:scale-105 border border-emerald-400/30"
@@ -118,10 +129,21 @@ export default function Header() {
             <Link href="/audits" className="text-base font-bold tracking-widest hover:text-[#34D399] transition-colors" onClick={() => setMobileMenuOpen(false)}>AUDITS</Link>
             <Link href="/about" className="text-base font-bold tracking-widest hover:text-[#34D399] transition-colors" onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
             <Link href="/contact" className="text-base font-bold tracking-widest hover:text-[#34D399] transition-colors" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
-            <div className="mt-2">
+            <div className="flex flex-col gap-3 w-4/5 max-w-xs mt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setIsVerifyOpen(true);
+                }}
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-bold tracking-wider glass-panel text-white hover:border-emerald-400/40"
+              >
+                <ShieldCheck size={15} className="text-[#34D399]" />
+                <span>VERIFY CERTIFICATE</span>
+              </button>
               <Link 
                 href="/contact" 
-                className="px-7 py-3 rounded-full font-bold text-xs tracking-widest transition-all bg-[#00873E] text-white hover:bg-[#059669] shadow-[0_0_20px_rgba(0,135,62,0.5)]" 
+                className="w-full text-center px-7 py-3 rounded-full font-bold text-xs tracking-widest transition-all bg-[#00873E] text-white hover:bg-[#059669] shadow-[0_0_20px_rgba(0,135,62,0.5)]" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 REQUEST AN AUDIT
@@ -130,6 +152,12 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Official Certificate Verification Modal */}
+      <CertificateVerifyModal
+        isOpen={isVerifyOpen}
+        onClose={() => setIsVerifyOpen(false)}
+      />
     </header>
   );
 }

@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, CheckCircle2, ShieldCheck, Clock, Award, FileCheck2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ShieldCheck, Clock, Award, FileCheck2, Info } from 'lucide-react';
+import AuditSpecModal from '../ui/AuditSpecModal';
 
 interface StandardDetail {
   id: string;
@@ -82,6 +83,7 @@ const standards: StandardDetail[] = [
 
 export default function InteractiveHeroAudit() {
   const [activeTab, setActiveTab] = useState<string>("iso-9001");
+  const [isSpecModalOpen, setIsSpecModalOpen] = useState(false);
   const activeStandard = standards.find(s => s.id === activeTab) || standards[0];
 
   return (
@@ -186,18 +188,19 @@ export default function InteractiveHeroAudit() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
-                <Link
-                  href="/contact"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white text-xs font-display font-bold tracking-wider hover:shadow-[0_0_20px_rgba(0,135,62,0.5)] transition-all border border-emerald-400/40"
+                <button
+                  type="button"
+                  onClick={() => setIsSpecModalOpen(true)}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white text-xs font-display font-bold tracking-wider hover:shadow-[0_0_20px_rgba(0,135,62,0.5)] transition-all border border-emerald-400/40 cursor-pointer"
                 >
                   <FileCheck2 size={15} />
-                  <span>BOOK {activeStandard.code}</span>
-                </Link>
+                  <span>VIEW SPECIFICATION</span>
+                </button>
                 <Link
-                  href="/audits"
+                  href="/audits#four-stage-protocol"
                   className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl glass-panel text-gray-300 hover:text-white text-xs font-sans font-medium hover:border-emerald-400/30 transition-all"
                 >
-                  <span>Scope Specs</span>
+                  <span>Audit Roadmap</span>
                   <ArrowUpRight size={14} />
                 </Link>
               </div>
@@ -205,6 +208,13 @@ export default function InteractiveHeroAudit() {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Interactive Audit Specification Modal */}
+      <AuditSpecModal
+        isOpen={isSpecModalOpen}
+        onClose={() => setIsSpecModalOpen(false)}
+        standardId={activeStandard.id}
+      />
     </div>
   );
 }

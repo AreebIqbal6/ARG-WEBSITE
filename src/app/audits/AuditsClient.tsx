@@ -79,8 +79,8 @@ export default function Audits() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-display font-bold text-xs tracking-widest bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:scale-105 transition-all duration-300 border border-emerald-400/40">
-                  <span>REQUEST AN AUDIT</span>
+                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-display font-bold text-xs tracking-widest bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:scale-105 transition-all duration-300 border border-emerald-400/40">
+                  <span>COMPARE ISO SCOPES</span>
                   <ArrowUpRight size={16} />
                 </Link>
 

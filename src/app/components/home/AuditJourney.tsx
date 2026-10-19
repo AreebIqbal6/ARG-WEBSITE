@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ClipboardCheck, SearchCheck, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import SpotlightCard from '../ui/SpotlightCard';
 
 const steps = [
@@ -130,13 +131,13 @@ export default function AuditJourney() {
               <div className="text-gray-400 font-sans text-xs">Initial documentation reviews dispatched within 48 business hours of receipt.</div>
             </div>
           </div>
-          <a
-            href="/contact"
+          <Link
+            href="/audits#four-stage-protocol"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white font-display font-bold text-xs tracking-wider transition-colors shrink-0 border border-white/10"
           >
-            <span>START APPLICATION</span>
+            <span>VIEW AUDIT METHODOLOGY</span>
             <ArrowRight size={14} />
-          </a>
+          </Link>
         </motion.div>
 
       </div>
