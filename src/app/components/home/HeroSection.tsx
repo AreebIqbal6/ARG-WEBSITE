@@ -18,6 +18,10 @@ const heroCertPills = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center pt-36 pb-24 overflow-hidden architect-grid noise-overlay">
+      {/* Background Faded Picture */}
+      <div className="absolute inset-0 z-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105 pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#030906] via-[#030906]/75 to-[#030906]/90 pointer-events-none" />
+
       {/* Dynamic Aurora Ambient Glows */}
       <div className="emerald-aurora top-1/4 left-1/2 -translate-x-1/2 w-[750px] h-[450px] bg-[#00873E]/20" />
       <div className="emerald-aurora -top-20 -left-20 w-[600px] h-[600px] bg-emerald-900/30" />

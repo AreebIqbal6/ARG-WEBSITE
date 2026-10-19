@@ -8,7 +8,10 @@ export default function Contact() {
   const [state, formAction, isPending] = useActionState(sendEmail, null);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay">
+    <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay relative overflow-hidden">
+      {/* Background Faded Picture */}
+      <div className="absolute top-0 left-0 right-0 h-[650px] z-0 bg-[url('/images/lead_auditor_desk.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-[650px] z-0 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent pointer-events-none" />
       
       {/* Background Aurora */}
       <div className="emerald-aurora top-20 right-10 w-[700px] h-[500px] bg-[#00873E]/15" />
