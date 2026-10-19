@@ -87,7 +87,7 @@ export default function SplitInfoSection() {
             >
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-[2.5s] ease-out group-hover:scale-105 opacity-80"
-                style={{ backgroundImage: "url('/inspector.jpg')" }}
+                style={{ backgroundImage: "url('/images/auditor_inspection.jpg')" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#030906] via-[#030906]/40 to-transparent"></div>
               

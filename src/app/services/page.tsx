@@ -9,7 +9,7 @@ const services = [
     title: "ISO 9001:2015 Quality Management Systems",
     badge: "Accredited QMS Registrar",
     desc: "End-to-end certification and surveillance auditing for ISO 9001:2015. We verify organizational risk management, defect reduction frameworks, standardized operational processes, and customer satisfaction loops.",
-    img: "/loom.jpg",
+    img: "/images/quality_assurance.jpg",
     deliverables: [
       "ISO 9001 gap analysis and readiness auditing",
       "Corrective & Preventive Action (CAPA) tracking loops",
@@ -20,7 +20,7 @@ const services = [
     title: "ISO 14001:2015 Environmental Management",
     badge: "Accredited EMS Certification",
     desc: "Rigorous verification of environmental safeguards, industrial waste reduction, energy efficiency, and chemical management to fulfill stringent multinational buyer sustainability criteria.",
-    img: "/unsplash_2.jpg",
+    img: "/images/environmental_sustainability.jpg",
     deliverables: [
       "Environmental impact risk assessment and legal audits",
       "Effluent, emissions, and hazardous waste monitoring",
@@ -31,7 +31,7 @@ const services = [
     title: "ISO 45001:2018 Health & Safety Systems",
     badge: "Occupational Safety Standard",
     desc: "Workplace hazard identification, emergency preparedness, machinery guarding, and employee wellness systems required by global brands and international labor conventions.",
-    img: "/inspector.jpg",
+    img: "/images/occupational_safety.jpg",
     deliverables: [
       "Occupational hazard & risk mitigation reviews",
       "Factory fire safety & emergency exit inspections",
@@ -42,7 +42,7 @@ const services = [
     title: "C-TPAT Supply Chain Security Certification",
     badge: "US Customs & Border Protection",
     desc: "Comprehensive supply chain security audits certifying container security, physical perimeter control, personnel screening, and procedural security for streamlined export into North America.",
-    img: "/unsplash_0.jpg",
+    img: "/images/supply_chain_security.jpg",
     deliverables: [
       "7-point container inspection validation",
       "Factory physical perimeter & cyber security audits",
@@ -53,7 +53,7 @@ const services = [
     title: "Factory Technical & Quality Audits",
     badge: "Operational Capability",
     desc: "On-site scrutiny of machinery capacity, calibration logs, lab quality control procedures, and inline production defect mapping to prove capability to international buyers.",
-    img: "/microscope.jpg",
+    img: "/images/technical_testing_lab.jpg",
     deliverables: [
       "Machine capacity and maintenance record verification",
       "In-line defect mapping & statistical process control",
@@ -64,7 +64,7 @@ const services = [
     title: "FSNS, SQF & Global Standards Support",
     badge: "Hygiene & Food Safety",
     desc: "Specialized auditing for food packaging, hygiene-critical consumer goods, and HACCP compliance to guarantee international retail acceptance.",
-    img: "/unsplash_4.jpg",
+    img: "/images/logistics_warehouse.jpg",
     deliverables: [
       "HACCP standard alignment & hygiene audits",
       "Packaging safety & contamination barrier verification",
@@ -79,7 +79,7 @@ export default function Services() {
       
       {/* HEADER */}
       <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/unsplash_0.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
         <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
         

@@ -22,7 +22,7 @@ export default function Audits() {
       
       {/* HEADER */}
       <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/inspector.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
         <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
         

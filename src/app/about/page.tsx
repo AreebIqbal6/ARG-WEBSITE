@@ -30,7 +30,7 @@ export default function About() {
       
       {/* HEADER */}
       <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/unsplash_3.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/images/corporate_headquarters.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
         <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
         
@@ -97,8 +97,8 @@ export default function About() {
               <div className="grid grid-cols-2 gap-4">
                 <motion.div whileHover={{ scale: 1.02 }} className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/10 group shadow-2xl">
                   <Image 
-                    src="/unsplash_0.jpg" 
-                    alt="Factory quality inspection" 
+                    src="/images/corporate_headquarters.jpg" 
+                    alt="Corporate registrar oversight" 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80" 
                   />
@@ -106,8 +106,8 @@ export default function About() {
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/10 translate-y-10 group shadow-2xl">
                   <Image 
-                    src="/microscope.jpg" 
-                    alt="Auditing and testing verification" 
+                    src="/images/lead_auditor_desk.jpg" 
+                    alt="Auditing and conformity evaluation desk" 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80" 
                   />
