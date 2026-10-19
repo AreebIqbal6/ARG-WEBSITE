@@ -1,13 +1,9 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, CheckCircle2, Award, Users, MapPin, Phone, Mail, Globe } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, CheckCircle2, Award, MapPin, Phone, Mail, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const appleEase: any = [0.16, 1, 0.3, 1];
-const fadeInUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: appleEase } } };
-const staggerContainer = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 
 const officeLocations = [
   {
@@ -30,120 +26,109 @@ const officeLocations = [
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#fafafa]">
+    <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay">
       
       {/* HEADER */}
-      <section className="relative h-[55vh] min-h-[440px] flex items-end pb-20 pt-32 overflow-hidden bg-[#06150D]">
-        <div className="absolute inset-0 z-0 bg-[url('/unsplash_3.jpg')] bg-cover bg-center opacity-25 mix-blend-luminosity"></div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#06150D] via-[#06150D]/80 to-transparent"></div>
+      <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-[url('/unsplash_3.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
+        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
-            <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-[#00873E]"></div>
-              <h2 className="text-[#34D399] font-montserrat font-bold tracking-[0.25em] uppercase text-xs">
-                WHO WE ARE &bull; ARG REGISTRARS PAKISTAN
-              </h2>
-            </motion.div>
-            <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white leading-tight tracking-tight mb-4">
-              Certified Rigor. Global Trust.
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="text-gray-300 font-lato text-lg max-w-2xl font-light">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6">
+              <ShieldCheck size={14} />
+              <span>WHO WE ARE &bull; ARG REGISTRARS PAKISTAN</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">
+              Certified Rigor. <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white italic">
+                Global Trust.
+              </span>
+            </h1>
+            <p className="text-gray-300 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Delivering accredited ISO management certifications, C-TPAT security audits, and factory technical assessments across international supply chains.
-            </motion.p>
+            </p>
           </motion.div>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="py-24 relative z-30 overflow-hidden">
-        {/* Stamp Watermark */}
-        <div className="absolute top-[20%] left-[-15%] w-[800px] h-[800px] opacity-[0.03] pointer-events-none -rotate-12 mix-blend-multiply">
-           <Image src="/arg_logo.png" alt="ARG Watermark" width={800} height={800} className="w-full h-full object-contain" />
-        </div>
-
+      <section className="py-28 relative z-30 overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} variants={staggerContainer} className="lg:w-1/2">
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-[#00873E] font-montserrat font-bold text-xs uppercase tracking-wider mb-6">
-                <Award size={15} className="text-[#00873E]" />
+            <div className="lg:w-1/2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6 border border-emerald-500/20">
+                <Award size={14} />
                 <span>Our Registrar Philosophy</span>
-              </motion.div>
+              </div>
 
-              <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-montserrat font-black text-[#06150D] mb-8 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-black text-white mb-8 leading-tight">
                 Empowering businesses with recognized international accreditation.
-              </motion.h2>
+              </h2>
 
-              <motion.p variants={fadeInUp} className="text-gray-600 font-lato text-lg leading-relaxed mb-6 font-light">
+              <p className="text-gray-300 font-sans text-base md:text-lg leading-relaxed mb-6 font-light">
                 ARG Registrars Pakistan is a premier certification, auditing, and registrar body providing accredited conformity assessments. With deep technical competence in industrial manufacturing, textiles, plastics, and global exports, we evaluate and certify organizational management systems.
-              </motion.p>
+              </p>
 
-              <motion.p variants={fadeInUp} className="text-gray-600 font-lato text-lg leading-relaxed mb-10 font-light">
+              <p className="text-gray-300 font-sans text-base md:text-lg leading-relaxed mb-10 font-light">
                 From our dual administrative hubs in Riyadh, KSA and Faisalabad, Pakistan, our qualified lead auditors conduct objective evaluations that fulfill buyer mandates and satisfy international regulatory standards.
-              </motion.p>
+              </p>
 
-              <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-                <Link href="/contact" className="group relative inline-flex items-center gap-4 bg-[#00873E] text-white rounded-full px-8 py-4 overflow-hidden transition-all duration-500 hover:bg-[#059669] shadow-lg hover:shadow-xl hover:-translate-y-1">
-                  <span className="relative z-10 font-montserrat font-bold text-xs md:text-sm tracking-widest">SCHEDULE AN AUDIT</span>
-                  <div className="relative z-10 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <ArrowRight size={16} className="text-white group-hover:translate-x-1 transition-transform" />
-                  </div>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-display font-bold text-xs tracking-widest bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:scale-105 transition-all duration-300 border border-emerald-400/40">
+                  <span>SCHEDULE AN AUDIT</span>
+                  <ArrowUpRight size={16} />
                 </Link>
 
                 <a 
                   href="https://wa.me/9231459101614"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white border border-gray-200 text-[#06150D] font-montserrat font-bold text-xs md:text-sm tracking-wider px-8 py-4 rounded-full hover:border-emerald-500 hover:text-emerald-600 transition-colors shadow-sm"
+                  className="inline-flex items-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-8 py-4 rounded-full hover:border-emerald-400/40 hover:bg-white/[0.08] transition-all"
                 >
                   <span>WHATSAPP DESK</span>
                 </a>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} variants={staggerContainer} className="lg:w-1/2">
+            <div className="lg:w-1/2">
               <div className="grid grid-cols-2 gap-4">
-                <motion.div variants={fadeInUp} className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl group border-2 border-white">
+                <motion.div whileHover={{ scale: 1.02 }} className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/10 group shadow-2xl">
                   <Image 
                     src="/unsplash_0.jpg" 
                     alt="Factory quality inspection" 
                     fill 
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                    className="object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80" 
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#030906] via-transparent to-transparent" />
                 </motion.div>
-                <motion.div variants={fadeInUp} className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl translate-y-12 group border-2 border-white">
+                <motion.div whileHover={{ scale: 1.02 }} className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/10 translate-y-10 group shadow-2xl">
                   <Image 
                     src="/microscope.jpg" 
                     alt="Auditing and testing verification" 
                     fill 
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                    className="object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80" 
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#030906] via-transparent to-transparent" />
                 </motion.div>
               </div>
-            </motion.div>
+            </div>
 
           </div>
 
-          {/* Corporate Hubs & Operational Locations */}
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true, margin: "-5%" }} 
-            variants={staggerContainer} 
-            className="mt-32 pt-16 border-t border-gray-200"
-          >
+          {/* Regional Network Cards */}
+          <div className="mt-36 pt-16 border-t border-white/[0.08]">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-[#00873E] font-montserrat font-bold text-xs uppercase tracking-wider mb-4">
-                <MapPin size={15} />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-4 border border-emerald-500/20">
+                <MapPin size={14} />
                 <span>Regional Network</span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-montserrat font-black text-[#06150D] mb-4">
+              <h3 className="text-3xl md:text-4xl font-display font-black text-white mb-4">
                 Our Corporate Offices
               </h3>
-              <p className="text-gray-600 font-lato text-base font-light">
+              <p className="text-gray-300 font-sans text-sm font-light">
                 Direct regional presence enabling rapid on-site audits, lead auditor deployment, and cross-border certification issuing.
               </p>
             </div>
@@ -152,39 +137,39 @@ export default function About() {
               {officeLocations.map((office, idx) => (
                 <motion.div 
                   key={idx}
-                  variants={fadeInUp}
-                  className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-emerald-500/40 transition-all duration-300"
+                  whileHover={{ y: -6 }}
+                  className="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/[0.08]"
                 >
                   <div>
-                    <span className="text-[#00873E] font-montserrat font-bold text-xs uppercase tracking-wider block mb-1">
+                    <span className="text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider block mb-1">
                       {office.type}
                     </span>
-                    <h4 className="text-xl sm:text-2xl font-montserrat font-black text-[#06150D] mb-3 tracking-tight">
+                    <h4 className="text-2xl font-display font-black text-white mb-3">
                       {office.city}
                     </h4>
-                    <p className="text-gray-600 font-lato text-sm leading-relaxed mb-6 font-light">
+                    <p className="text-gray-300 font-sans text-sm leading-relaxed mb-6 font-light">
                       {office.role}
                     </p>
                   </div>
 
-                  <div className="border-t border-gray-100 pt-5 flex flex-col gap-2.5 text-xs font-lato text-gray-700">
-                    <div className="flex items-start gap-2">
-                      <MapPin size={14} className="text-[#00873E] shrink-0 mt-0.5" />
+                  <div className="border-t border-white/[0.08] pt-5 flex flex-col gap-3 text-xs font-sans text-gray-300">
+                    <div className="flex items-start gap-2.5">
+                      <MapPin size={15} className="text-[#34D399] shrink-0 mt-0.5" />
                       <span>{office.address}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Phone size={14} className="text-[#00873E] shrink-0" />
-                      <span><strong>Telephone:</strong> <a href={`tel:${office.phone.replace(/[^0-9+]/g, '')}`} className="text-[#06150D] hover:text-[#00873E] font-semibold">{office.phone}</a></span>
+                    <div className="flex items-center gap-2.5">
+                      <Phone size={15} className="text-[#34D399] shrink-0" />
+                      <span><strong>Telephone:</strong> <a href={`tel:${office.phone.replace(/[^0-9+]/g, '')}`} className="text-white hover:text-[#34D399] font-semibold">{office.phone}</a></span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Mail size={14} className="text-[#00873E] shrink-0" />
-                      <span><strong>Email:</strong> <a href={`mailto:${office.email}`} className="text-[#06150D] hover:text-[#00873E] font-semibold">{office.email}</a></span>
+                    <div className="flex items-center gap-2.5">
+                      <Mail size={15} className="text-[#34D399] shrink-0" />
+                      <span><strong>Email:</strong> <a href={`mailto:${office.email}`} className="text-white hover:text-[#34D399] font-semibold">{office.email}</a></span>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </section>

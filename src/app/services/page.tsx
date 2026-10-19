@@ -1,18 +1,14 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, ShieldCheck, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ShieldCheck, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
-
-const appleEase: any = [0.16, 1, 0.3, 1];
-const fadeInUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: appleEase } } };
-const staggerContainer = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 
 const services = [
   {
     title: "ISO 9001:2015 Quality Management Systems",
     badge: "Accredited QMS Registrar",
-    desc: "End-to-end certification and surveillance auditing for ISO 9001:2015. We verify organizational risk management, defect reduction frameworks, standardized operational processes, and continuous customer satisfaction loops.",
+    desc: "End-to-end certification and surveillance auditing for ISO 9001:2015. We verify organizational risk management, defect reduction frameworks, standardized operational processes, and customer satisfaction loops.",
     img: "/loom.jpg",
     deliverables: [
       "ISO 9001 gap analysis and readiness auditing",
@@ -44,7 +40,7 @@ const services = [
   },
   {
     title: "C-TPAT Supply Chain Security Certification",
-    badge: "US Customs & Border Protection Alignment",
+    badge: "US Customs & Border Protection",
     desc: "Comprehensive supply chain security audits certifying container security, physical perimeter control, personnel screening, and procedural security for streamlined export into North America.",
     img: "/unsplash_0.jpg",
     deliverables: [
@@ -55,7 +51,7 @@ const services = [
   },
   {
     title: "Factory Technical & Quality Audits",
-    badge: "Operational Capability Benchmarking",
+    badge: "Operational Capability",
     desc: "On-site scrutiny of machinery capacity, calibration logs, lab quality control procedures, and inline production defect mapping to prove capability to international buyers.",
     img: "/microscope.jpg",
     deliverables: [
@@ -66,7 +62,7 @@ const services = [
   },
   {
     title: "FSNS, SQF & Global Standards Support",
-    badge: "Hygiene & Food Safety Verification",
+    badge: "Hygiene & Food Safety",
     desc: "Specialized auditing for food packaging, hygiene-critical consumer goods, and HACCP compliance to guarantee international retail acceptance.",
     img: "/unsplash_4.jpg",
     deliverables: [
@@ -79,76 +75,79 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#fafafa]">
+    <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay">
       
       {/* HEADER */}
-      <section className="relative h-[55vh] min-h-[440px] flex items-end pb-20 pt-32 overflow-hidden bg-[#06150D]">
-        <div className="absolute inset-0 z-0 bg-[url('/unsplash_0.jpg')] bg-cover bg-center opacity-25 mix-blend-luminosity"></div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#06150D] via-[#06150D]/80 to-transparent"></div>
+      <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-[url('/unsplash_0.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
+        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
-            <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-[#00873E]"></div>
-              <h2 className="text-[#34D399] font-montserrat font-bold tracking-[0.25em] uppercase text-xs">
-                WHAT WE DO &bull; ARG REGISTRARS PAKISTAN
-              </h2>
-            </motion.div>
-            <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white leading-tight tracking-tight mb-4">
-              Certification &amp; Audit Services
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="text-gray-300 font-lato text-lg max-w-2xl font-light">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-[#34D399] font-sans font-bold text-xs uppercase tracking-wider mb-6">
+              <ShieldCheck size={14} />
+              <span>WHAT WE DO &bull; ARG REGISTRARS PAKISTAN</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">
+              Certification &amp; <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F59B] via-[#34D399] to-white italic">
+                Registrar Services
+              </span>
+            </h1>
+            <p className="text-gray-300 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Accredited ISO certifications, supply chain security, and technical assessments to unlock global markets.
-            </motion.p>
+            </p>
           </motion.div>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="py-24 relative z-30">
+      <section className="py-28 relative z-30">
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((srv, idx) => (
               <motion.div
                 key={idx}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-5%" }}
-                variants={fadeInUp}
-                className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-emerald-500/40 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.08 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col justify-between group border border-white/[0.08] relative"
               >
-                <div className="relative h-48 w-full overflow-hidden">
+                <div className="relative h-52 w-full overflow-hidden">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" 
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-70" 
                     style={{ backgroundImage: `url('${srv.img}')` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="inline-block bg-[#00873E] text-white font-montserrat text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06150D] via-[#06150D]/40 to-transparent" />
+                  <div className="absolute bottom-4 left-6 right-6">
+                    <span className="inline-block bg-[#00873E]/90 backdrop-blur-md text-white font-sans text-[10px] font-bold tracking-widest uppercase px-3.5 py-1 rounded-full border border-emerald-400/30">
                       {srv.badge}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 flex flex-col flex-1 justify-between">
+                <div className="p-7 md:p-8 flex flex-col flex-1 justify-between">
                   <div>
-                    <h3 className="text-xl font-montserrat font-bold text-[#06150D] mb-3 leading-snug">
+                    <h3 className="text-2xl font-display font-bold text-white mb-3 leading-snug group-hover:text-[#34D399] transition-colors">
                       {srv.title}
                     </h3>
-                    <p className="text-gray-600 font-lato text-sm leading-relaxed mb-6 font-light">
+                    <p className="text-gray-300 font-sans text-xs leading-relaxed mb-6 font-light">
                       {srv.desc}
                     </p>
                   </div>
 
-                  <div className="border-t border-gray-100 pt-5">
-                    <div className="text-xs font-montserrat font-bold text-[#00873E] uppercase tracking-wider mb-3">
+                  <div className="border-t border-white/[0.08] pt-5">
+                    <div className="text-[11px] font-sans font-bold text-[#34D399] uppercase tracking-wider mb-3">
                       Core Deliverables
                     </div>
                     <ul className="flex flex-col gap-2 mb-6">
                       {srv.deliverables.map((item, dIdx) => (
-                        <li key={dIdx} className="flex items-start gap-2 text-xs text-gray-700 font-lato">
-                          <CheckCircle2 size={14} className="text-[#00873E] shrink-0 mt-0.5" />
+                        <li key={dIdx} className="flex items-start gap-2 text-xs text-gray-300 font-sans font-light">
+                          <CheckCircle2 size={13} className="text-[#34D399] shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -156,10 +155,10 @@ export default function Services() {
 
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full bg-gray-50 hover:bg-[#00873E] text-[#06150D] hover:text-white font-montserrat font-bold text-xs tracking-wider transition-all duration-300 border border-gray-200 hover:border-transparent"
+                      className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full glass-panel hover:bg-[#00873E] text-white font-sans font-bold text-xs tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent"
                     >
-                      <span>INQUIRE ABOUT THIS SERVICE</span>
-                      <ArrowRight size={14} />
+                      <span>INQUIRE ABOUT THIS SCOPE</span>
+                      <ArrowUpRight size={14} />
                     </Link>
                   </div>
                 </div>
@@ -168,12 +167,12 @@ export default function Services() {
           </div>
 
           {/* Bottom WhatsApp CTA */}
-          <div className="mt-20 p-8 md:p-12 rounded-3xl bg-[#06150D] text-white flex flex-col md:flex-row items-center justify-between gap-8 border border-emerald-500/30">
+          <div className="mt-20 p-8 md:p-12 rounded-3xl glass-panel text-white flex flex-col md:flex-row items-center justify-between gap-8 border border-emerald-500/30 relative overflow-hidden">
             <div>
-              <h3 className="text-2xl md:text-3xl font-montserrat font-black mb-2">
-                Need a Custom Scope or Multiple ISO Standard Certifications?
+              <h3 className="text-2xl md:text-3xl font-display font-black mb-2 text-white">
+                Need Multi-Site or Integrated Standard Auditing?
               </h3>
-              <p className="text-gray-300 font-lato text-sm max-w-xl font-light">
+              <p className="text-gray-300 font-sans text-sm max-w-xl font-light">
                 Speak directly with an ARG Registrars lead auditor to structure combined audits, gap analysis, and tailored surveillance timelines.
               </p>
             </div>
@@ -181,7 +180,7 @@ export default function Services() {
               href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20discuss%20a%20certification%20scope."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-montserrat font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all shrink-0 shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all shrink-0 shadow-lg hover:scale-105"
             >
               <MessageCircle size={18} />
               <span>WHATSAPP TECHNICAL DESK</span>

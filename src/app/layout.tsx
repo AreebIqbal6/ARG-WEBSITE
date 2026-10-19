@@ -1,28 +1,30 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Syne, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SmoothScrolling from "./components/SmoothScrolling";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
-const headingFont = Plus_Jakarta_Sans({
-  variable: "--font-montserrat",
+// Ultra-premium Display font for titles and impact headers
+const displayFont = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "600", "700", "800"],
 });
 
-const bodyFont = Inter({
-  variable: "--font-lato",
+// Modern, high-trust font for body, navigation and data
+const sansFont = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "ARG REGISTRARS PAKISTAN | Global ISO Certifications & Audits",
+  title: "ARG REGISTRARS PAKISTAN | Accredited ISO Certifications & Audits",
   description: "ARG REGISTRARS PAKISTAN provides accredited ISO management certifications (ISO 9001, ISO 14001, ISO 45001), C-TPAT security audits, technical factory evaluations, and international registrar solutions. Head Office: Riyadh, KSA | Local Office: Faisalabad, Pakistan.",
   icons: {
-    icon: '/favicon.png?v=3',
+    icon: '/favicon.png?v=4',
   },
 };
 
@@ -34,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} antialiased font-sans flex flex-col min-h-screen selection:bg-emerald-500 selection:text-white`}
+        className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans bg-[#030906] text-white selection:bg-[#00873E] selection:text-white flex flex-col min-h-screen`}
       >
         <SmoothScrolling>
           <Header />
