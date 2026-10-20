@@ -129,8 +129,22 @@ export default function AccreditationsSection() {
 
   return (
     <section id="accreditations" className="py-28 relative z-20 bg-slate-50 border-t border-b border-slate-200 overflow-hidden bg-[#F8FAFC]">
-      {/* Aurora Glows */}
-      
+      {/* Background Watermarks & Inspection Photo */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Subtle low-opacity facility inspection background photo */}
+        <div className="absolute inset-0 bg-[url('/images/quality_assurance.jpg')] bg-cover bg-center opacity-[0.06] grayscale contrast-125 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/70 to-slate-50" />
+
+        {/* Enlarged Low-Opacity Accredited Stamp Watermark (Top Right) */}
+        <div className="absolute -top-16 -right-24 w-[650px] h-[650px] lg:w-[900px] lg:h-[900px] opacity-[0.045] pointer-events-none rotate-12 mix-blend-multiply select-none">
+          <Image src="/stamp.png" alt="ARG Certification Stamp" fill className="object-contain" priority={false} />
+        </div>
+
+        {/* Enlarged Low-Opacity ARG Logo Watermark (Bottom Left) */}
+        <div className="absolute -bottom-28 -left-24 w-[550px] h-[550px] lg:w-[800px] lg:h-[800px] opacity-[0.035] pointer-events-none -rotate-12 mix-blend-multiply select-none">
+          <Image src="/arg_logo.png" alt="ARG Logo Watermark" fill className="object-contain" priority={false} />
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         

@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ClipboardCheck, SearchCheck, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import SpotlightCard from '../ui/SpotlightCard';
 
@@ -47,6 +48,23 @@ const steps = [
 export default function AuditJourney() {
   return (
     <section id="four-stage-protocol" className="py-28 relative z-20 overflow-hidden bg-white border-t border-slate-200 scroll-mt-24">
+      {/* Background Watermarks & Facility Inspection Photo */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Subtle low-opacity facility inspection background photo */}
+        <div className="absolute inset-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-[0.06] grayscale contrast-125 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
+
+        {/* Enlarged Low-Opacity Accredited Stamp Watermark (Top Left) */}
+        <div className="absolute -top-20 -left-28 w-[650px] h-[650px] lg:w-[850px] lg:h-[850px] opacity-[0.04] pointer-events-none -rotate-12 mix-blend-multiply select-none">
+          <Image src="/stamp.png" alt="ARG Certification Stamp" fill className="object-contain" priority={false} />
+        </div>
+
+        {/* Enlarged Low-Opacity ARG Logo Watermark (Bottom Right) */}
+        <div className="absolute -bottom-24 -right-24 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] opacity-[0.035] pointer-events-none rotate-12 mix-blend-multiply select-none">
+          <Image src="/arg_logo.png" alt="ARG Logo Watermark" fill className="object-contain" priority={false} />
+        </div>
+      </div>
+
       <span id="audit-roadmap" className="absolute -top-24" />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         

@@ -14,8 +14,22 @@ const features = [
 export default function SplitInfoSection() {
   return (
     <section className="py-32 bg-white relative z-30 overflow-hidden  border-t border-slate-200">
-      {/* Background Glow */}
-      
+      {/* Background Watermarks & Headquarters Photo */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Subtle low-opacity corporate bureau background photo */}
+        <div className="absolute inset-0 bg-[url('/images/corporate_headquarters.jpg')] bg-cover bg-center opacity-[0.05] grayscale contrast-125 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
+
+        {/* Enlarged Low-Opacity Accredited Stamp Watermark (Top Right) */}
+        <div className="absolute -top-20 -right-24 w-[650px] h-[650px] lg:w-[850px] lg:h-[850px] opacity-[0.04] pointer-events-none rotate-12 mix-blend-multiply select-none">
+          <Image src="/stamp.png" alt="ARG Certification Stamp" fill className="object-contain" priority={false} />
+        </div>
+
+        {/* Enlarged Low-Opacity ARG Logo Watermark (Bottom Left) */}
+        <div className="absolute -bottom-28 -left-24 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] opacity-[0.035] pointer-events-none -rotate-12 mix-blend-multiply select-none">
+          <Image src="/arg_logo.png" alt="ARG Logo Watermark" fill className="object-contain" priority={false} />
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">

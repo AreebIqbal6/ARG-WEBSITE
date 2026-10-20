@@ -8,8 +8,25 @@ import SpotlightCard from '../ui/SpotlightCard';
 
 export default function CaseStudiesBento() {
   return (
-    <section className="py-28 relative z-20 bg-slate-50 border-t border-slate-200 ">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-28 relative z-20 bg-slate-50 border-t border-slate-200 overflow-hidden bg-[#F8FAFC]">
+      {/* Background Watermarks & Facility Safety Photo */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Subtle low-opacity industrial workplace background photo */}
+        <div className="absolute inset-0 bg-[url('/images/occupational_safety.jpg')] bg-cover bg-center opacity-[0.05] grayscale contrast-125 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/75 to-slate-50" />
+
+        {/* Enlarged Low-Opacity Accredited Stamp Watermark (Top Left) */}
+        <div className="absolute -top-24 -left-28 w-[650px] h-[650px] lg:w-[850px] lg:h-[850px] opacity-[0.04] pointer-events-none -rotate-12 mix-blend-multiply select-none">
+          <Image src="/stamp.png" alt="ARG Certification Stamp" fill className="object-contain" priority={false} />
+        </div>
+
+        {/* Enlarged Low-Opacity ARG Logo Watermark (Bottom Right) */}
+        <div className="absolute -bottom-28 -right-24 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] opacity-[0.035] pointer-events-none rotate-12 mix-blend-multiply select-none">
+          <Image src="/arg_logo.png" alt="ARG Logo Watermark" fill className="object-contain" priority={false} />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
