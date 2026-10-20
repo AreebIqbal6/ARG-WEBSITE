@@ -131,11 +131,14 @@ export default function Footer() {
           <div className="text-center text-xs font-display font-bold tracking-[0.25em] text-[#00873E] uppercase mb-6">
             Accredited Certification Frameworks &bull; Recognized Standards
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 max-w-6xl mx-auto items-center">
+          <div className="flex flex-wrap justify-center gap-3 max-w-6xl mx-auto items-center">
             {footerCertLogos.map((logo, idx) => (
-              <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-sm hover:scale-105 transition-transform duration-300">
+              <div 
+                key={idx} 
+                className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-xs hover:shadow-md hover:scale-105 transition-all duration-300 w-[calc(50%-0.75rem)] sm:w-[calc(25%-0.75rem)] md:w-[calc(20%-0.75rem)] lg:w-[150px] h-[58px]"
+              >
                 <div className="relative w-full h-9">
-                  <Image src={logo.src} alt={logo.name} fill sizes="12vw" className="object-contain" />
+                  <Image src={logo.src} alt={logo.name} fill sizes="150px" className="object-contain" />
                 </div>
               </div>
             ))}
