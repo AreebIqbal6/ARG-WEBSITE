@@ -115,13 +115,17 @@ export default function CertificateVerifyModal({
 
   useEffect(() => {
     if (isOpen) {
+      const prevHtmlOverflow = document.documentElement.style.overflow;
+      const prevBodyOverflow = document.body.style.overflow;
+
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+
+      return () => {
+        document.documentElement.style.overflow = prevHtmlOverflow;
+        document.body.style.overflow = prevBodyOverflow;
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   // Sync if initialQuery changes
@@ -157,7 +161,7 @@ export default function CertificateVerifyModal({
   return createPortal(
     <AnimatePresence>
       <div 
-        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+        className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-hidden overscroll-none"
         onClick={onClose}
       >
         {/* Backdrop */}
@@ -165,6 +169,10 @@ export default function CertificateVerifyModal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          onWheel={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
           className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
         />
 
@@ -175,10 +183,10 @@ export default function CertificateVerifyModal({
           exit={{ opacity: 0, scale: 0.96, y: 16 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl bg-white border border-slate-200/90 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] overflow-hidden z-10 my-auto text-left max-h-[88vh] flex flex-col"
+          className="relative w-full max-w-2xl bg-white border border-slate-200/90 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] overflow-hidden z-10 my-auto text-left max-h-[88vh] flex flex-col overscroll-contain"
         >
           {/* Header Bar */}
-          <div className="p-6 md:p-8 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+          <div className="p-5 sm:p-6 md:p-8 border-b border-slate-200 flex items-center justify-between bg-slate-50 shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E]">
                 <ShieldCheck size={22} />
@@ -194,7 +202,7 @@ export default function CertificateVerifyModal({
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+              className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label="Close modal"
             >
               <X size={20} />
@@ -202,7 +210,10 @@ export default function CertificateVerifyModal({
           </div>
 
           {/* Search Bar & Samples */}
-          <div className="p-6 md:p-8 space-y-6">
+          <div 
+            className="p-5 sm:p-6 md:p-8 space-y-6 overflow-y-auto min-h-0 flex-1 overscroll-contain"
+            onWheel={(e) => e.stopPropagation()}
+          >
             <form
               onSubmit={(e) => {
                 e.preventDefault();

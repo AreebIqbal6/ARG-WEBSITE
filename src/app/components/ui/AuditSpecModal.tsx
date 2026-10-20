@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { 
   FileCheck2, 
   X, 
@@ -25,6 +26,8 @@ export interface AuditSpecData {
   turnaround: string;
   validity: string;
   iafSector: string;
+  badge: string;
+  heroImage: string;
   stage1Docs: string[];
   stage2Audits: string[];
   personDaysGuide: string;
@@ -40,6 +43,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "10-14 Business Days",
     validity: "3-Year Cycle (Annual Surveillance)",
     iafSector: "IAF Scope Category 04, 14, 17, 29",
+    badge: "/certifications/card/iso-9001.png",
+    heroImage: "/images/quality_assurance.jpg",
     personDaysGuide: "Based on IAF MD5 complexity tables (typically 2 to 4 on-site person-days for facilities with 50-150 personnel).",
     stage1Docs: [
       "Documented Quality Policy, Objectives, and Organizational Scope (Clause 4.3 & 5.2)",
@@ -67,6 +72,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "12-16 Business Days",
     validity: "3-Year Cycle (Annual Surveillance)",
     iafSector: "IAF Scope Category 04, 09, 14",
+    badge: "/certifications/card/iso-14001.jpg",
+    heroImage: "/images/environmental_sustainability.jpg",
     personDaysGuide: "Determined by facility environmental aspects, chemical usage, and effluent complexity (approx. 2.5 to 5 person-days).",
     stage1Docs: [
       "Environmental Aspects and Impacts Register across normal, abnormal, and emergency states",
@@ -94,6 +101,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "10-14 Business Days",
     validity: "3-Year Cycle (Annual Surveillance)",
     iafSector: "IAF Scope Category 04, 14, 17, 28",
+    badge: "/certifications/card/iso-45001.jpg",
+    heroImage: "/images/occupational_safety.jpg",
     personDaysGuide: "Calculated from hazardous work exposure, shifts, and total active workforce.",
     stage1Docs: [
       "Occupational Health & Safety Policy and Hazard Identification & Risk Assessment (HIRA)",
@@ -121,6 +130,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "7-10 Business Days",
     validity: "Annual Registrar Security Validation",
     iafSector: "US CBP Minimum Security Criteria (MSC)",
+    badge: "/certifications/card/ctpat.jpg",
+    heroImage: "/images/supply_chain_security.jpg",
     personDaysGuide: "Typically 1 to 2 on-site person-days focusing on perimeter, logistics, and container loading.",
     stage1Docs: [
       "Supply Chain Security Profile addressing all 12 MSC criteria categories",
@@ -148,6 +159,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "7-10 Business Days",
     validity: "Annual Registrar Security Validation",
     iafSector: "US CBP Minimum Security Criteria (MSC)",
+    badge: "/certifications/card/ctpat.jpg",
+    heroImage: "/images/supply_chain_security.jpg",
     personDaysGuide: "Typically 1 to 2 on-site person-days focusing on perimeter, logistics, and container loading.",
     stage1Docs: [
       "Supply Chain Security Profile addressing all 12 MSC criteria categories",
@@ -175,6 +188,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "10-14 Business Days",
     validity: "Annual Scope Certificate Cycle",
     iafSector: "Organic Fiber & Chemical Processing",
+    badge: "/certifications/card/gots.png",
+    heroImage: "/images/environmental_sustainability.jpg",
     personDaysGuide: "Based on processing stages (spinning, weaving, wet processing) and facility headcount.",
     stage1Docs: [
       "Organic raw material transaction certificates (TCs) and certified supplier invoices",
@@ -202,6 +217,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "10-14 Business Days",
     validity: "Annual Scope Certificate Cycle",
     iafSector: "Recycled Content Chain of Custody",
+    badge: "/certifications/card/grs.png",
+    heroImage: "/images/precision_robotics.jpg",
     personDaysGuide: "Calculated from recycled material input points and chain-of-custody complexity.",
     stage1Docs: [
       "Reclaimed material supplier declarations and legal compliance permits",
@@ -229,6 +246,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "7-12 Business Days",
     validity: "Annual Validation",
     iafSector: "Textile & Leather Wet Processing",
+    badge: "/certifications/card/zdhc.png",
+    heroImage: "/images/technical_testing_lab.jpg",
     personDaysGuide: "Typically 2 to 3 auditor days focusing on chemical inventory and effluent plant.",
     stage1Docs: [
       "Chemical inventory log with ZDHC Gateway CID numbers and MRSL levels",
@@ -256,6 +275,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "10-14 Business Days",
     validity: "Annual Audit Cycle",
     iafSector: "European Polymer Recycling Standards",
+    badge: "/certifications/card/en_15343.png",
+    heroImage: "/images/precision_robotics.jpg",
     personDaysGuide: "Typically 2 person-days covering recycling lines, extrusion, and mass balance.",
     stage1Docs: [
       "Raw polymer source documentation and origin declarations for recycled inputs",
@@ -283,6 +304,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "7-10 Business Days",
     validity: "Annual EU Market Conformance Review",
     iafSector: "EU Single Market Green Deal Directives",
+    badge: "/certifications/card/ppwr.png",
+    heroImage: "/images/logistics_warehouse.jpg",
     personDaysGuide: "Typically 1 to 2 person-days focusing on packaging design and material composition.",
     stage1Docs: [
       "Technical packaging specifications, layer compositions, and barrier coatings data",
@@ -310,6 +333,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "14-20 Business Days",
     validity: "3-Year Cycle with Annual Surveillance",
     iafSector: "ILAC / Laboratory Testing Services",
+    badge: "/certifications/card/iso_17025.png",
+    heroImage: "/images/technical_testing_lab.jpg",
     personDaysGuide: "Determined by test scopes, calibration parameters, and qualified technical signatories.",
     stage1Docs: [
       "Quality manual adhering to ISO/IEC 17025:2017 management and technical clauses",
@@ -337,6 +362,8 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
     turnaround: "10-15 Business Days",
     validity: "Directives Conformity Cycle",
     iafSector: "EU Harmonized Technical Legislation",
+    badge: "/certifications/card/ce_marking.png",
+    heroImage: "/images/precision_robotics.jpg",
     personDaysGuide: "Based on applicable EU directives (e.g., PPE, Machinery, Low Voltage).",
     stage1Docs: [
       "Draft EU Declaration of Conformity (DoC) and list of applied harmonized EN standards",
@@ -354,6 +381,64 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
       "EU CE Technical File Compliance Verification Certificate",
       "Technical Construction File Review Summary Dossier",
       "Authorized Registrar Conformity Sign-Off for EU Customs Export"
+    ]
+  },
+  "technical-audit": {
+    id: "technical-audit",
+    code: "Technical Audit",
+    title: "Factory Technical & Production Capability Review",
+    category: "Manufacturing Capacity",
+    turnaround: "5-7 Business Days",
+    validity: "Annual Buyer Compliance Review",
+    iafSector: "Industrial Manufacturing & Supply Chain",
+    badge: "/certifications/card/technical-audit.png",
+    heroImage: "/images/auditor_inspection.jpg",
+    personDaysGuide: "Typically 1 to 2 on-site person-days covering shopfloor machinery and QC labs.",
+    stage1Docs: [
+      "Factory layout schematics, line machine capacity charts, and maintenance logs",
+      "Internal quality assurance flowcharts and raw material acceptance thresholds",
+      "Standard operating procedures (SOPs) for defect quarantine and rework tracking",
+      "Calibration certificates for key manufacturing sensors, gauges, and load cells"
+    ],
+    stage2Audits: [
+      "Live inspection of production flow from material intake to packaging lines",
+      "Machinery preventative maintenance verification and downtime records",
+      "Witnessing of in-line and end-of-line quality inspections by QC inspectors",
+      "Operator skill matrix review and continuous production line throughput audits"
+    ],
+    deliverables: [
+      "ARG Factory Technical Capability Assessment Dossier",
+      "Machinery Reliability & Production Capacity Scorecard",
+      "Supplier Vetting Compliance Sign-Off for Buyer Portals"
+    ]
+  },
+  "fsns-sqf": {
+    id: "fsns-sqf",
+    code: "FSNS & SQF",
+    title: "Food Contact & Packaging Safety Systems",
+    category: "Hygiene & Food Safety",
+    turnaround: "10-14 Business Days",
+    validity: "Annual GFSI Benchmarked Cycle",
+    iafSector: "Food Contact Materials & Processing",
+    badge: "/certifications/card/fsns-sqf.png",
+    heroImage: "/images/quality_assurance.jpg",
+    personDaysGuide: "Based on HACCP plans, food contact zones, and sanitation complexity.",
+    stage1Docs: [
+      "HACCP plan, Hazard Analysis, and Critical Control Points (CCP) identification",
+      "Good Manufacturing Practice (GMP) manual and sanitation standard operating procedures (SSOPs)",
+      "Pest control service logs and building integrity inspection certificates",
+      "Allergen control plans and raw material supplier food safety guarantees"
+    ],
+    stage2Audits: [
+      "Inspection of hygienic zoning, hand-washing stations, and air filtration positive pressure",
+      "Swab sampling validation and ATP luminescence sanitation testing reviews",
+      "Traceability drill execution (one step back, one step forward within 2 hours)",
+      "Interviews with food safety team leaders and sanitation technicians"
+    ],
+    deliverables: [
+      "Accredited Food Safety / Hygiene System Audit Certificate",
+      "Full HACCP & Sanitation Verification Audit Dossier",
+      "GFSI Alignment Verification Report for Export Retailers"
     ]
   }
 };
@@ -377,19 +462,23 @@ export default function AuditSpecModal({
     setMounted(true);
   }, []);
 
+  // Strict double-lock background scroll prevention on both html and body
   useEffect(() => {
     if (isOpen) {
+      const prevHtmlOverflow = document.documentElement.style.overflow;
+      const prevBodyOverflow = document.body.style.overflow;
+
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+
+      return () => {
+        document.documentElement.style.overflow = prevHtmlOverflow;
+        document.body.style.overflow = prevBodyOverflow;
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   const handleDownload = () => {
-    // Generate text/markdown spec sheet download
     const content = `=====================================================
 ARG REGISTRARS - OFFICIAL AUDIT CRITERIA SPECIFICATION
 =====================================================
@@ -434,7 +523,7 @@ Email: records@argregistrars.com
   return createPortal(
     <AnimatePresence>
       <div 
-        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+        className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-hidden overscroll-none"
         onClick={onClose}
       >
         {/* Backdrop */}
@@ -442,6 +531,10 @@ Email: records@argregistrars.com
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          onWheel={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
           className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
         />
 
@@ -452,34 +545,82 @@ Email: records@argregistrars.com
           exit={{ opacity: 0, scale: 0.96, y: 16 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-3xl bg-white border border-slate-200/90 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] overflow-hidden z-10 my-auto text-left max-h-[88vh] flex flex-col"
+          className="relative w-full max-w-3xl bg-white border border-slate-200/90 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] overflow-hidden z-10 my-auto text-left max-h-[90vh] flex flex-col overscroll-contain"
         >
-          {/* Header Bar */}
-          <div className="p-5 sm:p-6 md:p-7 border-b border-slate-200 flex items-center justify-between bg-white shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] shrink-0">
-                <FileCheck2 size={22} />
+          {/* Header Bar with Official Certification Badge Picture */}
+          <div className="p-4 sm:p-6 border-b border-slate-200 flex items-center justify-between bg-white shrink-0">
+            <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+              {/* Respective Certification Official Badge Image */}
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-slate-50 border border-slate-200/90 p-1.5 flex items-center justify-center shrink-0 shadow-xs relative overflow-hidden">
+                <Image
+                  src={data.badge}
+                  alt={`${data.code} Official Badge`}
+                  fill
+                  className="object-contain p-1"
+                  priority
+                />
               </div>
-              <div>
-                <div className="text-[11px] font-sans font-bold uppercase tracking-widest text-[#00873E]">
+              <div className="min-w-0">
+                <div className="text-[10px] sm:text-[11px] font-sans font-bold uppercase tracking-widest text-[#00873E] truncate">
                   {data.category} &bull; {data.iafSector}
                 </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 tracking-tight">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-slate-900 tracking-tight truncate">
                   {data.code} &ndash; Audit Specification
                 </h3>
+                <div className="text-xs text-slate-500 font-sans truncate hidden sm:block">
+                  {data.title}
+                </div>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-2.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+              className="p-2 sm:p-2.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer shrink-0 ml-2"
               aria-label="Close modal"
             >
               <X size={20} />
             </button>
           </div>
 
-          {/* Scrollable Content Body */}
-          <div className="p-5 sm:p-6 md:p-8 space-y-6 overflow-y-auto flex-1">
+          {/* Scrollable Content Body with min-h-0 and internal wheel containment */}
+          <div 
+            className="p-5 sm:p-6 md:p-8 space-y-6 overflow-y-auto min-h-0 flex-1 overscroll-contain [scrollbar-width:thin] [scrollbar-color:#00873E_#F1F5F9]"
+            onWheel={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            {/* Respective Certification High-Resolution Industrial Picture Banner */}
+            <div className="relative h-32 sm:h-44 rounded-2xl overflow-hidden border border-slate-200 shadow-xs shrink-0">
+              <Image
+                src={data.heroImage}
+                alt={`${data.title} Audit Inspection Environment`}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent flex items-end p-4 sm:p-5">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white p-1 border border-white/40 shadow-lg shrink-0 overflow-hidden">
+                    <Image
+                      src={data.badge}
+                      alt={data.code}
+                      fill
+                      className="object-contain p-0.5"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-white font-display font-bold text-sm sm:text-lg leading-tight drop-shadow-sm">
+                      {data.title}
+                    </div>
+                    <div className="text-emerald-400 font-mono text-[11px] sm:text-xs font-semibold drop-shadow-sm flex items-center gap-2 mt-0.5">
+                      <span>{data.code}</span>
+                      <span>&bull;</span>
+                      <span className="text-slate-300">Accredited Registrar Scope</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-sans">
               <div className="flex items-center gap-2.5">
@@ -566,7 +707,7 @@ Email: records@argregistrars.com
           <div className="p-4 sm:p-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-50 shrink-0">
             <button
               onClick={handleDownload}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-sm cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-xs cursor-pointer"
             >
               <Download size={14} className="text-[#00873E]" />
               <span>{downloaded ? "Specification Downloaded!" : "Download Criteria Sheet (.TXT)"}</span>
