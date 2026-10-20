@@ -7,14 +7,14 @@ import CertificateVerifyModal from '../components/ui/CertificateVerifyModal';
 
 const services = [
   {
-    title: "ISO 9001:2015 Quality Management Systems",
+    title: "ISO 9001:2026 Quality Management Systems",
     badge: "Accredited QMS Registrar",
-    desc: "End-to-end certification and surveillance auditing for ISO 9001:2015. We verify organizational risk management, defect reduction frameworks, standardized operational processes, and customer satisfaction loops.",
+    desc: "End-to-end certification and surveillance auditing for ISO 9001:2026. We verify organizational risk management, defect reduction frameworks, standardized operational processes, and customer satisfaction loops.",
     img: "/images/quality_assurance.jpg",
     ctaText: "VIEW QMS AUDIT METHODOLOGY",
     ctaLink: "/audits#four-stage-protocol",
     deliverables: [
-      "ISO 9001 gap analysis and readiness auditing",
+      "ISO 9001:2026 gap analysis and readiness auditing",
       "Corrective & Preventive Action (CAPA) tracking loops",
       "Accredited ISO certificate issuance & annual surveillance"
     ]

@@ -29,7 +29,7 @@ interface StandardAuditData {
 const standards: StandardAuditData[] = [
   {
     id: "iso-9001",
-    code: "ISO 9001:2015",
+    code: "ISO 9001:2026",
     title: "Quality Management Systems (QMS)",
     category: "Management Conformity",
     badge: "/certifications/card/iso-9001.png",

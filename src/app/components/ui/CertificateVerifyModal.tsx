@@ -39,7 +39,7 @@ const mockRegistry: Record<string, CertificateRecord> = {
     companyName: "Arabian Polymer & Chemical Industries Ltd.",
     country: "Saudi Arabia",
     city: "Riyadh Industrial City 2",
-    standard: "ISO 9001:2015 (Quality Management Systems)",
+    standard: "ISO 9001:2026 (Quality Management Systems)",
     accreditationBody: "EIAC (Emirates International Accreditation Centre)",
     status: "ACTIVE",
     issueDate: "14 January 2024",

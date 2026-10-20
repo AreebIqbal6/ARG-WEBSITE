@@ -37,7 +37,7 @@ export interface AuditSpecData {
 export const auditSpecsCatalog: Record<string, AuditSpecData> = {
   "iso-9001": {
     id: "iso-9001",
-    code: "ISO 9001:2015",
+    code: "ISO 9001:2026",
     title: "Quality Management Systems (QMS)",
     category: "Management Conformity",
     turnaround: "10-14 Business Days",
@@ -59,7 +59,7 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
       "Non-conformance handling and Corrective/Preventive Action (CAPA) verification"
     ],
     deliverables: [
-      "Official accredited ISO 9001:2015 Certificate with QR Registry validation",
+      "Official accredited ISO 9001:2026 Certificate with QR Registry validation",
       "Executive Lead Auditor Evaluation & Findings Summary Report",
       "3-Year Surveillance Cycle Schedule and Milestones"
     ]

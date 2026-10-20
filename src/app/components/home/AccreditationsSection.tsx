@@ -19,7 +19,7 @@ interface Certification {
 const certifications: Certification[] = [
   {
     id: "iso-9001",
-    name: "ISO 9001:2015",
+    name: "ISO 9001:2026",
     badgeImg: "/certifications/card/iso-9001.png",
     tagline: "Quality Management Systems (QMS)",
     scope: "Standardized quality management frameworks, risk-based operational auditing, defect reduction, and continuous improvement.",

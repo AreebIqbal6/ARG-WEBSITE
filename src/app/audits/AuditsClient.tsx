@@ -7,7 +7,7 @@ import Image from 'next/image';
 import AuditJourney from '../components/home/AuditJourney';
 
 const auditStandards = [
-  { name: "ISO 9001:2015", badge: "/certifications/card/iso-9001.png", title: "Quality Management Audits", desc: "Rigorous evaluation of operational workflows, defect minimization, risk analysis, and customer satisfaction loops." },
+  { name: "ISO 9001:2026", badge: "/certifications/card/iso-9001.png", title: "Quality Management Audits", desc: "Rigorous evaluation of operational workflows, defect minimization, risk analysis, and customer satisfaction loops." },
   { name: "ISO 14001:2015", badge: "/certifications/card/iso-14001.jpg", title: "Environmental Management Audits", desc: "Assessment of ecological impacts, waste treatment compliance, resource conservation, and environmental legal obligations." },
   { name: "ISO 45001:2018", badge: "/certifications/card/iso-45001.jpg", title: "Occupational Safety Audits", desc: "Workplace hazard prevention, emergency response protocols, industrial hygiene, and worker wellness safeguards." },
   { name: "C-TPAT Certified", badge: "/certifications/card/ctpat.jpg", title: "Supply Chain Security Audits", desc: "End-to-end security audits according to US Customs criteria, covering container integrity, physical perimeter security, and logistics." },

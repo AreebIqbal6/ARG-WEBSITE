@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Mail, MapPin, ShieldCheck, Globe } from 'lucide-react';
 
 const footerCertLogos = [
-  { name: "ISO 9001:2015 Quality Management", src: "/certifications/card/iso-9001.png" },
+  { name: "ISO 9001:2026 Quality Management", src: "/certifications/card/iso-9001.png" },
   { name: "ISO 14001:2015 Environmental EMS", src: "/certifications/card/iso-14001.jpg" },
   { name: "ISO 45001:2018 Health & Safety", src: "/certifications/card/iso-45001.jpg" },
   { name: "C-TPAT Supply Chain Security", src: "/certifications/card/ctpat.jpg" },
@@ -71,7 +71,7 @@ export default function Footer() {
               Accredited Scopes
             </h3>
             <ul className="flex flex-col gap-3 text-slate-600 font-sans text-xs">
-              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 9001:2015 (Quality QMS)</Link></li>
+              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 9001:2026 (Quality QMS)</Link></li>
               <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 14001:2015 (Environmental EMS)</Link></li>
               <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 45001:2018 (Health &amp; Safety)</Link></li>
               <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">C-TPAT Supply Chain Security</Link></li>

@@ -18,7 +18,7 @@ const endorsements = [
     author: "Engr. Khalid Al-Otaibi",
     role: "Director of Plant Quality & Safety",
     company: "Al-Riyadh Polymer & Specialty Chemicals (Riyadh, KSA)",
-    scope: "ISO 9001:2015 & ISO 14001:2015",
+    scope: "ISO 9001:2026 & ISO 14001:2015",
     rating: 5
   },
   {

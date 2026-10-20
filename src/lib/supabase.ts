@@ -56,7 +56,7 @@ const fallbackInquiries: InquiryRecord[] = [
     last_name: 'Al-Otaibi',
     company: 'Al-Riyadh Polymer & Specialty Chemicals',
     email: 'khalid.otaibi@alriyadh-chem.example.com',
-    message: 'Seeking renewal and surveillance audit schedule for ISO 9001:2015 and ISO 14001:2015 Integrated Management System.',
+    message: 'Seeking renewal and surveillance audit schedule for ISO 9001:2026 and ISO 14001:2015 Integrated Management System.',
     status: 'in_review',
     source: 'web_contact_form',
     notes: 'Followed up via technical director.'
