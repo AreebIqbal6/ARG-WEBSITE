@@ -125,9 +125,9 @@ const certifications: Certification[] = [
 
 export default function AccreditationsSection() {
   return (
-    <section id="accreditations" className="py-28 relative z-20 bg-slate-50 border-t border-b border-slate-200 overflow-hidden architect-grid">
+    <section id="accreditations" className="py-28 relative z-20 bg-slate-50 border-t border-b border-slate-200 overflow-hidden bg-[#F8FAFC]">
       {/* Aurora Glows */}
-      <div className="emerald-aurora top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-[#00873E]/10" />
+      
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
@@ -138,7 +138,7 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] mb-4"
+            className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4"
           >
             <span className="w-1.5 h-1.5 bg-[#00873E]" />
             <span>RECOGNIZED GLOBAL CONFORMITY</span>
@@ -149,7 +149,7 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-slate-900 leading-tight tracking-tight mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight tracking-tight mb-6"
           >
             Accredited Registrar Scopes &amp; <br className="hidden md:block" />
             <span className="text-[#00873E]">
@@ -181,7 +181,7 @@ export default function AccreditationsSection() {
               className="bg-white rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all"
             >
               {/* Shimmer line top */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00873E] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
 
               <div>
                 {/* Top Status & Badge Cradle */}
@@ -196,14 +196,14 @@ export default function AccreditationsSection() {
                       />
                     </div>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono tracking-wider uppercase bg-emerald-50 border border-emerald-200 text-[#00873E]">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-sans font-semibold text-[10px] tracking-wider uppercase bg-emerald-50 border border-emerald-200/80 text-[#00873E]">
                     <span className="w-1.5 h-1.5 bg-[#00873E]" />
                     VERIFIED
                   </span>
                 </div>
 
                 {/* Title & Scope */}
-                <h3 className="text-xl font-display font-bold text-slate-900 group-hover:text-[#00873E] transition-colors mb-1">
+                <h3 className="text-lg font-display font-semibold text-slate-900 group-hover:text-[#00873E] transition-colors mb-1">
                   {cert.name}
                 </h3>
                 <div className="text-[#00873E] font-sans text-xs font-semibold tracking-wide uppercase mb-3">

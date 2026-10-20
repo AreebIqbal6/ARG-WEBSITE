@@ -89,23 +89,22 @@ const services = [
 export default function Services() {
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800 architect-grid">
+    <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800 ">
       
       {/* HEADER */}
       <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden bg-white border-b border-slate-200">
-        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-[0.06] mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-[0.14] grayscale contrast-125"></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/70 to-transparent"></div>
-        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/10" />
+        
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-slate-200 pb-2 max-w-full">
-              <span className="text-[#00873E] font-bold">SEC. 03 //</span>
-              <span className="text-slate-800 font-semibold">ACCREDITED SCOPES</span>
+            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-sans font-semibold text-xs tracking-wider uppercase border-b border-slate-200 pb-2 max-w-full">
+              <span className="text-[#00873E] font-bold">ACCREDITED CERTIFICATION SCOPES</span>
               <span className="hidden sm:inline text-slate-400">&bull;</span>
               <span className="text-slate-500">ARG REGISTRARS</span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-slate-900 leading-tight tracking-tight mb-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-tight tracking-tight mb-4">
               Certification &amp; <br />
               <span className="text-[#00873E]">
                 Registrar Services

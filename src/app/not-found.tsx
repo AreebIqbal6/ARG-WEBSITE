@@ -6,10 +6,10 @@ import { ShieldAlert, ArrowLeft, Home, FileSearch, HelpCircle } from 'lucide-rea
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center p-4 architect-grid relative overflow-hidden text-slate-800">
+    <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center p-4  relative overflow-hidden text-slate-800">
       
       {/* Background Ambience */}
-      <div className="emerald-aurora top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00873E]/10" />
+      
 
       {/* Radar Ring Graphic */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">

@@ -33,16 +33,16 @@ const endorsements = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-28 relative z-20 bg-white border-t border-slate-200 architect-grid">
+    <section className="py-28 relative z-20 bg-white border-t border-slate-200 ">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] font-bold mb-4">
+          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
             <span>EXECUTIVE STAKEHOLDER REVIEWS</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black text-slate-900 leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight mb-4">
             Trusted by Industrial Leaders <br />
             <span className="text-[#00873E]">
               Across Regional Corridors

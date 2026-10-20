@@ -8,25 +8,24 @@ export default function Contact() {
   const [state, formAction, isPending] = useActionState(sendEmail, null);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800 architect-grid relative overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800  relative overflow-hidden">
       {/* Background Faded Picture */}
-      <div className="absolute top-0 left-0 right-0 h-[650px] z-0 bg-[url('/images/lead_auditor_desk.jpg')] bg-cover bg-center opacity-[0.06] mix-blend-luminosity scale-105 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-[650px] z-0 bg-[url('/images/lead_auditor_desk.jpg')] bg-cover bg-center opacity-[0.14] grayscale contrast-125 pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-[650px] z-0 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/70 to-transparent pointer-events-none" />
       
       {/* Background Aurora */}
-      <div className="emerald-aurora top-20 right-10 w-[700px] h-[500px] bg-[#00873E]/10" />
+      
 
       <section className="relative z-10 pt-40 pb-32">
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-slate-200 pb-2 text-center max-w-full">
-              <span className="text-[#00873E] font-bold">SEC. 05 //</span>
-              <span className="text-slate-800 font-semibold">REGISTRAR DESK &amp; OFFICES</span>
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-sans font-semibold text-xs tracking-wider uppercase border-b border-slate-200 pb-2 text-center max-w-full">
+              <span className="text-[#00873E] font-bold">REGISTRAR DESK &amp; OFFICES</span>
               <span className="hidden sm:inline text-slate-400">&bull;</span>
               <span className="text-slate-500">RIYADH &bull; FAISALABAD</span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-slate-900 leading-tight tracking-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-tight tracking-tight mb-6">
               Connect With Our <br />
               <span className="text-[#00873E]">
                 Lead Registrars

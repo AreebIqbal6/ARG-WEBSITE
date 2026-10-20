@@ -8,16 +8,16 @@ import SpotlightCard from '../ui/SpotlightCard';
 
 export default function CaseStudiesBento() {
   return (
-    <section className="py-28 relative z-20 bg-slate-50 border-t border-slate-200 architect-grid">
+    <section className="py-28 relative z-20 bg-slate-50 border-t border-slate-200 ">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] font-bold mb-4">
+          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
             <span>PROVEN ACCREDITATION TRACK RECORD</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black text-slate-900 leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight mb-4">
             Auditing Impact &amp; <br />
             <span className="text-[#00873E]">
               Enterprise Trust Metrics
@@ -38,7 +38,7 @@ export default function CaseStudiesBento() {
               
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono text-[#00873E] font-semibold uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
+                  <span className="text-xs font-sans text-[#00873E] font-semibold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
                     CASE STUDY &bull; SUPPLY CHAIN
                   </span>
                   <span className="text-slate-500 font-sans text-xs">Tier-3 US Trade</span>

@@ -21,7 +21,7 @@ const footerCertLogos = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 text-slate-700 pt-24 pb-12 border-t border-slate-200 relative z-30 architect-grid">
+    <footer className="bg-slate-50 text-slate-700 pt-24 pb-12 border-t border-slate-200 relative z-30 ">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Main Footer Grid */}

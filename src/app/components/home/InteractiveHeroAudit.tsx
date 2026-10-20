@@ -128,60 +128,57 @@ export default function InteractiveHeroAudit() {
   return (
     <div className="w-full max-w-5xl mx-auto mt-14">
       {/* Console Header Tabs */}
-      <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-2 p-2 rounded-2xl bg-slate-100/90 border border-slate-200/90 mb-6 shadow-xs">
+      <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-xl bg-slate-100 border border-slate-200 mb-6 shadow-xs">
         {standards.map((s) => {
           const isActive = activeTab === s.id;
           return (
             <button
               key={s.id}
               onClick={() => setActiveTab(s.id)}
-              className={`relative px-3 sm:px-5 py-2.5 rounded-xl text-xs md:text-sm font-display font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-center cursor-pointer ${
+              className={`relative px-3.5 py-2 rounded-lg text-xs font-sans font-semibold transition-all duration-200 flex items-center justify-center gap-2 text-center cursor-pointer ${
                 isActive
-                  ? "text-white shadow-md"
-                  : "text-slate-600 hover:text-slate-900 hover:bg-white/80"
+                  ? "text-white shadow-xs"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-white/70"
               }`}
             >
               {isActive && (
                 <motion.div
                   layoutId="activeTabPill"
-                  className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] border border-emerald-500/40 -z-10 shadow-[0_4px_16px_rgba(0,135,62,0.3)]"
-                  transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                  className="absolute inset-0 rounded-lg bg-[#00873E] -z-10 shadow-xs"
+                  transition={{ type: "spring", damping: 25, stiffness: 220 }}
                 />
               )}
-              <span className={`w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-slate-400'}`} />
-              <span>{s.code}</span>
+              <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-white' : 'bg-slate-400'}`} />
+              <span className="font-mono text-xs">{s.code}</span>
             </button>
           );
         })}
       </div>
 
       {/* Dynamic Console Panel */}
-      <div className="relative bg-white rounded-2xl md:rounded-[2.5rem] p-5 sm:p-7 md:p-10 border border-slate-200/90 shadow-[0_10px_40px_-10px_rgba(15,23,42,0.08)] overflow-hidden">
-        {/* Subtle Ambient Radial Light */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-
+      <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStandard.id}
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col lg:flex-row gap-8 items-center justify-between"
           >
             {/* Left Info Column */}
             <div className="lg:w-7/12 text-left">
               <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold uppercase tracking-wider text-[#00873E] bg-emerald-50 border border-emerald-200">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-sans font-semibold uppercase tracking-wider text-[#00873E] bg-emerald-50 border border-emerald-200/80">
                   <ShieldCheck size={12} />
                   <span>{activeStandard.category}</span>
                 </span>
-                <span className="text-slate-400 font-mono text-xs">
+                <span className="text-slate-500 font-mono text-xs">
                   ID: {activeStandard.code}
                 </span>
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-3">
+              <h3 className="text-2xl md:text-3xl font-display font-semibold text-slate-900 mb-3 tracking-tight">
                 {activeStandard.title}
               </h3>
 

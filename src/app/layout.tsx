@@ -1,22 +1,29 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SmoothScrolling from "./components/SmoothScrolling";
 
-// High-authority, precision-engineered geometric display font
-const displayFont = Outfit({
+// High-precision architectural display typeface
+const displayFont = Geist({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-// Modern, high-trust font for body, navigation and data
-const sansFont = Plus_Jakarta_Sans({
+// Swiss modernist typeface for high-trust body, navigation and editorial content
+const sansFont = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+// Tabular monospace for technical standard clauses, dates, and certificate serials
+const monoFont = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 import StickyMobileCta from "./components/StickyMobileCta";
@@ -146,7 +153,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans bg-slate-50 text-slate-900 selection:bg-[#00873E] selection:text-white flex flex-col min-h-screen`}
+        className={`${displayFont.variable} ${sansFont.variable} ${monoFont.variable} antialiased font-sans bg-slate-50 text-slate-900 selection:bg-[#00873E] selection:text-white flex flex-col min-h-screen`}
       >
         <SmoothScrolling>
           <Header />

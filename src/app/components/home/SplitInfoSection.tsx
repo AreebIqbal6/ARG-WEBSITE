@@ -13,9 +13,9 @@ const features = [
 
 export default function SplitInfoSection() {
   return (
-    <section className="py-32 bg-white relative z-30 overflow-hidden architect-grid border-t border-slate-200">
+    <section className="py-32 bg-white relative z-30 overflow-hidden  border-t border-slate-200">
       {/* Background Glow */}
-      <div className="emerald-aurora top-1/2 right-10 -translate-y-1/2 w-[700px] h-[500px] bg-[#00873E]/10" />
+      
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
@@ -27,7 +27,7 @@ export default function SplitInfoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="flex items-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] mb-6"
+              className="flex items-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-6"
             >
               <span className="w-1.5 h-1.5 bg-[#00873E]" />
               <span>THE ARG REGISTRARS ADVANTAGE</span>
@@ -38,7 +38,7 @@ export default function SplitInfoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-slate-900 mb-8 tracking-tight leading-[1.08]"
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-8 tracking-tight leading-[1.08]"
             >
               Uncompromising rigor. <br />
               <span className="text-[#00873E]">

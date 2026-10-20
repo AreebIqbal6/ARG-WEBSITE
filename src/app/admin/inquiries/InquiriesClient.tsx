@@ -182,7 +182,7 @@ export default function InquiriesClient() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] architect-grid text-slate-800 pt-28 pb-20 px-4 md:px-8 relative selection:bg-[#00873E] selection:text-white">
+    <div className="min-h-screen bg-[#FAFAFA]  text-slate-800 pt-28 pb-20 px-4 md:px-8 relative selection:bg-[#00873E] selection:text-white">
       {/* Toast Notification */}
       <AnimatePresence>
         {toastMessage && (
@@ -213,9 +213,9 @@ export default function InquiriesClient() {
               </div>
 
               <div className="text-xs font-mono text-[#00873E] font-bold uppercase tracking-widest mb-2">
-                SEC. 06 // REGISTRAR INTAKE SYSTEM
+                REGISTRAR INTAKE SYSTEM
               </div>
-              <h1 className="text-2xl md:text-3xl font-display font-black text-slate-900 mb-3">
+              <h1 className="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-3">
                 Inquiries &amp; Form Replies
               </h1>
               <p className="text-slate-600 font-sans text-xs mb-8 leading-relaxed font-light">
