@@ -89,29 +89,29 @@ const services = [
 export default function Services() {
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
   return (
-    <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay">
+    <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800 architect-grid">
       
       {/* HEADER */}
-      <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
-        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
+      <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden bg-white border-b border-slate-200">
+        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-[0.06] mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/70 to-transparent"></div>
+        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/10" />
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-white/10 pb-2 max-w-full">
-              <span className="text-[#34D399] font-bold">SEC. 03 //</span>
-              <span className="text-gray-200">ACCREDITED SCOPES</span>
-              <span className="hidden sm:inline text-gray-600">&bull;</span>
-              <span className="text-gray-400">ARG REGISTRARS</span>
+            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-slate-200 pb-2 max-w-full">
+              <span className="text-[#00873E] font-bold">SEC. 03 //</span>
+              <span className="text-slate-800 font-semibold">ACCREDITED SCOPES</span>
+              <span className="hidden sm:inline text-slate-400">&bull;</span>
+              <span className="text-slate-500">ARG REGISTRARS</span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-slate-900 leading-tight tracking-tight mb-4">
               Certification &amp; <br />
-              <span className="text-[#34D399]">
+              <span className="text-[#00873E]">
                 Registrar Services
               </span>
             </h1>
-            <p className="text-gray-300 font-sans text-lg max-w-2xl font-light leading-relaxed">
+            <p className="text-slate-600 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Accredited ISO certifications, supply chain security, and technical assessments to unlock global markets.
             </p>
           </motion.div>
@@ -121,16 +121,16 @@ export default function Services() {
       {/* REGISTRY VERIFICATION BANNER */}
       <section className="relative z-30 -mt-10 mb-4">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="p-6 md:p-8 rounded-3xl glass-panel border border-emerald-500/30 bg-[#06150D]/85 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200/90 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
             <div className="flex items-center gap-4 text-left">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-[#34D399] shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] shrink-0">
                 <Award size={24} />
               </div>
               <div>
-                <div className="text-white font-display font-bold text-base md:text-lg">
+                <div className="text-slate-900 font-display font-bold text-base md:text-lg">
                   Official Accredited Registrar Certificate Registry
                 </div>
-                <div className="text-gray-400 font-sans text-xs md:text-sm">
+                <div className="text-slate-600 font-sans text-xs md:text-sm">
                   Validate client certificates, active validity status, and accredited scope in real-time.
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function Services() {
             <button
               type="button"
               onClick={() => setIsVerifyOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/40 hover:shadow-[0_0_25px_rgba(0,135,62,0.5)] transition-all cursor-pointer shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer shrink-0"
             >
               <Search size={15} />
               <span>SEARCH CERTIFICATE REGISTRY</span>
@@ -160,16 +160,16 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col justify-between group border border-white/[0.08] relative"
+                className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col justify-between group border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 relative"
               >
                 <div className="relative h-52 w-full overflow-hidden">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-70" 
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-90" 
                     style={{ backgroundImage: `url('${srv.img}')` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#06150D] via-[#06150D]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-6 right-6">
-                    <span className="inline-block bg-[#00873E]/90 backdrop-blur-md text-white font-mono text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md border border-emerald-400/30">
+                    <span className="inline-block bg-[#00873E] text-white font-mono text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md shadow-sm">
                       {srv.badge}
                     </span>
                   </div>
@@ -177,22 +177,22 @@ export default function Services() {
 
                 <div className="p-7 md:p-8 flex flex-col flex-1 justify-between">
                   <div>
-                    <h3 className="text-2xl font-display font-bold text-white mb-3 leading-snug group-hover:text-[#34D399] transition-colors">
+                    <h3 className="text-2xl font-display font-bold text-slate-900 mb-3 leading-snug group-hover:text-[#00873E] transition-colors">
                       {srv.title}
                     </h3>
-                    <p className="text-gray-300 font-sans text-xs leading-relaxed mb-6 font-light">
+                    <p className="text-slate-600 font-sans text-xs leading-relaxed mb-6 font-light">
                       {srv.desc}
                     </p>
                   </div>
 
-                  <div className="border-t border-white/[0.08] pt-5">
-                    <div className="text-[11px] font-sans font-bold text-[#34D399] uppercase tracking-wider mb-3">
+                  <div className="border-t border-slate-100 pt-5">
+                    <div className="text-[11px] font-sans font-bold text-[#00873E] uppercase tracking-wider mb-3">
                       Core Deliverables
                     </div>
                     <ul className="flex flex-col gap-2 mb-6">
                       {srv.deliverables.map((item, dIdx) => (
-                        <li key={dIdx} className="flex items-start gap-2 text-xs text-gray-300 font-sans font-light">
-                          <CheckCircle2 size={13} className="text-[#34D399] shrink-0 mt-0.5" />
+                        <li key={dIdx} className="flex items-start gap-2 text-xs text-slate-600 font-sans font-light">
+                          <CheckCircle2 size={13} className="text-[#00873E] shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -200,7 +200,7 @@ export default function Services() {
 
                     <Link
                       href={srv.ctaLink}
-                      className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl glass-panel hover:bg-[#00873E] text-white font-sans font-bold text-xs tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent"
+                      className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-50 hover:bg-[#00873E] text-slate-800 hover:text-white font-sans font-bold text-xs tracking-wider transition-all duration-300 border border-slate-200 hover:border-transparent"
                     >
                       <span>{srv.ctaText}</span>
                       <ArrowUpRight size={14} />
@@ -212,12 +212,12 @@ export default function Services() {
           </div>
 
           {/* Bottom WhatsApp CTA */}
-          <div className="mt-20 p-8 md:p-12 rounded-3xl glass-panel text-white flex flex-col md:flex-row items-center justify-between gap-8 border border-emerald-500/30 relative overflow-hidden">
+          <div className="mt-20 p-8 md:p-12 rounded-3xl bg-white text-slate-900 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-200 shadow-sm relative overflow-hidden">
             <div>
-              <h3 className="text-2xl md:text-3xl font-display font-black mb-2 text-white">
+              <h3 className="text-2xl md:text-3xl font-display font-black mb-2 text-slate-900">
                 Need Multi-Site or Integrated Standard Auditing?
               </h3>
-              <p className="text-gray-300 font-sans text-sm max-w-xl font-light">
+              <p className="text-slate-600 font-sans text-sm max-w-xl font-light">
                 Speak directly with an ARG Registrars lead auditor to structure combined audits, gap analysis, and tailored surveillance timelines.
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function Services() {
               href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20discuss%20a%20certification%20scope."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-xl transition-all shrink-0 shadow-lg hover:scale-105"
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-xl transition-all shrink-0 shadow-md hover:scale-105"
             >
               <MessageCircle size={18} />
               <span>WHATSAPP TECHNICAL DESK</span>

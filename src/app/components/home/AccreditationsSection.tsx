@@ -85,9 +85,9 @@ const certifications: Certification[] = [
 
 export default function AccreditationsSection() {
   return (
-    <section id="accreditations" className="py-32 relative z-20 bg-[#040D07] border-t border-b border-white/[0.08] overflow-hidden architect-grid">
+    <section id="accreditations" className="py-28 relative z-20 bg-slate-50 border-t border-b border-slate-200 overflow-hidden architect-grid">
       {/* Aurora Glows */}
-      <div className="emerald-aurora top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-[#00873E]/15" />
+      <div className="emerald-aurora top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-[#00873E]/10" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
@@ -98,9 +98,9 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4"
+            className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] mb-4"
           >
-            <span className="w-1.5 h-1.5 bg-[#34D399]" />
+            <span className="w-1.5 h-1.5 bg-[#00873E]" />
             <span>RECOGNIZED GLOBAL CONFORMITY</span>
           </motion.div>
 
@@ -109,10 +109,10 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-white leading-tight tracking-tight mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-slate-900 leading-tight tracking-tight mb-6"
           >
             Accredited Registrar Scopes &amp; <br className="hidden md:block" />
-            <span className="text-[#34D399]">
+            <span className="text-[#00873E]">
               International Standards
             </span>
           </motion.h2>
@@ -122,13 +122,13 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-300 font-sans text-base md:text-lg font-light leading-relaxed"
+            className="text-slate-600 font-sans text-base md:text-lg font-light leading-relaxed"
           >
             ARG Registrars Pakistan certifies, audits, and validates organizations against premier ISO standards, US C-TPAT security criteria, and factory technical benchmarks.
           </motion.p>
         </div>
 
-        {/* 8 Bento-Style Glass Cards Grid */}
+        {/* 8 Bento-Style Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <motion.div 
@@ -138,15 +138,15 @@ export default function AccreditationsSection() {
               viewport={{ once: true, margin: "-5%" }}
               transition={{ duration: 0.6, delay: index * 0.07 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="glass-card rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden"
+              className="bg-white rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all"
             >
               {/* Shimmer line top */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#34D399] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00873E] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div>
                 {/* Top Status & Badge Cradle */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="bg-white rounded-2xl p-2.5 shadow-lg border border-gray-100 flex items-center justify-center shrink-0 w-16 h-16 group-hover:scale-105 transition-transform duration-300">
+                  <div className="bg-slate-50 rounded-2xl p-2.5 shadow-xs border border-slate-200 flex items-center justify-center shrink-0 w-16 h-16 group-hover:scale-105 transition-transform duration-300">
                     <div className="relative w-full h-full">
                       <Image 
                         src={cert.badgeImg} 
@@ -156,30 +156,30 @@ export default function AccreditationsSection() {
                       />
                     </div>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono tracking-wider uppercase bg-emerald-500/10 border border-emerald-500/20 text-[#34D399]">
-                    <span className="w-1.5 h-1.5 bg-[#34D399]" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono tracking-wider uppercase bg-emerald-50 border border-emerald-200 text-[#00873E]">
+                    <span className="w-1.5 h-1.5 bg-[#00873E]" />
                     VERIFIED
                   </span>
                 </div>
 
                 {/* Title & Scope */}
-                <h3 className="text-xl font-display font-bold text-white group-hover:text-[#34D399] transition-colors mb-1">
+                <h3 className="text-xl font-display font-bold text-slate-900 group-hover:text-[#00873E] transition-colors mb-1">
                   {cert.name}
                 </h3>
-                <div className="text-[#34D399] font-sans text-xs font-semibold tracking-wide uppercase mb-3">
+                <div className="text-[#00873E] font-sans text-xs font-semibold tracking-wide uppercase mb-3">
                   {cert.tagline}
                 </div>
-                <p className="text-gray-300 font-sans text-xs leading-relaxed mb-6 font-light">
+                <p className="text-slate-600 font-sans text-xs leading-relaxed mb-6 font-light">
                   {cert.scope}
                 </p>
               </div>
 
               {/* Bullet Features */}
-              <div className="border-t border-white/[0.08] pt-4 mt-auto">
+              <div className="border-t border-slate-100 pt-4 mt-auto">
                 <ul className="flex flex-col gap-2">
                   {cert.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-[11px] text-gray-300 font-sans">
-                      <CheckCircle2 size={13} className="text-[#34D399] shrink-0" />
+                    <li key={idx} className="flex items-center gap-2 text-[11px] text-slate-700 font-sans">
+                      <CheckCircle2 size={13} className="text-[#00873E] shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -195,21 +195,21 @@ export default function AccreditationsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-16 rounded-3xl glass-panel p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-emerald-500/30 relative overflow-hidden"
+          className="mt-16 rounded-3xl bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-200 shadow-md relative overflow-hidden"
         >
           <div className="max-w-2xl text-center md:text-left">
-            <h4 className="text-2xl md:text-3xl font-display font-black text-white mb-2">
+            <h4 className="text-2xl md:text-3xl font-display font-black text-slate-900 mb-2">
               Ready to Certify Your Organization or Supply Chain?
             </h4>
-            <p className="text-gray-300 font-sans text-sm font-light leading-relaxed">
+            <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
               Contact our registrar desks in Riyadh, KSA or Faisalabad, Pakistan for auditor deployment, certification timelines, and official registrar issuance.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
             <Link 
               href="/services" 
-              className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:-translate-y-0.5 border border-emerald-400/40"
+              className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,135,62,0.4)] hover:-translate-y-0.5 border border-emerald-500/30 w-full sm:w-auto"
             >
               <span>EXPLORE ACCREDITED SCOPES</span>
               <ArrowUpRight size={15} />
@@ -219,7 +219,7 @@ export default function AccreditationsSection() {
               href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20am%20interested%20in%20ISO%20certification." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 hover:border-emerald-400/40 hover:bg-white/[0.08]"
+              className="inline-flex items-center justify-center gap-2.5 bg-slate-50 hover:bg-slate-100 text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 border border-slate-200 w-full sm:w-auto"
             >
               <span>WHATSAPP INQUIRY</span>
             </a>

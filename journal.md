@@ -92,3 +92,28 @@ Auditing revealed an aggressive, repetitive "conversion-bro" pattern where over 
    - **Audits Page:** Replaced contact redirect with `/services` (Compare ISO Scopes).
    - **Services Cards:** Replaced uniform "INQUIRE ABOUT THIS SCOPE" with bespoke methodology links (`VIEW QMS AUDIT METHODOLOGY`, `ENVIRONMENTAL AUDIT CRITERIA`, `WORKPLACE SAFETY PROTOCOL`, etc.) and integrated the Certificate Registry Search banner.
 
+---
+
+## 6. Institutional Light Mode Transformation
+
+### The Rationale
+Global accredited certification bodies and conformity assessment registrars (such as BSI Group, SGS, DNV, TÜV SÜD, and Lloyd's Register) project their authority, transparency, and regulatory governance through clean, daylight institutional aesthetics rather than dark-themed "SaaS/crypto" palettes. 
+
+### Design Architecture & Color Palette
+1. **Canvases & Surfaces:**
+   - Primary Canvas: `#FAFAFA` (oyster slate background) and `#FFFFFF` (pristine paper white).
+   - Card Surfaces: Pure white (`bg-white`) bordered by crisp `border-slate-200/90` with subtle elevation (`shadow-sm hover:shadow-xl`).
+   - Architectural Grid: Faint blueprint grid lines (`rgba(15, 23, 42, 0.035)`), replacing dark emerald lines.
+2. **Typography & Contrast:**
+   - Headings & Accents: Executive deep navy slate (`#0F172A` / `#1E293B`) for maximum readability.
+   - Body Copy: Neutral slate (`#475569` / `#334155`) with high legibility on light surfaces.
+   - Brand Accent: Institutional Forest Emerald (`#00873E` / `#059669`).
+3. **Interactive Components & Form Inputs:**
+   - Form Inputs: Clean slate-50 background (`bg-slate-50 border border-slate-200 text-slate-900 focus:border-[#00873E] focus:bg-white`).
+   - Modals: Pure white dialog surfaces with slate headers and subtle emerald status pills (`CertificateVerifyModal.tsx`, `AuditSpecModal.tsx`).
+   - Mobile Sticky Action Bar: Crisp white frosted glass pill (`bg-white/95 border-slate-200/90 shadow-md text-slate-800`).
+   - Admin Intake Portal: Executive slate & white dashboard cards for incoming lead review.
+4. **Mobile Responsiveness Verification:**
+   - Automated Headless Chromium audit across all routes confirmed `scrollWidth === innerWidth` with **0px horizontal overflow**.
+
+

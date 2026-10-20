@@ -46,22 +46,22 @@ const steps = [
 
 export default function AuditJourney() {
   return (
-    <section className="py-28 relative z-20 overflow-hidden bg-[#030906] architect-grid">
+    <section className="py-28 relative z-20 overflow-hidden bg-white border-t border-slate-200 architect-grid">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4">
-            <span className="w-1.5 h-1.5 bg-[#34D399]" />
+          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] font-bold mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
             <span>AUDITING METHODOLOGY</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-black text-slate-900 leading-tight mb-4">
             The 4-Stage Accredited <br />
-            <span className="text-[#34D399]">
+            <span className="text-[#00873E]">
               Certification Roadmap
             </span>
           </h2>
-          <p className="text-gray-300 font-sans text-sm md:text-base font-light">
+          <p className="text-slate-600 font-sans text-sm md:text-base font-light">
             A transparent, audit-ready framework designed for rapid execution and 100% compliance acceptance by international buyers and regulatory bodies.
           </p>
         </div>
@@ -81,33 +81,33 @@ export default function AuditJourney() {
                 <SpotlightCard className="p-8 h-full flex flex-col justify-between group">
                   <div>
                     {/* Top Step Number & Tag */}
-                    <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
-                      <span className="text-3xl font-display font-black text-[#34D399]">
+                    <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
+                      <span className="text-3xl font-display font-black text-[#00873E]">
                         {item.step}
                       </span>
-                      <span className="text-[11px] font-mono text-gray-400 bg-white/[0.05] px-2.5 py-1 rounded-md border border-white/10">
+                      <span className="text-[11px] font-mono text-slate-600 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200">
                         {item.duration}
                       </span>
                     </div>
 
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-2xl glass-panel border border-emerald-500/30 flex items-center justify-center mb-5 text-[#34D399] group-hover:scale-110 group-hover:bg-[#00873E]/20 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-5 text-[#00873E] group-hover:scale-110 group-hover:bg-[#00873E] group-hover:text-white transition-all duration-300">
                       <Icon size={22} />
                     </div>
 
-                    <span className="text-[#34D399] text-[11px] font-sans font-bold uppercase tracking-wider block mb-1">
+                    <span className="text-[#00873E] text-[11px] font-sans font-bold uppercase tracking-wider block mb-1">
                       {item.tag}
                     </span>
-                    <h3 className="text-xl font-display font-bold text-white mb-2 leading-snug">
+                    <h3 className="text-xl font-display font-bold text-slate-900 mb-2 leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-gray-400 font-sans text-xs leading-relaxed font-light">
+                    <p className="text-slate-600 font-sans text-xs leading-relaxed font-light">
                       {item.desc}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-white/[0.06] flex items-center gap-2 text-xs text-gray-400 font-sans">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#00F59B]" />
+                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs text-slate-500 font-sans">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
                     <span>{item.subtitle}</span>
                   </div>
                 </SpotlightCard>
@@ -121,20 +121,20 @@ export default function AuditJourney() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-14 glass-panel rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-emerald-500/20 max-w-4xl mx-auto bg-[#06150D]/80"
+          className="mt-14 bg-slate-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-200 shadow-sm max-w-4xl mx-auto"
         >
           <div className="flex items-center gap-4 text-left">
-            <div className="w-10 h-10 rounded-xl bg-[#00873E]/30 border border-emerald-400/30 flex items-center justify-center text-[#34D399] shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-emerald-100/70 border border-emerald-300 flex items-center justify-center text-[#00873E] shrink-0">
               <Award size={20} />
             </div>
             <div>
-              <div className="text-white font-display font-bold text-sm">48-Hour Preliminary Gap Report Guarantee</div>
-              <div className="text-gray-400 font-sans text-xs">Initial documentation reviews dispatched within 48 business hours of receipt.</div>
+              <div className="text-slate-900 font-display font-bold text-sm">48-Hour Preliminary Gap Report Guarantee</div>
+              <div className="text-slate-600 font-sans text-xs">Initial documentation reviews dispatched within 48 business hours of receipt.</div>
             </div>
           </div>
           <Link
             href="/audits#four-stage-protocol"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white font-display font-bold text-xs tracking-wider transition-colors shrink-0 border border-white/10"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-display font-bold text-xs tracking-wider transition-colors shrink-0 border border-slate-200 shadow-sm"
           >
             <span>VIEW AUDIT METHODOLOGY</span>
             <ArrowRight size={14} />

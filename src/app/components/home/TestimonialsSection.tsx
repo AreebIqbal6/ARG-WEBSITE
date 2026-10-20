@@ -33,22 +33,22 @@ const endorsements = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-28 relative z-20 bg-[#030906] architect-grid">
+    <section className="py-28 relative z-20 bg-white border-t border-slate-200 architect-grid">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4">
-            <span className="w-1.5 h-1.5 bg-[#34D399]" />
+          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] font-bold mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
             <span>EXECUTIVE STAKEHOLDER REVIEWS</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-black text-slate-900 leading-tight mb-4">
             Trusted by Industrial Leaders <br />
-            <span className="text-[#34D399]">
+            <span className="text-[#00873E]">
               Across Regional Corridors
             </span>
           </h2>
-          <p className="text-gray-300 font-sans text-sm md:text-base font-light">
+          <p className="text-slate-600 font-sans text-sm md:text-base font-light">
             Read direct feedback from corporate operations directors, compliance chiefs, and export heads who rely on ARG Registrars for accredited certifications.
           </p>
         </div>
@@ -66,33 +66,33 @@ export default function TestimonialsSection() {
               <SpotlightCard className="p-8 h-full flex flex-col justify-between">
                 <div>
                   {/* Rating Stars & Badge */}
-                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
-                    <div className="flex items-center gap-1 text-[#34D399]">
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
+                    <div className="flex items-center gap-1 text-[#00873E]">
                       {[...Array(item.rating)].map((_, i) => (
-                        <Star key={i} size={14} fill="#34D399" />
+                        <Star key={i} size={14} fill="#00873E" />
                       ))}
                     </div>
-                    <span className="text-[10px] font-mono text-gray-400 bg-white/[0.05] px-2.5 py-0.5 rounded border border-white/10 uppercase">
+                    <span className="text-[10px] font-mono text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200 uppercase">
                       VERIFIED AUDIT
                     </span>
                   </div>
 
-                  <p className="text-gray-300 font-sans text-xs md:text-sm leading-relaxed font-light mb-6 italic">
+                  <p className="text-slate-700 font-sans text-xs md:text-sm leading-relaxed font-light mb-6 italic">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-white/[0.08]">
-                  <div className="text-white font-display font-bold text-sm">
+                <div className="pt-4 border-t border-slate-100">
+                  <div className="text-slate-900 font-display font-bold text-sm">
                     {item.author}
                   </div>
-                  <div className="text-[#34D399] font-sans text-xs font-medium">
+                  <div className="text-[#00873E] font-sans text-xs font-semibold">
                     {item.role}
                   </div>
-                  <div className="text-gray-400 font-sans text-[11px] mt-0.5">
+                  <div className="text-slate-500 font-sans text-[11px] mt-0.5">
                     {item.company}
                   </div>
-                  <div className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#00873E]/15 text-[#34D399] text-[10px] font-mono border border-emerald-500/20">
+                  <div className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-[#00873E] text-[10px] font-mono border border-emerald-200 font-medium">
                     <CheckCircle2 size={11} />
                     <span>Scope: {item.scope}</span>
                   </div>

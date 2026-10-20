@@ -11,7 +11,7 @@ interface SpotlightCardProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function SpotlightCard({
   children,
   className = "",
-  spotlightColor = "rgba(52, 211, 153, 0.15)",
+  spotlightColor = "rgba(0, 135, 62, 0.08)",
   ...props
 }: SpotlightCardProps) {
   const divRef = useRef<HTMLDivElement>(null);
@@ -54,7 +54,7 @@ export default function SpotlightCard({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-3xl border border-white/[0.08] bg-[#06150D]/65 overflow-hidden backdrop-blur-xl transition-all duration-300 hover:border-emerald-500/30 ${className}`}
+      className={`relative rounded-3xl border border-slate-200/90 bg-white shadow-sm overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-xl ${className}`}
       {...props}
     >
       <div

@@ -216,26 +216,26 @@ Email: records@argregistrars.com
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-3xl bg-[#051109] border border-emerald-500/30 rounded-3xl shadow-[0_25px_70px_rgba(0,0,0,0.9)] overflow-hidden z-10 my-8 text-left max-h-[90vh] flex flex-col"
+          className="relative w-full max-w-3xl bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden z-10 my-8 text-left max-h-[90vh] flex flex-col"
         >
           {/* Header Bar */}
-          <div className="p-6 md:p-8 border-b border-white/10 flex items-center justify-between bg-gradient-to-r from-[#00873E]/20 to-transparent shrink-0">
+          <div className="p-6 md:p-8 border-b border-slate-200 flex items-center justify-between bg-slate-50 shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-[#34D399]">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E]">
                 <FileCheck2 size={22} />
               </div>
               <div>
-                <div className="text-[11px] font-sans font-bold uppercase tracking-widest text-[#34D399]">
+                <div className="text-[11px] font-sans font-bold uppercase tracking-widest text-[#00873E]">
                   {data.category} &bull; {data.iafSector}
                 </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-white tracking-wide">
+                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 tracking-wide">
                   {data.code} &ndash; Audit Specification
                 </h3>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+              className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
               aria-label="Close modal"
             >
               <X size={20} />
@@ -245,50 +245,50 @@ Email: records@argregistrars.com
           {/* Scrollable Content Body */}
           <div className="p-6 md:p-8 space-y-6 overflow-y-auto">
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-xs font-sans">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-sans">
               <div className="flex items-center gap-2.5">
-                <Clock size={16} className="text-[#34D399] shrink-0" />
+                <Clock size={16} className="text-[#00873E] shrink-0" />
                 <div>
-                  <div className="text-gray-400 text-[10px] uppercase">Turnaround Time</div>
-                  <div className="text-white font-semibold">{data.turnaround}</div>
+                  <div className="text-slate-500 text-[10px] uppercase">Turnaround Time</div>
+                  <div className="text-slate-900 font-semibold">{data.turnaround}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <CalendarCheck size={16} className="text-[#34D399] shrink-0" />
+                <CalendarCheck size={16} className="text-[#00873E] shrink-0" />
                 <div>
-                  <div className="text-gray-400 text-[10px] uppercase">Validity Cycle</div>
-                  <div className="text-white font-semibold">{data.validity}</div>
+                  <div className="text-slate-500 text-[10px] uppercase">Validity Cycle</div>
+                  <div className="text-slate-900 font-semibold">{data.validity}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <Award size={16} className="text-[#34D399] shrink-0" />
+                <Award size={16} className="text-[#00873E] shrink-0" />
                 <div>
-                  <div className="text-gray-400 text-[10px] uppercase">Registrar Recognition</div>
-                  <div className="text-[#34D399] font-semibold">EIAC / IAS Aligned</div>
+                  <div className="text-slate-500 text-[10px] uppercase">Registrar Recognition</div>
+                  <div className="text-[#00873E] font-semibold">EIAC / IAS Aligned</div>
                 </div>
               </div>
             </div>
 
             {/* Person-Day Formula Note */}
-            <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/20 text-xs font-sans">
-              <span className="font-bold text-white uppercase tracking-wider text-[11px] block mb-1">
+            <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200 text-xs font-sans">
+              <span className="font-bold text-slate-900 uppercase tracking-wider text-[11px] block mb-1">
                 Auditor Person-Days Formula:
               </span>
-              <p className="text-gray-300 leading-relaxed font-light">
+              <p className="text-slate-700 leading-relaxed font-light">
                 {data.personDaysGuide}
               </p>
             </div>
 
             {/* Stage 1 Checklist */}
             <div>
-              <div className="flex items-center gap-2 text-sm font-display font-bold text-white mb-3">
-                <span className="w-6 h-6 rounded-lg bg-[#00873E]/30 text-[#34D399] border border-emerald-400/30 flex items-center justify-center text-xs">1</span>
+              <div className="flex items-center gap-2 text-sm font-display font-bold text-slate-900 mb-3">
+                <span className="w-6 h-6 rounded-lg bg-emerald-100 text-[#00873E] border border-emerald-300 flex items-center justify-center text-xs font-bold">1</span>
                 <span>Stage 1: Documentation Pre-Audit Checklist</span>
               </div>
               <div className="space-y-2">
                 {data.stage1Docs.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] text-xs font-sans text-gray-200">
-                    <CheckCircle2 size={15} className="text-[#34D399] shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-sans text-slate-700">
+                    <CheckCircle2 size={15} className="text-[#00873E] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -297,14 +297,14 @@ Email: records@argregistrars.com
 
             {/* Stage 2 Checklist */}
             <div>
-              <div className="flex items-center gap-2 text-sm font-display font-bold text-white mb-3">
-                <span className="w-6 h-6 rounded-lg bg-[#00873E]/30 text-[#34D399] border border-emerald-400/30 flex items-center justify-center text-xs">2</span>
+              <div className="flex items-center gap-2 text-sm font-display font-bold text-slate-900 mb-3">
+                <span className="w-6 h-6 rounded-lg bg-emerald-100 text-[#00873E] border border-emerald-300 flex items-center justify-center text-xs font-bold">2</span>
                 <span>Stage 2: On-Site Audit &amp; Technical Verification</span>
               </div>
               <div className="space-y-2">
                 {data.stage2Audits.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] text-xs font-sans text-gray-200">
-                    <CheckCircle2 size={15} className="text-[#34D399] shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-sans text-slate-700">
+                    <CheckCircle2 size={15} className="text-[#00873E] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -313,12 +313,12 @@ Email: records@argregistrars.com
 
             {/* Deliverables */}
             <div>
-              <div className="text-xs font-sans font-bold uppercase tracking-wider text-gray-400 mb-2">
+              <div className="text-xs font-sans font-bold uppercase tracking-wider text-slate-500 mb-2">
                 Certified Deliverables &amp; Artifacts
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {data.deliverables.map((item, idx) => (
-                  <div key={idx} className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] text-xs font-sans text-gray-300">
+                  <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-sans text-slate-700">
                     {item}
                   </div>
                 ))}
@@ -327,12 +327,12 @@ Email: records@argregistrars.com
           </div>
 
           {/* Footer Bar */}
-          <div className="p-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#030906] shrink-0">
+          <div className="p-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50 shrink-0">
             <button
               onClick={handleDownload}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white font-sans text-xs tracking-wider transition-all border border-white/10"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-sm"
             >
-              <Download size={14} className="text-[#34D399]" />
+              <Download size={14} className="text-[#00873E]" />
               <span>{downloaded ? "Specification Downloaded!" : "Download Criteria Sheet (.TXT)"}</span>
             </button>
 
@@ -341,14 +341,14 @@ Email: records@argregistrars.com
                 href={`https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20have%20a%20technical%20question%20regarding%20${encodeURIComponent(data.code)}%20audit%20requirements.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#00873E]/20 hover:bg-[#00873E]/40 text-[#34D399] font-sans text-xs border border-emerald-500/30 transition-all"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#00873E] font-sans text-xs border border-emerald-200 font-medium transition-all"
               >
                 <MessageCircle size={14} />
                 <span>Ask Auditor</span>
               </a>
               <button
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-gray-300 hover:text-white font-sans text-xs transition-all"
+                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans text-xs transition-all border border-slate-200"
               >
                 Close
               </button>

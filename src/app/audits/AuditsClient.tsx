@@ -18,29 +18,29 @@ const auditStandards = [
 
 export default function Audits() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#030906] architect-grid noise-overlay">
+    <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800 architect-grid">
       
       {/* HEADER */}
-      <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity scale-105"></div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#030906] via-[#030906]/80 to-transparent"></div>
-        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/20" />
+      <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden bg-white border-b border-slate-200">
+        <div className="absolute inset-0 z-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-[0.06] mix-blend-luminosity scale-105"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/70 to-transparent"></div>
+        <div className="emerald-aurora top-1/4 left-1/3 w-[600px] h-[350px] bg-[#00873E]/10" />
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-white/10 pb-2 max-w-full">
-              <span className="text-[#34D399] font-bold">SEC. 04 //</span>
-              <span className="text-gray-200">ON-SITE EVALUATIONS</span>
-              <span className="hidden sm:inline text-gray-600">&bull;</span>
-              <span className="text-gray-400">ARG REGISTRARS</span>
+            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-slate-200 pb-2 max-w-full">
+              <span className="text-[#00873E] font-bold">SEC. 04 //</span>
+              <span className="text-slate-800 font-semibold">ON-SITE EVALUATIONS</span>
+              <span className="hidden sm:inline text-slate-400">&bull;</span>
+              <span className="text-slate-500">ARG REGISTRARS</span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-slate-900 leading-tight tracking-tight mb-4">
               Quality &amp; Compliance <br />
-              <span className="text-[#34D399]">
+              <span className="text-[#00873E]">
                 Audits
               </span>
             </h1>
-            <p className="text-gray-300 font-sans text-lg max-w-2xl font-light leading-relaxed">
+            <p className="text-slate-600 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Objective, accredited evaluations of manufacturing facilities, supply chain security, and quality management systems.
             </p>
           </motion.div>
@@ -53,15 +53,15 @@ export default function Audits() {
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             
             <div className="lg:w-1/2">
-              <div className="flex items-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-6">
-                <span className="w-1.5 h-1.5 bg-[#34D399]" />
+              <div className="flex items-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] font-bold mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
                 <span>AUDITING EXPERTISE &bull; FACTORY SCRUTINY</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-display font-black text-white mb-8 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-black text-slate-900 mb-8 leading-tight">
                 Comprehensive evaluation for international buyer compliance.
               </h2>
-              <p className="text-gray-300 font-sans text-base md:text-lg leading-relaxed mb-6 font-light">
+              <p className="text-slate-600 font-sans text-base md:text-lg leading-relaxed mb-6 font-light">
                 ARG Registrars Pakistan provides certified third-party auditing services designed to scrutinize factory floors, supply chain security lines, environmental controls, and managerial workflows for full compliance with global trade mandates.
               </p>
               
@@ -73,15 +73,15 @@ export default function Audits() {
                   "Environmental compliance, waste management, and chemical safeguards",
                   "Accredited registrar certificate issuance upon audit completion"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 rounded-xl glass-panel text-gray-200 font-sans text-xs md:text-sm">
-                    <CheckCircle2 size={16} className="text-[#34D399] shrink-0" />
+                  <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 font-sans text-xs md:text-sm">
+                    <CheckCircle2 size={16} className="text-[#00873E] shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.6)] hover:-translate-y-0.5 transition-all duration-300 border border-emerald-400/40">
+                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                   <span>COMPARE ISO SCOPES</span>
                   <ArrowUpRight size={16} />
                 </Link>
@@ -90,9 +90,9 @@ export default function Audits() {
                   href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20request%20an%20audit%20inquiry."
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 glass-panel text-white font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl hover:border-emerald-400/40 hover:bg-white/[0.08] transition-all"
+                  className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
                 >
-                  <MessageCircle size={16} className="text-[#34D399]" />
+                  <MessageCircle size={16} className="text-[#25D366]" />
                   <span>WhatsApp Inquiry</span>
                 </a>
               </div>
@@ -104,18 +104,18 @@ export default function Audits() {
                   <motion.div 
                     key={idx}
                     whileHover={{ y: -5 }}
-                    className="glass-card p-6 rounded-3xl flex flex-col justify-between border border-white/[0.08]"
+                    className="bg-white p-6 rounded-3xl flex flex-col justify-between border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40"
                   >
                     <div className="flex items-center gap-3.5 mb-3.5">
-                      <div className="relative w-12 h-12 bg-white rounded-xl p-1 shrink-0 shadow-md">
+                      <div className="relative w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl p-1 shrink-0 shadow-sm">
                         <Image src={std.badge} alt={std.name} fill className="object-contain p-0.5" />
                       </div>
                       <div>
-                        <div className="text-[#34D399] font-sans font-bold text-[11px] uppercase tracking-wider">{std.name}</div>
-                        <h4 className="font-display font-bold text-sm text-white leading-tight">{std.title}</h4>
+                        <div className="text-[#00873E] font-sans font-bold text-[11px] uppercase tracking-wider">{std.name}</div>
+                        <h4 className="font-display font-bold text-sm text-slate-900 leading-tight">{std.title}</h4>
                       </div>
                     </div>
-                    <p className="text-gray-400 font-sans text-xs leading-relaxed font-light">{std.desc}</p>
+                    <p className="text-slate-600 font-sans text-xs leading-relaxed font-light">{std.desc}</p>
                   </motion.div>
                 ))}
               </div>

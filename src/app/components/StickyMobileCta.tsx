@@ -31,14 +31,14 @@ export default function StickyMobileCta() {
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="fixed bottom-4 left-4 right-4 z-50 md:hidden"
         >
-          <div className="glass-panel p-2 rounded-2xl border border-emerald-500/30 shadow-[0_10px_35px_rgba(0,0,0,0.8)] bg-[#030906]/92 backdrop-blur-2xl flex items-center justify-between gap-2">
+          <div className="p-2 rounded-2xl border border-slate-200/90 shadow-[0_10px_35px_rgba(15,23,42,0.12)] bg-white/95 backdrop-blur-2xl flex items-center justify-between gap-2">
             
             {/* Call Button */}
             <a
               href="tel:+966558004287"
-              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white font-display font-semibold text-xs border border-white/10 active:scale-95 transition-all"
+              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 font-display font-semibold text-xs border border-slate-200 active:scale-95 transition-all"
             >
-              <Phone size={14} className="text-[#34D399]" />
+              <Phone size={14} className="text-[#00873E]" />
               <span>Call Desk</span>
             </a>
 
@@ -47,7 +47,7 @@ export default function StickyMobileCta() {
               href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20request%20an%20audit%20inquiry."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl bg-[#00873E]/30 hover:bg-[#00873E]/50 text-[#34D399] font-display font-semibold text-xs border border-emerald-500/30 active:scale-95 transition-all"
+              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#00873E] font-display font-semibold text-xs border border-emerald-200 active:scale-95 transition-all"
             >
               <MessageCircle size={14} />
               <span>WhatsApp</span>
@@ -56,7 +56,7 @@ export default function StickyMobileCta() {
             {/* Quote Action */}
             <Link
               href="/contact"
-              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs shadow-[0_0_15px_rgba(0,135,62,0.4)] border border-emerald-400/40 active:scale-95 transition-all"
+              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs shadow-md border border-emerald-600 active:scale-95 transition-all"
             >
               <FileText size={14} />
               <span>Get Quote</span>

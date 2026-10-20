@@ -16,7 +16,7 @@ const footerCertLogos = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#020604] text-white pt-24 pb-12 border-t border-white/[0.08] relative z-30 architect-grid">
+    <footer className="bg-slate-50 text-slate-700 pt-24 pb-12 border-t border-slate-200 relative z-30 architect-grid">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -25,99 +25,99 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3.5 mb-5 group">
-              <div className="bg-white rounded-xl p-1.5 shadow-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              <div className="bg-white rounded-xl p-1.5 shadow-sm border border-slate-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <Image src="/arg_logo.png" alt="ARG Registrars Pakistan Logo" width={44} height={44} className="w-9 h-9 object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-lg tracking-wider text-white">ARG REGISTRARS</span>
-                <span className="font-sans text-[10px] tracking-[0.28em] text-[#34D399] font-bold">PAKISTAN</span>
+                <span className="font-display font-extrabold text-lg tracking-wider text-slate-900">ARG REGISTRARS</span>
+                <span className="font-sans text-[10px] tracking-[0.28em] text-[#00873E] font-bold">PAKISTAN</span>
               </div>
             </Link>
-            <div className="text-[#34D399] font-sans italic font-medium text-xs tracking-wider mb-4 flex items-center gap-1.5">
+            <div className="text-[#00873E] font-sans italic font-semibold text-xs tracking-wider mb-4 flex items-center gap-1.5">
               <ShieldCheck size={14} className="text-[#00873E]" />
               Accredited International Certification Registrars
             </div>
-            <p className="text-gray-400 font-sans leading-relaxed text-xs font-light mb-6">
+            <p className="text-slate-600 font-sans leading-relaxed text-xs font-light mb-6">
               Delivering accredited ISO management certifications, C-TPAT security compliance, and comprehensive technical factory audits across international supply chains.
             </p>
-            <div className="flex items-center gap-2 text-xs text-gray-400 font-sans">
-              <Globe size={14} className="text-[#34D399]" />
+            <div className="flex items-center gap-2 text-xs text-slate-600 font-sans font-medium">
+              <Globe size={14} className="text-[#00873E]" />
               <span>argregistrars.com</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display font-bold text-base mb-6 text-white tracking-wide border-b border-white/10 pb-2">
+            <h3 className="font-display font-bold text-base mb-6 text-slate-900 tracking-wide border-b border-slate-200 pb-2">
               Navigation
             </h3>
-            <ul className="flex flex-col gap-3 text-gray-400 font-sans text-xs">
-              <li><Link href="/" className="hover:text-[#34D399] transition-colors inline-block">Home</Link></li>
-              <li><Link href="/about" className="hover:text-[#34D399] transition-colors inline-block">About ARG Registrars</Link></li>
-              <li><Link href="/services" className="hover:text-[#34D399] transition-colors inline-block">ISO Certifications</Link></li>
-              <li><Link href="/audits" className="hover:text-[#34D399] transition-colors inline-block">Technical &amp; C-TPAT Audits</Link></li>
-              <li><Link href="/contact" className="hover:text-[#34D399] transition-colors inline-block">Contact &amp; Offices</Link></li>
+            <ul className="flex flex-col gap-3 text-slate-600 font-sans text-xs">
+              <li><Link href="/" className="hover:text-[#00873E] transition-colors inline-block font-medium">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#00873E] transition-colors inline-block font-medium">About ARG Registrars</Link></li>
+              <li><Link href="/services" className="hover:text-[#00873E] transition-colors inline-block font-medium">ISO Certifications</Link></li>
+              <li><Link href="/audits" className="hover:text-[#00873E] transition-colors inline-block font-medium">Technical &amp; C-TPAT Audits</Link></li>
+              <li><Link href="/contact" className="hover:text-[#00873E] transition-colors inline-block font-medium">Contact &amp; Offices</Link></li>
             </ul>
           </div>
 
           {/* Standards Scope */}
           <div>
-            <h3 className="font-display font-bold text-base mb-6 text-white tracking-wide border-b border-white/10 pb-2">
+            <h3 className="font-display font-bold text-base mb-6 text-slate-900 tracking-wide border-b border-slate-200 pb-2">
               Accredited Scopes
             </h3>
-            <ul className="flex flex-col gap-3 text-gray-400 font-sans text-xs">
-              <li><Link href="/#accreditations" className="hover:text-[#34D399] transition-colors">ISO 9001:2015 (Quality QMS)</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#34D399] transition-colors">ISO 14001:2015 (Environmental EMS)</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#34D399] transition-colors">ISO 45001:2018 (Health &amp; Safety)</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#34D399] transition-colors">C-TPAT Supply Chain Security</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#34D399] transition-colors">Technical Audits &amp; SQF Standards</Link></li>
+            <ul className="flex flex-col gap-3 text-slate-600 font-sans text-xs">
+              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 9001:2015 (Quality QMS)</Link></li>
+              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 14001:2015 (Environmental EMS)</Link></li>
+              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 45001:2018 (Health &amp; Safety)</Link></li>
+              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">C-TPAT Supply Chain Security</Link></li>
+              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">Technical Audits &amp; SQF Standards</Link></li>
             </ul>
           </div>
 
           {/* Offices & Contact Details */}
           <div>
-            <h3 className="font-display font-bold text-base mb-6 text-white tracking-wide border-b border-white/10 pb-2">
+            <h3 className="font-display font-bold text-base mb-6 text-slate-900 tracking-wide border-b border-slate-200 pb-2">
               Corporate Offices
             </h3>
-            <ul className="flex flex-col gap-4 text-gray-300 font-sans text-xs">
+            <ul className="flex flex-col gap-4 text-slate-700 font-sans text-xs">
               {/* Head Office */}
               <li className="flex items-start gap-2.5">
-                <MapPin size={15} className="text-[#34D399] shrink-0 mt-0.5" />
+                <MapPin size={15} className="text-[#00873E] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block font-display">Head Office (Riyadh, KSA):</strong>
-                  <span className="text-gray-400 leading-relaxed text-[11px]">
+                  <strong className="text-slate-900 block font-display">Head Office (Riyadh, KSA):</strong>
+                  <span className="text-slate-600 leading-relaxed text-[11px]">
                     Riverwalk Hussain Ibn Ali Road, Tawaan, Riyadh KSA.
                   </span>
                   <div className="mt-1">
-                    <a href="tel:+966558004287" className="text-[#34D399] hover:underline font-semibold">+966 55 8004287</a>
+                    <a href="tel:+966558004287" className="text-[#00873E] hover:underline font-semibold">+966 55 8004287</a>
                   </div>
                 </div>
               </li>
 
               {/* Local Office */}
               <li className="flex items-start gap-2.5">
-                <MapPin size={15} className="text-[#34D399] shrink-0 mt-0.5" />
+                <MapPin size={15} className="text-[#00873E] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block font-display">Local Office (Pakistan):</strong>
-                  <span className="text-gray-400 leading-relaxed text-[11px]">
+                  <strong className="text-slate-900 block font-display">Local Office (Pakistan):</strong>
+                  <span className="text-slate-600 leading-relaxed text-[11px]">
                     Plot No. 2118, Street No. 06, Johan Colony, Block E, Millat Road, Faisalabad.
                   </span>
                   <div className="mt-1">
-                    <a href="tel:+9231459101614" className="text-[#34D399] hover:underline font-semibold">+92 314 59101614</a>
+                    <a href="tel:+9231459101614" className="text-[#00873E] hover:underline font-semibold">+92 314 59101614</a>
                   </div>
                 </div>
               </li>
 
               {/* Email & WhatsApp */}
-              <li className="flex items-center gap-2.5 pt-1 border-t border-white/10">
-                <Mail size={14} className="text-[#34D399] shrink-0" />
-                <a href="mailto:info@argregistrars.com" className="hover:text-[#34D399] transition-colors">
+              <li className="flex items-center gap-2.5 pt-1 border-t border-slate-200">
+                <Mail size={14} className="text-[#00873E] shrink-0" />
+                <a href="mailto:info@argregistrars.com" className="hover:text-[#00873E] transition-colors font-medium">
                   info@argregistrars.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <MessageCircle size={14} className="text-[#25D366] shrink-0" />
-                <a href="https://wa.me/9231459101614" target="_blank" rel="noopener noreferrer" className="hover:text-[#34D399] transition-colors font-semibold">
+                <a href="https://wa.me/9231459101614" target="_blank" rel="noopener noreferrer" className="hover:text-[#00873E] transition-colors font-semibold">
                   WhatsApp: +92 314 59101614
                 </a>
               </li>
@@ -127,13 +127,13 @@ export default function Footer() {
         </div>
 
         {/* Global Certifications & Badges Row */}
-        <div className="border-t border-white/[0.08] pt-8 pb-10">
-          <div className="text-center text-xs font-display font-bold tracking-[0.25em] text-[#34D399] uppercase mb-6">
+        <div className="border-t border-slate-200 pt-8 pb-10">
+          <div className="text-center text-xs font-display font-bold tracking-[0.25em] text-[#00873E] uppercase mb-6">
             Accredited Certification Frameworks &bull; Recognized Standards
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 max-w-5xl mx-auto items-center">
             {footerCertLogos.map((logo, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-2.5 flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
+              <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-sm hover:scale-105 transition-transform duration-300">
                 <div className="relative w-full h-9">
                   <Image src={logo.src} alt={logo.name} fill sizes="12vw" className="object-contain" />
                 </div>
@@ -143,12 +143,12 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white/[0.05] pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs font-sans gap-4">
+        <div className="border-t border-slate-200 pt-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs font-sans gap-4">
           <p>&copy; {new Date().getFullYear()} ARG REGISTRARS PAKISTAN. All Rights Reserved. (argregistrars.com)</p>
           <div className="flex gap-6 items-center">
-            <Link href="/privacy-policy" className="hover:text-[#34D399] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[#34D399] transition-colors">Terms of Service</Link>
-            <Link href="/admin/inquiries" className="hover:text-[#34D399] transition-colors font-mono text-[11px]">Registrar Portal</Link>
+            <Link href="/privacy-policy" className="hover:text-[#00873E] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#00873E] transition-colors">Terms of Service</Link>
+            <Link href="/admin/inquiries" className="hover:text-[#00873E] transition-colors font-mono text-[11px]">Registrar Portal</Link>
           </div>
         </div>
 

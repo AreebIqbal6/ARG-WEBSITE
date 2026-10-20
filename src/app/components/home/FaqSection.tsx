@@ -51,22 +51,22 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-28 relative z-20 bg-[#030906] architect-grid border-t border-white/[0.08]">
+    <section className="py-28 relative z-20 bg-slate-50 architect-grid border-t border-slate-200">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#34D399] mb-4">
-            <span className="w-1.5 h-1.5 bg-[#34D399]" />
+          <div className="flex items-center justify-center gap-2.5 text-xs font-mono tracking-widest uppercase text-[#00873E] font-bold mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
             <span>TECHNICAL REGISTRAR FAQ</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black text-white leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-black text-slate-900 leading-tight mb-4">
             Frequently Asked <br />
-            <span className="text-[#34D399]">
+            <span className="text-[#00873E]">
               Audit &amp; Certification Questions
             </span>
           </h2>
-          <p className="text-gray-300 font-sans text-sm md:text-base font-light">
+          <p className="text-slate-600 font-sans text-sm md:text-base font-light">
             Clear, transparent technical guidelines regarding ISO management conformity, C-TPAT security standards, and lead auditor deployments.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="glass-card rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-300 hover:border-emerald-500/30"
+                className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden transition-all duration-300 hover:border-emerald-500/40"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
@@ -86,14 +86,14 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex flex-col gap-1 text-left">
-                    <span className="text-[11px] font-mono text-[#34D399] uppercase tracking-wider">
+                    <span className="text-[11px] font-mono text-[#00873E] font-semibold uppercase tracking-wider">
                       {faq.category}
                     </span>
-                    <span className="text-base md:text-lg font-display font-bold text-white">
+                    <span className="text-base md:text-lg font-display font-bold text-slate-900">
                       {faq.question}
                     </span>
                   </div>
-                  <div className={`w-8 h-8 rounded-full glass-panel border border-white/10 flex items-center justify-center shrink-0 text-white transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[#00873E]/30 text-[#34D399]' : ''}`}>
+                  <div className={`w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 text-slate-600 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[#00873E] text-white' : ''}`}>
                     <ChevronDown size={18} />
                   </div>
                 </button>
@@ -106,7 +106,7 @@ export default function FaqSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-gray-300 font-sans text-sm md:text-base font-light leading-relaxed border-t border-white/[0.04]">
+                      <div className="px-6 pb-6 pt-2 text-slate-600 font-sans text-sm md:text-base font-light leading-relaxed border-t border-slate-100">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -119,13 +119,13 @@ export default function FaqSection() {
 
         {/* Still Have Questions CTA */}
         <div className="mt-14 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 rounded-2xl glass-panel border border-white/10 bg-[#06150D]/80">
-            <span className="text-gray-300 font-sans text-xs md:text-sm">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+            <span className="text-slate-700 font-sans text-xs md:text-sm">
               Have a specific standard or regulatory requirement not listed here?
             </span>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/30 hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:scale-105 transition-all"
             >
               <span>VIEW REGIONAL DIRECTORY</span>
               <ArrowUpRight size={14} />
