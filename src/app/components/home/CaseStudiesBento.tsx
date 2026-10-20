@@ -2,23 +2,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, TrendingUp, Globe2, Building2, CheckCircle2, ArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import SpotlightCard from '../ui/SpotlightCard';
 
 export default function CaseStudiesBento() {
   return (
     <section className="py-28 relative z-20 bg-slate-50 border-t border-slate-200 overflow-hidden bg-[#F8FAFC]">
-      {/* Background Watermarks & Facility Safety Photo */}
+      {/* Background Topic-Relative Faded Photo: Precision Robotics & Industrial Manufacturing */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* Subtle low-opacity industrial workplace background photo */}
-        <div className="absolute inset-0 bg-[url('/images/occupational_safety.jpg')] bg-cover bg-center opacity-[0.05] grayscale contrast-125 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/75 to-slate-50" />
-
-        {/* Enlarged Low-Opacity Official ARG Logo Watermark (Top Left) */}
-        <div className="absolute -top-24 -left-24 w-[700px] h-[700px] lg:w-[900px] lg:h-[900px] opacity-[0.045] pointer-events-none -rotate-6 mix-blend-multiply select-none">
-          <Image src="/arg_logo.png" alt="ARG Registrars Official Logo Watermark" fill className="object-contain" priority={false} />
-        </div>
+        <div className="absolute inset-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-[0.08] contrast-[1.08] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8FAFC]/90 via-[#F8FAFC]/75 to-[#F8FAFC]" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

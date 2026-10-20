@@ -17,8 +17,8 @@ export default function SplitInfoSection() {
       {/* Background Watermarks & Headquarters Photo */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         {/* Subtle low-opacity corporate bureau background photo */}
-        <div className="absolute inset-0 bg-[url('/images/corporate_headquarters.jpg')] bg-cover bg-center opacity-[0.05] grayscale contrast-125 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
+        <div className="absolute inset-0 bg-[url('/images/corporate_headquarters.jpg')] bg-cover bg-center opacity-[0.08] contrast-[1.08] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/75 to-white" />
 
         {/* Enlarged Low-Opacity Official ARG Logo Watermark (Top Right) */}
         <div className="absolute -top-20 -right-20 w-[700px] h-[700px] lg:w-[900px] lg:h-[900px] opacity-[0.045] pointer-events-none rotate-6 mix-blend-multiply select-none">

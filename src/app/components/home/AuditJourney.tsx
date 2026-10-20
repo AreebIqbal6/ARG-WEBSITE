@@ -2,7 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ClipboardCheck, SearchCheck, ShieldCheck, Award, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import SpotlightCard from '../ui/SpotlightCard';
 
@@ -48,16 +47,10 @@ const steps = [
 export default function AuditJourney() {
   return (
     <section id="four-stage-protocol" className="py-28 relative z-20 overflow-hidden bg-white border-t border-slate-200 scroll-mt-24">
-      {/* Background Watermarks & Facility Inspection Photo */}
+      {/* Background Topic-Relative Faded Photo: Lead Auditor Documentation & Audit Preparation */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* Subtle low-opacity facility inspection background photo */}
-        <div className="absolute inset-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-[0.06] grayscale contrast-125 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
-
-        {/* Enlarged Low-Opacity Official ARG Logo Watermark (Top Left) */}
-        <div className="absolute -top-20 -left-24 w-[700px] h-[700px] lg:w-[900px] lg:h-[900px] opacity-[0.045] pointer-events-none -rotate-6 mix-blend-multiply select-none">
-          <Image src="/arg_logo.png" alt="ARG Registrars Official Logo Watermark" fill className="object-contain" priority={false} />
-        </div>
+        <div className="absolute inset-0 bg-[url('/images/lead_auditor_desk.jpg')] bg-cover bg-center opacity-[0.08] contrast-[1.08] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/75 to-white" />
       </div>
 
       <span id="audit-roadmap" className="absolute -top-24" />

@@ -137,16 +137,10 @@ export default function AccreditationsSection() {
 
   return (
     <section id="accreditations" className="py-28 relative z-20 bg-slate-50 border-t border-b border-slate-200 overflow-hidden bg-[#F8FAFC]">
-      {/* Background Watermarks & Inspection Photo */}
+      {/* Background Topic-Relative Faded Photo: Quality Assurance & Metrology */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* Subtle low-opacity facility inspection background photo */}
-        <div className="absolute inset-0 bg-[url('/images/quality_assurance.jpg')] bg-cover bg-center opacity-[0.06] grayscale contrast-125 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/70 to-slate-50" />
-
-        {/* Enlarged Low-Opacity Official ARG Logo Watermark (Top Right) */}
-        <div className="absolute -top-16 -right-20 w-[700px] h-[700px] lg:w-[950px] lg:h-[950px] opacity-[0.045] pointer-events-none rotate-6 mix-blend-multiply select-none">
-          <Image src="/arg_logo.png" alt="ARG Registrars Official Logo Watermark" fill className="object-contain" priority={false} />
-        </div>
+        <div className="absolute inset-0 bg-[url('/images/quality_assurance.jpg')] bg-cover bg-center opacity-[0.09] contrast-[1.08] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8FAFC]/90 via-[#F8FAFC]/75 to-[#F8FAFC]" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

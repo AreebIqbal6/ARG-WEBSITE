@@ -34,11 +34,6 @@ export default function Audits() {
         <div className="absolute inset-0 z-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-[0.35] contrast-105"></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/65 to-transparent"></div>
         
-        {/* Enlarged Low-Opacity Official ARG Logo Watermark (Top Right) */}
-        <div className="absolute -top-16 -right-20 w-[650px] h-[650px] lg:w-[850px] lg:h-[850px] opacity-[0.045] pointer-events-none rotate-6 mix-blend-multiply select-none z-10">
-          <Image src="/arg_logo.png" alt="ARG Registrars Official Logo Watermark" fill className="object-contain" priority={false} />
-        </div>
-        
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
             <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-sans font-semibold text-xs tracking-wider uppercase border-b border-slate-200 pb-2 max-w-full">
