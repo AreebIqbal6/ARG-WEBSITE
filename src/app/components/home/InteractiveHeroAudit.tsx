@@ -137,19 +137,19 @@ export default function InteractiveHeroAudit() {
               onClick={() => setActiveTab(s.id)}
               className={`relative px-3.5 py-2 rounded-lg text-xs font-sans font-semibold transition-all duration-200 flex items-center justify-center gap-2 text-center cursor-pointer ${
                 isActive
-                  ? "text-white shadow-xs"
-                  : "text-slate-600 hover:text-slate-900 hover:bg-white/70"
+                  ? "text-white shadow-sm"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-white/80"
               }`}
             >
               {isActive && (
                 <motion.div
                   layoutId="activeTabPill"
-                  className="absolute inset-0 rounded-lg bg-[#00873E] -z-10 shadow-xs"
+                  className="absolute inset-0 rounded-lg bg-[#00873E] shadow-sm"
                   transition={{ type: "spring", damping: 25, stiffness: 220 }}
                 />
               )}
-              <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-white' : 'bg-slate-400'}`} />
-              <span className="font-mono text-xs">{s.code}</span>
+              <span className={`relative z-10 w-1.5 h-1.5 rounded-full ${isActive ? 'bg-white' : 'bg-slate-400'}`} />
+              <span className="relative z-10 font-mono text-xs font-semibold">{s.code}</span>
             </button>
           );
         })}
