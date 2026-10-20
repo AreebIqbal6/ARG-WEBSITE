@@ -21,10 +21,10 @@ export default function Contact() {
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="inline-flex items-center gap-3 mb-6 text-xs font-mono tracking-widest uppercase border-b border-white/10 pb-2">
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-white/10 pb-2 text-center max-w-full">
               <span className="text-[#34D399] font-bold">SEC. 05 //</span>
               <span className="text-gray-200">REGISTRAR DESK &amp; OFFICES</span>
-              <span className="text-gray-600">&bull;</span>
+              <span className="hidden sm:inline text-gray-600">&bull;</span>
               <span className="text-gray-400">RIYADH &bull; FAISALABAD</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-6">

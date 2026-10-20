@@ -99,10 +99,10 @@ export default function Services() {
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-6 text-xs font-mono tracking-widest uppercase border-b border-white/10 pb-2">
+            <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-white/10 pb-2 max-w-full">
               <span className="text-[#34D399] font-bold">SEC. 03 //</span>
               <span className="text-gray-200">ACCREDITED SCOPES</span>
-              <span className="text-gray-600">&bull;</span>
+              <span className="hidden sm:inline text-gray-600">&bull;</span>
               <span className="text-gray-400">ARG REGISTRARS</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight tracking-tight mb-4">

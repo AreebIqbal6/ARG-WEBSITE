@@ -9,7 +9,7 @@ export default function FloatingWhatsApp() {
   const defaultMessage = "Hello ARG Registrars Pakistan, I would like to inquire about your accredited ISO certifications, C-TPAT audits, and technical compliance services.";
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="hidden md:flex fixed bottom-6 right-6 z-50 flex-col items-end">
       {/* Mini Chat Card Pop-over */}
       <AnimatePresence>
         {isOpen && (
@@ -22,7 +22,7 @@ export default function FloatingWhatsApp() {
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
               <div className="flex items-center gap-2.5">
-                <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                 <span className="font-montserrat font-bold text-xs uppercase tracking-wider text-[#34D399]">
                   ARG Registrars Desk
                 </span>

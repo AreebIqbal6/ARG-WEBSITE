@@ -188,7 +188,7 @@ export default function CertificateVerifyModal({
                 e.preventDefault();
                 handleSearch();
               }}
-              className="flex gap-2"
+              className="flex flex-col sm:flex-row gap-2.5"
             >
               <div className="relative flex-1">
                 <Search
@@ -200,12 +200,12 @@ export default function CertificateVerifyModal({
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Enter Certificate ID (e.g. ARG-9001-KSA-041)"
-                  className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/[0.04] border border-white/15 focus:border-[#34D399] focus:outline-none text-white placeholder-gray-500 font-mono text-sm tracking-wide transition-all"
+                  className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/[0.04] border border-white/15 focus:border-[#34D399] focus:outline-none text-white placeholder-gray-500 font-mono text-xs sm:text-sm tracking-wide transition-all"
                 />
               </div>
               <button
                 type="submit"
-                className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/40 hover:shadow-[0_0_20px_rgba(0,135,62,0.4)] transition-all shrink-0"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-400/40 hover:shadow-[0_0_20px_rgba(0,135,62,0.4)] transition-all shrink-0 text-center justify-center flex items-center cursor-pointer"
               >
                 VERIFY
               </button>

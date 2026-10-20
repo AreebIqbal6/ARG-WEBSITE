@@ -89,14 +89,14 @@ export default function InteractiveHeroAudit() {
   return (
     <div className="w-full max-w-5xl mx-auto mt-14">
       {/* Console Header Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-2 p-2 rounded-2xl glass-panel border border-white/10 bg-[#06150D]/70 backdrop-blur-xl mb-6">
+      <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-2 p-2 rounded-2xl glass-panel border border-white/10 bg-[#06150D]/70 backdrop-blur-xl mb-6">
         {standards.map((s) => {
           const isActive = activeTab === s.id;
           return (
             <button
               key={s.id}
               onClick={() => setActiveTab(s.id)}
-              className={`relative px-5 py-2.5 rounded-xl text-xs md:text-sm font-display font-semibold transition-all duration-300 flex items-center gap-2 ${
+              className={`relative px-3 sm:px-5 py-2.5 rounded-xl text-xs md:text-sm font-display font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-center ${
                 isActive
                   ? "text-white shadow-lg"
                   : "text-gray-400 hover:text-gray-200 hover:bg-white/[0.04]"
@@ -117,7 +117,7 @@ export default function InteractiveHeroAudit() {
       </div>
 
       {/* Dynamic Console Panel */}
-      <div className="relative glass-card rounded-[2.5rem] p-6 md:p-10 border border-emerald-500/20 shadow-2xl overflow-hidden">
+      <div className="relative glass-card rounded-2xl md:rounded-[2.5rem] p-5 sm:p-7 md:p-10 border border-emerald-500/20 shadow-2xl overflow-hidden">
         {/* Subtle Ambient Radial Light */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -191,14 +191,14 @@ export default function InteractiveHeroAudit() {
                 <button
                   type="button"
                   onClick={() => setIsSpecModalOpen(true)}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white text-xs font-display font-bold tracking-wider hover:shadow-[0_0_20px_rgba(0,135,62,0.5)] transition-all border border-emerald-400/40 cursor-pointer"
+                  className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white text-xs font-display font-bold tracking-wider hover:shadow-[0_0_20px_rgba(0,135,62,0.5)] transition-all border border-emerald-400/40 cursor-pointer"
                 >
                   <FileCheck2 size={15} />
                   <span>VIEW SPECIFICATION</span>
                 </button>
                 <Link
                   href="/audits#four-stage-protocol"
-                  className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl glass-panel text-gray-300 hover:text-white text-xs font-sans font-medium hover:border-emerald-400/30 transition-all"
+                  className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl glass-panel text-gray-300 hover:text-white text-xs font-sans font-medium hover:border-emerald-400/30 transition-all"
                 >
                   <span>Audit Roadmap</span>
                   <ArrowUpRight size={14} />

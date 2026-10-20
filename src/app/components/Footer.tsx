@@ -145,9 +145,10 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-white/[0.05] pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs font-sans gap-4">
           <p>&copy; {new Date().getFullYear()} ARG REGISTRARS PAKISTAN. All Rights Reserved. (argregistrars.com)</p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 items-center">
             <Link href="/privacy-policy" className="hover:text-[#34D399] transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[#34D399] transition-colors">Terms of Service</Link>
+            <Link href="/admin/inquiries" className="hover:text-[#34D399] transition-colors font-mono text-[11px]">Registrar Portal</Link>
           </div>
         </div>
 

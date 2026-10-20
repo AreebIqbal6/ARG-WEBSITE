@@ -122,7 +122,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden absolute top-full left-0 w-full bg-[#030906]/95 border-t border-white/10 text-white backdrop-blur-2xl flex flex-col items-center py-8 gap-5 font-sans z-40 shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
+            className="lg:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-[#030906] border-t border-white/10 text-white flex flex-col items-center justify-start py-8 px-6 gap-6 font-sans z-50 overflow-y-auto"
           >
             <Link href="/" className="text-base font-bold tracking-widest hover:text-[#34D399] transition-colors" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
             <Link href="/services" className="text-base font-bold tracking-widest hover:text-[#34D399] transition-colors" onClick={() => setMobileMenuOpen(false)}>SERVICES</Link>

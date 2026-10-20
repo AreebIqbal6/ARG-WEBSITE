@@ -35,11 +35,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center gap-3 mb-8 text-xs font-mono tracking-widest uppercase border-b border-white/10 pb-2"
+            className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-6 md:mb-8 text-[11px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase border-b border-white/10 pb-2 text-center max-w-full"
           >
             <span className="text-[#34D399] font-bold">SEC. 01 //</span>
             <span className="text-gray-200">ACCREDITED REGISTRAR BODY</span>
-            <span className="text-gray-600">&bull;</span>
+            <span className="hidden sm:inline text-gray-600">&bull;</span>
             <span className="text-gray-400">RIYADH &bull; FAISALABAD</span>
           </motion.div>
 
@@ -61,7 +61,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-gray-300 font-sans text-base sm:text-lg md:text-xl max-w-3xl mb-12 font-light leading-relaxed"
+            className="text-gray-300 font-sans text-base sm:text-lg md:text-xl max-w-3xl mb-12 font-light leading-relaxed px-2"
           >
             Empowering industrial leaders, textile manufacturers, and international exporters with accredited <strong className="text-white font-semibold">ISO 9001</strong>, <strong className="text-white font-semibold">ISO 14001</strong>, <strong className="text-white font-semibold">ISO 45001</strong>, and <strong className="text-white font-semibold">C-TPAT</strong> supply chain certifications across Saudi Arabia and Pakistan.
           </motion.p>
@@ -71,11 +71,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-16 w-full sm:w-auto"
           >
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.5)] hover:-translate-y-0.5 transition-all border border-emerald-400/40"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_0_30px_rgba(0,135,62,0.5)] hover:-translate-y-0.5 transition-all border border-emerald-400/40"
             >
               <span>SCHEDULE AN AUDIT</span>
               <ArrowUpRight size={15} />
@@ -83,7 +83,7 @@ export default function HeroSection() {
 
             <Link 
               href="/services" 
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-sans font-semibold text-xs tracking-wider glass-panel text-gray-200 hover:text-white hover:border-emerald-400/40 hover:bg-white/[0.06] transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-sans font-semibold text-xs tracking-wider glass-panel text-gray-200 hover:text-white hover:border-emerald-400/40 hover:bg-white/[0.06] transition-all"
             >
               <ShieldCheck size={15} className="text-[#34D399]" />
               <span>EXPLORE ACCREDITED SCOPES</span>
