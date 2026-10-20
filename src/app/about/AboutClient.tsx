@@ -29,7 +29,7 @@ export default function About() {
     <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-slate-800 ">
       
       {/* HEADER */}
-      <section className="relative pt-44 md:pt-52 pb-24 md:pb-28 min-h-[500px] md:min-h-[540px] flex flex-col justify-center overflow-hidden bg-white border-b border-slate-200">
+      <section className="relative pt-40 sm:pt-44 md:pt-48 pb-20 md:pb-24 overflow-hidden bg-white border-b border-slate-200">
         <div className="absolute inset-0 z-0 bg-[url('/images/corporate_headquarters.jpg')] bg-cover bg-center opacity-[0.35] contrast-105"></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/65 to-transparent"></div>
         

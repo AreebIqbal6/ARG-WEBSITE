@@ -6,7 +6,7 @@ const fadeInUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, t
 
 export default function TermsAndConditions() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#fafafa] pt-40 pb-20">
+    <div className="flex flex-col min-h-screen bg-[#fafafa] pt-44 md:pt-48 pb-20">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl relative z-10">
         <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-4">

@@ -7,14 +7,14 @@ import InteractiveHeroAudit from './InteractiveHeroAudit';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-center pt-36 pb-24 overflow-hidden bg-white">
+    <section className="relative min-h-[92vh] flex flex-col justify-center pt-44 md:pt-48 pb-24 overflow-hidden bg-white">
       {/* Background Editorial Auditor Inspection Picture */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-[0.45] contrast-105" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/35 to-white" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 my-auto">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
           
           {/* Institutional Trust Badge */}
