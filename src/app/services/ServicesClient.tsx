@@ -93,8 +93,8 @@ export default function Services() {
       
       {/* HEADER */}
       <section className="relative h-[60vh] min-h-[460px] flex items-end pb-20 pt-36 overflow-hidden bg-white border-b border-slate-200">
-        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-[0.14] grayscale contrast-125"></div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/70 to-transparent"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/images/precision_robotics.jpg')] bg-cover bg-center opacity-[0.40] contrast-105"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/50 to-transparent"></div>
         
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
