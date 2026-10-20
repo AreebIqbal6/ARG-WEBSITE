@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FileCheck2, 
@@ -368,8 +369,24 @@ export default function AuditSpecModal({
   onClose,
   standardId
 }: AuditSpecModalProps) {
+  const [mounted, setMounted] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
   const data = auditSpecsCatalog[standardId] || auditSpecsCatalog["iso-9001"];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const handleDownload = () => {
     // Generate text/markdown spec sheet download
@@ -412,46 +429,49 @@ Email: records@argregistrars.com
     setTimeout(() => setDownloaded(false), 3000);
   };
 
-  if (!isOpen) return null;
+  if (!isOpen || !mounted) return null;
 
-  return (
+  return createPortal(
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      <div 
+        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+        onClick={onClose}
+      >
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onClick={onClose}
-          className="fixed inset-0 bg-black/85 backdrop-blur-md"
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
         />
 
         {/* Modal Window */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          initial={{ opacity: 0, scale: 0.96, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-3xl bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden z-10 my-8 text-left max-h-[90vh] flex flex-col"
+          exit={{ opacity: 0, scale: 0.96, y: 16 }}
+          transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          onClick={(e) => e.stopPropagation()}
+          className="relative w-full max-w-3xl bg-white border border-slate-200/90 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] overflow-hidden z-10 my-auto text-left max-h-[88vh] flex flex-col"
         >
           {/* Header Bar */}
-          <div className="p-6 md:p-8 border-b border-slate-200 flex items-center justify-between bg-slate-50 shrink-0">
+          <div className="p-5 sm:p-6 md:p-7 border-b border-slate-200 flex items-center justify-between bg-white shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E]">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] shrink-0">
                 <FileCheck2 size={22} />
               </div>
               <div>
                 <div className="text-[11px] font-sans font-bold uppercase tracking-widest text-[#00873E]">
                   {data.category} &bull; {data.iafSector}
                 </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 tracking-wide">
+                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 tracking-tight">
                   {data.code} &ndash; Audit Specification
                 </h3>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+              className="p-2.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label="Close modal"
             >
               <X size={20} />
@@ -459,7 +479,7 @@ Email: records@argregistrars.com
           </div>
 
           {/* Scrollable Content Body */}
-          <div className="p-6 md:p-8 space-y-6 overflow-y-auto">
+          <div className="p-5 sm:p-6 md:p-8 space-y-6 overflow-y-auto flex-1">
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-sans">
               <div className="flex items-center gap-2.5">
@@ -543,28 +563,28 @@ Email: records@argregistrars.com
           </div>
 
           {/* Footer Bar */}
-          <div className="p-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50 shrink-0">
+          <div className="p-4 sm:p-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-50 shrink-0">
             <button
               onClick={handleDownload}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-sm cursor-pointer"
             >
               <Download size={14} className="text-[#00873E]" />
               <span>{downloaded ? "Specification Downloaded!" : "Download Criteria Sheet (.TXT)"}</span>
             </button>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-end gap-2.5 w-full sm:w-auto">
               <a
                 href={`https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20have%20a%20technical%20question%20regarding%20${encodeURIComponent(data.code)}%20audit%20requirements.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#00873E] font-sans text-xs border border-emerald-200 font-medium transition-all"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#00873E] font-sans text-xs border border-emerald-200 font-medium transition-all"
               >
                 <MessageCircle size={14} />
                 <span>Ask Auditor</span>
               </a>
               <button
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans text-xs transition-all border border-slate-200"
+                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans text-xs transition-all border border-slate-200 cursor-pointer"
               >
                 Close
               </button>
@@ -572,6 +592,7 @@ Email: records@argregistrars.com
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
