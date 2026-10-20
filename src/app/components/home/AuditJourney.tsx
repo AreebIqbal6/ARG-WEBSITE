@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ClipboardCheck, SearchCheck, ShieldCheck, Award, ArrowRight, FileCheck2 } from 'lucide-react';
+import { ClipboardCheck, SearchCheck, ShieldCheck, Award, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import SpotlightCard from '../ui/SpotlightCard';
-import AuditSpecModal from '../ui/AuditSpecModal';
 
 const steps = [
   {
@@ -47,7 +46,6 @@ const steps = [
 ];
 
 export default function AuditJourney() {
-  const [specModalOpen, setSpecModalOpen] = useState(false);
   return (
     <section id="four-stage-protocol" className="py-28 relative z-20 overflow-hidden bg-white border-t border-slate-200 scroll-mt-24">
       {/* Background Watermarks & Facility Inspection Photo */}
@@ -148,31 +146,14 @@ export default function AuditJourney() {
               <div className="text-slate-600 font-sans text-xs md:text-sm">Initial documentation reviews dispatched within 48 business hours of receipt.</div>
             </div>
           </div>
-          <div className="flex flex-wrap items-center gap-3 shrink-0 w-full md:w-auto">
-            <button
-              type="button"
-              onClick={() => setSpecModalOpen(true)}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-display font-bold text-xs tracking-wider transition-all border border-slate-200 shadow-xs hover:shadow-sm cursor-pointer active:scale-[0.98]"
-            >
-              <FileCheck2 size={14} className="text-[#00873E]" />
-              <span>VIEW AUDIT METHODOLOGY</span>
-            </button>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#00873E] hover:bg-[#059669] text-white font-display font-bold text-xs tracking-wider transition-all shadow-sm hover:shadow-md hover:scale-105 active:scale-[0.98]"
-            >
-              <span>REQUEST AUDIT INTAKE</span>
-              <ArrowRight size={14} />
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00873E] hover:bg-[#059669] text-white font-display font-bold text-xs tracking-wider transition-all shadow-sm hover:shadow-md hover:scale-105 active:scale-[0.98] shrink-0 w-full md:w-auto"
+          >
+            <span>REQUEST AUDIT INTAKE</span>
+            <ArrowRight size={14} />
+          </Link>
         </motion.div>
-
-        {/* Audit Specification Modal */}
-        <AuditSpecModal
-          isOpen={specModalOpen}
-          onClose={() => setSpecModalOpen(false)}
-          standardId="iso-9001"
-        />
 
       </div>
     </section>
