@@ -16,7 +16,7 @@ export default function Contact() {
       {/* Background Aurora */}
       
 
-      <section className="relative z-10 pt-40 pb-32">
+      <section className="relative z-10 pt-44 md:pt-48 pb-32">
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-20">
