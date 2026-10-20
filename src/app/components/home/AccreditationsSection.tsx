@@ -121,6 +121,14 @@ const certifications: Certification[] = [
     tagline: "European Health & Safety Directives",
     scope: "Validation that manufactured industrial goods and textiles meet European Union health, safety, and environmental protection requirements.",
     features: ["Technical File Documentation", "Essential Safety Assessment", "EU Declaration of Conformity"]
+  },
+  {
+    id: "iso-22000",
+    name: "ISO 22000:2018",
+    badgeImg: "/certifications/card/iso-22000.png",
+    tagline: "Food Safety Management Systems (FSMS)",
+    scope: "Interactive communication, prerequisite programs (PRPs), and HACCP hazard controls across the entire global food and packaging supply chain.",
+    features: ["HACCP Principles Integration", "Critical Control Point (CCP) Auditing", "Farm-to-Fork Traceability"]
   }
 ];
 

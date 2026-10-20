@@ -440,6 +440,35 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
       "Full HACCP & Sanitation Verification Audit Dossier",
       "GFSI Alignment Verification Report for Export Retailers"
     ]
+  },
+  "iso-22000": {
+    id: "iso-22000",
+    code: "ISO 22000:2018",
+    title: "Food Safety Management Systems (FSMS)",
+    category: "Food Safety & HACCP",
+    turnaround: "10-14 Business Days",
+    validity: "3-Year Cycle (Annual Surveillance)",
+    iafSector: "IAF Scope Category 03 (Food Products, Beverages & Packaging)",
+    badge: "/certifications/card/iso-22000.png",
+    heroImage: "/images/logistics_warehouse.jpg",
+    personDaysGuide: "Based on IAF MD5 complexity tables, food chain category, number of HACCP studies, and production shifts.",
+    stage1Docs: [
+      "Documented Food Safety Policy and FSMS Scope (Clauses 4.3 & 5.2)",
+      "Prerequisite Programs (PRPs) according to ISO/TS 22002 series",
+      "Hazard Analysis, CCP Determinations, and Operational PRPs (OPRPs)",
+      "Product descriptions, intended use specifications, and verified process flow diagrams"
+    ],
+    stage2Audits: [
+      "On-site inspection of critical control points (CCPs) and critical limits monitoring logs",
+      "Physical examination of sanitation, personal hygiene, and pest exclusion barriers",
+      "Mock recall and mass-balance traceability exercise verification",
+      "Verification of internal audits, management reviews, and food safety team competency records"
+    ],
+    deliverables: [
+      "Accredited ISO 22000:2018 Management System Certificate",
+      "Comprehensive FSMS & HACCP Audit Technical Findings Report",
+      "Formal CAPA Review and Verification Dossier"
+    ]
   }
 };
 

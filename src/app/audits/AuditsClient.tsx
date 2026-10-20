@@ -20,7 +20,8 @@ const auditStandards = [
   { id: "technical-audit", name: "Technical Audit", badge: "/certifications/card/technical-audit.png", title: "Factory Capability Reviews", desc: "In-depth machinery inspection, labor practices, quality control room protocols, and overall factory manufacturing capacity." },
   { id: "fsns-sqf", name: "FSNS & SQF", badge: "/certifications/card/fsns-sqf.png", title: "Hygiene & Food Safety Standards", desc: "Comprehensive auditing for food contact materials, sanitation practices, traceability, and global safety standards." },
   { id: "iso-17025", name: "ISO 17025", badge: "/certifications/card/iso_17025.png", title: "Laboratory Competence Audits", desc: "Scrutiny of testing methodologies, environmental controls, equipment calibration curves, and measurement uncertainty." },
-  { id: "ce-marking", name: "CE Marking", badge: "/certifications/card/ce_marking.png", title: "European Conformity Directives", desc: "Technical file scrutiny, risk mitigation records, and safety conformity declarations for European export compliance." }
+  { id: "ce-marking", name: "CE Marking", badge: "/certifications/card/ce_marking.png", title: "European Conformity Directives", desc: "Technical file scrutiny, risk mitigation records, and safety conformity declarations for European export compliance." },
+  { id: "iso-22000", name: "ISO 22000:2018", badge: "/certifications/card/iso-22000.png", title: "Food Safety Audits", desc: "Comprehensive evaluation of prerequisite programs (PRPs), critical control points (CCPs), and farm-to-fork food chain safety." }
 ];
 
 export default function Audits() {
