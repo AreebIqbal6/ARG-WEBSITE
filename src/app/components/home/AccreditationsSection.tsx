@@ -1,9 +1,10 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, CheckCircle2, Award } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, CheckCircle2, Award, FileCheck2 } from 'lucide-react';
+import AuditSpecModal from '../ui/AuditSpecModal';
 
 const springPhysics = { type: "spring", damping: 25, stiffness: 120 };
 
@@ -124,6 +125,8 @@ const certifications: Certification[] = [
 ];
 
 export default function AccreditationsSection() {
+  const [specModalId, setSpecModalId] = useState<string | null>(null);
+
   return (
     <section id="accreditations" className="py-28 relative z-20 bg-slate-50 border-t border-b border-slate-200 overflow-hidden bg-[#F8FAFC]">
       {/* Aurora Glows */}
@@ -216,7 +219,7 @@ export default function AccreditationsSection() {
 
               {/* Bullet Features */}
               <div className="border-t border-slate-100 pt-4 mt-auto">
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col gap-2 mb-4">
                   {cert.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-[11px] text-slate-700 font-sans">
                       <CheckCircle2 size={13} className="text-[#00873E] shrink-0" />
@@ -224,6 +227,16 @@ export default function AccreditationsSection() {
                     </li>
                   ))}
                 </ul>
+
+                {/* View Specification Button */}
+                <button
+                  type="button"
+                  onClick={() => setSpecModalId(cert.id)}
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-[#00873E] font-display font-semibold text-xs border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer active:scale-[0.98] group/btn"
+                >
+                  <FileCheck2 size={14} className="text-[#00873E] group-hover/btn:scale-110 transition-transform" />
+                  <span>VIEW SPECIFICATION</span>
+                </button>
               </div>
             </motion.div>
           ))}
@@ -263,6 +276,13 @@ export default function AccreditationsSection() {
             </Link>
           </div>
         </motion.div>
+
+        {/* Specification Modal for Selected Certification */}
+        <AuditSpecModal
+          isOpen={!!specModalId}
+          onClose={() => setSpecModalId(null)}
+          standardId={specModalId || "iso-9001"}
+        />
 
       </div>
     </section>
