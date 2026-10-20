@@ -138,6 +138,222 @@ export const auditSpecsCatalog: Record<string, AuditSpecData> = {
       "Comprehensive Security Risk Matrix & Vulnerability Assessment Report",
       "Corrective Action Plan for US Buyer Vendor Portal Compliance"
     ]
+  },
+  "c-tpat": {
+    id: "c-tpat",
+    code: "C-TPAT Certified",
+    title: "Customs-Trade Partnership Against Terrorism",
+    category: "US Customs & Border Protection Supply Chain",
+    turnaround: "7-10 Business Days",
+    validity: "Annual Registrar Security Validation",
+    iafSector: "US CBP Minimum Security Criteria (MSC)",
+    personDaysGuide: "Typically 1 to 2 on-site person-days focusing on perimeter, logistics, and container loading.",
+    stage1Docs: [
+      "Supply Chain Security Profile addressing all 12 MSC criteria categories",
+      "Business Partner Security Verification questionnaires and Tier-2 supplier vetting records",
+      "Container & trailer 7-point inspection written procedures and high-security seal logbooks",
+      "Information technology security policies, firewall logs, and user access revocations"
+    ],
+    stage2Audits: [
+      "Perimeter fencing, lighting, CCTV coverage, and 30-day recorded video archive inspection",
+      "Guard post visitor logs, employee ID card badge systems, and vehicle access controls",
+      "Live witnessing of 7-point container inspection and ISO 17712 compliant bolt-seal application",
+      "Pre-employment background check verification files for security-sensitive personnel"
+    ],
+    deliverables: [
+      "Official ARG C-TPAT Security Assessment Verification Certificate",
+      "Comprehensive Security Risk Matrix & Vulnerability Assessment Report",
+      "Corrective Action Plan for US Buyer Vendor Portal Compliance"
+    ]
+  },
+  "gots": {
+    id: "gots",
+    code: "GOTS Certified",
+    title: "Global Organic Textile Standard",
+    category: "Organic Sustainability",
+    turnaround: "10-14 Business Days",
+    validity: "Annual Scope Certificate Cycle",
+    iafSector: "Organic Fiber & Chemical Processing",
+    personDaysGuide: "Based on processing stages (spinning, weaving, wet processing) and facility headcount.",
+    stage1Docs: [
+      "Organic raw material transaction certificates (TCs) and certified supplier invoices",
+      "Organic management plan detailing separation of organic and conventional lots",
+      "List of all chemical inputs, dyestuffs, and auxiliaries with toxicological data sheets",
+      "Environmental management manual and effluent treatment monitoring protocols"
+    ],
+    stage2Audits: [
+      "Inspection of raw fiber storage, ginning/spinning lines, and contamination barriers",
+      "Sampling of wastewater and chemical inventory checks against GOTS restricted list",
+      "Social criteria compliance audit including worker interviews, wage records, and working hours",
+      "Mass balance calculation and transaction certificate reconciliation across batches"
+    ],
+    deliverables: [
+      "Official GOTS Conformity Assessment Report",
+      "Accredited Scope Certificate and Transaction Certificate eligibility",
+      "Annual Organic Surveillance Roadmap"
+    ]
+  },
+  "grs": {
+    id: "grs",
+    code: "GRS Standard",
+    title: "Global Recycled Standard",
+    category: "Circularity & Recycling",
+    turnaround: "10-14 Business Days",
+    validity: "Annual Scope Certificate Cycle",
+    iafSector: "Recycled Content Chain of Custody",
+    personDaysGuide: "Calculated from recycled material input points and chain-of-custody complexity.",
+    stage1Docs: [
+      "Reclaimed material supplier declarations and legal compliance permits",
+      "Chain of custody procedures adhering to Content Claim Standard (CCS)",
+      "Chemical management system records and ZDHC MRSL conformance declarations",
+      "Environmental policy, energy usage records, and water consumption metrics"
+    ],
+    stage2Audits: [
+      "On-site material flow inspection from bale opening to finished product packing",
+      "Physical verification of post-consumer vs pre-consumer material segregation",
+      "Chemical storage review and environmental discharge testing reconciliation",
+      "Worker safety, health, and labor standards on-site verification"
+    ],
+    deliverables: [
+      "GRS Verification Assessment Dossier",
+      "Accredited Recycled Claim Scope Certificate",
+      "Corrective Action and Ongoing Surveillance Report"
+    ]
+  },
+  "zdhc": {
+    id: "zdhc",
+    code: "ZDHC Gateway & MRSL",
+    title: "Roadmap to Zero Discharge of Hazardous Chemicals",
+    category: "Chemical Integrity",
+    turnaround: "7-12 Business Days",
+    validity: "Annual Validation",
+    iafSector: "Textile & Leather Wet Processing",
+    personDaysGuide: "Typically 2 to 3 auditor days focusing on chemical inventory and effluent plant.",
+    stage1Docs: [
+      "Chemical inventory log with ZDHC Gateway CID numbers and MRSL levels",
+      "Safety data sheets (SDS) conforming to GHS standards for 100% of formulations",
+      "Effluent treatment plant (ETP) engineering schematics and discharge authorizations",
+      "Chemical storage protocols and hazardous waste consignment notes"
+    ],
+    stage2Audits: [
+      "Sampling of raw wastewater, treated effluent, and sludge for ClearStream lab testing",
+      "Shopfloor chemical dispensing station inspection and spill containment gates",
+      "Interviews with chemical storekeepers, ETP technicians, and safety leads",
+      "Cross-check of chemical purchasing invoices against ZDHC Gateway registered products"
+    ],
+    deliverables: [
+      "ZDHC ClearStream Wastewater & Sludge Conformity Report",
+      "Chemical Management System Assessment Certificate",
+      "InCheck Chemical Inventory Conformance Summary"
+    ]
+  },
+  "en-15343": {
+    id: "en-15343",
+    code: "EN 15343",
+    title: "Recycled Plastics Traceability & Assessment",
+    category: "European Plastics Directives",
+    turnaround: "10-14 Business Days",
+    validity: "Annual Audit Cycle",
+    iafSector: "European Polymer Recycling Standards",
+    personDaysGuide: "Typically 2 person-days covering recycling lines, extrusion, and mass balance.",
+    stage1Docs: [
+      "Raw polymer source documentation and origin declarations for recycled inputs",
+      "Mass balance accounting system records and batch tracking protocols",
+      "Internal quality control manual for mechanical or chemical recycling processes",
+      "Testing records for mechanical properties and contamination levels"
+    ],
+    stage2Audits: [
+      "Physical inspection of polymer sorting, washing, compounding, and pelletizing lines",
+      "Auditor verification of batch traceability numbers from scrap receipt to finished pellets",
+      "Witnessing of melt flow index (MFI), density, and moisture testing procedures",
+      "Reconciliation of purchase weight vs production yield and scrap losses"
+    ],
+    deliverables: [
+      "Official EN 15343 Recycled Content Traceability Certificate",
+      "Full Polymer Batch Traceability Audit Dossier",
+      "EU Market Access Recycled Plastic Compliance Report"
+    ]
+  },
+  "ppwr": {
+    id: "ppwr",
+    code: "EU PPWR Compliance",
+    title: "Packaging & Packaging Waste Regulation",
+    category: "EU Circularity Standards",
+    turnaround: "7-10 Business Days",
+    validity: "Annual EU Market Conformance Review",
+    iafSector: "EU Single Market Green Deal Directives",
+    personDaysGuide: "Typically 1 to 2 person-days focusing on packaging design and material composition.",
+    stage1Docs: [
+      "Technical packaging specifications, layer compositions, and barrier coatings data",
+      "Recyclability assessment documentation based on CEN harmonized standards",
+      "Material safety certificates confirming absence of PFAS and heavy metals (<100 ppm)",
+      "Recycled plastic content certificates for plastic packaging formats"
+    ],
+    stage2Audits: [
+      "Manufacturing line inspection to verify material bill of materials (BOM)",
+      "Screening of adhesives, inks, and labeling materials for recyclability disruption",
+      "Testing lab report review for heavy metal concentrations and SVHC compliance",
+      "Audit of packaging volume and weight minimization design optimization records"
+    ],
+    deliverables: [
+      "EU PPWR Regulatory Conformity Verification Report",
+      "Design for Recyclability (DfR) Grade Assessment Certificate",
+      "EU Buyer Technical Compliance Summary"
+    ]
+  },
+  "iso-17025": {
+    id: "iso-17025",
+    code: "ISO/IEC 17025:2017",
+    title: "Testing & Calibration Laboratories Competence",
+    category: "Laboratory Accreditation",
+    turnaround: "14-20 Business Days",
+    validity: "3-Year Cycle with Annual Surveillance",
+    iafSector: "ILAC / Laboratory Testing Services",
+    personDaysGuide: "Determined by test scopes, calibration parameters, and qualified technical signatories.",
+    stage1Docs: [
+      "Quality manual adhering to ISO/IEC 17025:2017 management and technical clauses",
+      "Method validation dossiers, uncertainty budgets, and standard operating procedures (SOPs)",
+      "Equipment calibration certificates with unbroken traceability to national metrology institutes",
+      "Proficiency testing (PT) or inter-laboratory comparison (ILC) participation records"
+    ],
+    stage2Audits: [
+      "Live witnessing of representative test and calibration procedures by technical assessors",
+      "Evaluation of environmental controls (temperature, humidity, vibration) in testing areas",
+      "Interviews with authorized signatories on measurement uncertainty and error analysis",
+      "Audit of sample receipt, chain-of-custody, reporting software, and data integrity"
+    ],
+    deliverables: [
+      "Accredited ISO/IEC 17025:2017 Laboratory Competence Certificate",
+      "Formal Schedule of Accreditation detailing validated test parameters and ranges",
+      "Technical Assessor Evaluation & Measurement Uncertainty Review"
+    ]
+  },
+  "ce-marking": {
+    id: "ce-marking",
+    code: "CE Marking Conformity",
+    title: "European Economic Area Conformity Directives",
+    category: "EU Product Directives",
+    turnaround: "10-15 Business Days",
+    validity: "Directives Conformity Cycle",
+    iafSector: "EU Harmonized Technical Legislation",
+    personDaysGuide: "Based on applicable EU directives (e.g., PPE, Machinery, Low Voltage).",
+    stage1Docs: [
+      "Draft EU Declaration of Conformity (DoC) and list of applied harmonized EN standards",
+      "Product technical construction file (TCF) with design drawings and schematics",
+      "Risk assessment and reduction analysis adhering to applicable directive Annexes",
+      "User manuals, safety warnings, and packaging labeling in required EU languages"
+    ],
+    stage2Audits: [
+      "Verification of factory production control (FPC) to ensure serial production conformity",
+      "Review of accredited type-examination testing reports and safety margins",
+      "Inspection of serial number marking, CE logo proportion, and traceability tags",
+      "Post-market surveillance and customer complaint resolution procedure review"
+    ],
+    deliverables: [
+      "EU CE Technical File Compliance Verification Certificate",
+      "Technical Construction File Review Summary Dossier",
+      "Authorized Registrar Conformity Sign-Off for EU Customs Export"
+    ]
   }
 };
 

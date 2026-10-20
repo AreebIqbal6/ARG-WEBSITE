@@ -32,7 +32,7 @@ const standards: StandardAuditData[] = [
     code: "ISO 9001:2015",
     title: "Quality Management Systems (QMS)",
     category: "Management Conformity",
-    badge: "/certifications/card/iso-9001.jpg",
+    badge: "/certifications/card/iso-9001.png",
     scopeSummary: "Demonstrates organizational ability to consistently provide defect-free products and services fulfilling international buyer regulatory standards.",
     turnaround: "10–14 Business Days",
     validity: "3-Year Cycle with Annual Surveillance",
@@ -77,7 +77,7 @@ const standards: StandardAuditData[] = [
     code: "C-TPAT Certified",
     title: "Customs Trade Partnership Against Terrorism",
     category: "Supply Chain Security",
-    badge: "/certifications/card/c-tpat.jpg",
+    badge: "/certifications/card/ctpat.jpg",
     scopeSummary: "Rigorous 12-point US Customs security evaluation enabling expedited Tier-2/Tier-3 green lane cargo processing at US import ports.",
     turnaround: "14–21 Business Days",
     validity: "Annual Verification & Threat Re-assessment",
@@ -85,6 +85,36 @@ const standards: StandardAuditData[] = [
       "Container & trailer 7-point physical security inspection",
       "Biometric access control, CCTV coverage & fencing integrity",
       "Subcontractor screening & international supply chain mapping"
+    ]
+  },
+  {
+    id: "gots",
+    code: "GOTS Certified",
+    title: "Global Organic Textile Standard",
+    category: "Organic Sustainability",
+    badge: "/certifications/card/gots.png",
+    scopeSummary: "World-leading organic fiber processing verification enforcing strict toxicological limits, chain-of-custody tracking, and social accountability.",
+    turnaround: "10–14 Business Days",
+    validity: "Annual Scope Certificate Cycle",
+    keyCheckpoints: [
+      "Organic raw material transaction certificate verification",
+      "Restricted chemical screening & residue testing gates",
+      "Wastewater treatment & worker environmental safeguards"
+    ]
+  },
+  {
+    id: "grs",
+    code: "GRS Standard",
+    title: "Global Recycled Standard",
+    category: "Circularity & Recycling",
+    badge: "/certifications/card/grs.png",
+    scopeSummary: "Accredited tracking of recycled content percentages across supply chains, chemical management, and environmental production practices.",
+    turnaround: "10–14 Business Days",
+    validity: "Annual Recycled Content Certification",
+    keyCheckpoints: [
+      "Post-consumer & pre-consumer recycled input mass balancing",
+      "Chemical management audit against ZDHC MRSL limits",
+      "Chain of custody documentation & traceability review"
     ]
   }
 ];

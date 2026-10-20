@@ -50,6 +50,46 @@ const certifications: Certification[] = [
     features: ["Cargo & Physical Security", "Access Control & Container Integrity", "Supply Chain Risk Assessment"]
   },
   {
+    id: "gots",
+    name: "GOTS Certified",
+    badgeImg: "/certifications/card/gots.png",
+    tagline: "Global Organic Textile Standard",
+    scope: "World-leading textile processing standard for organic fibers, integrating environmental and strict social compliance criteria.",
+    features: ["Organic Chain of Custody", "Residue & Toxin Screening", "Transaction Certificate Verification"]
+  },
+  {
+    id: "grs",
+    name: "GRS Standard",
+    badgeImg: "/certifications/card/grs.png",
+    tagline: "Global Recycled Standard",
+    scope: "Third-party certification of recycled material input, chain of custody, chemical restrictions, and responsible manufacturing.",
+    features: ["Recycled Input Tracking", "Environmental Management Systems", "Supply Chain Traceability"]
+  },
+  {
+    id: "zdhc",
+    name: "ZDHC Gateway & MRSL",
+    badgeImg: "/certifications/card/zdhc.png",
+    tagline: "Roadmap to Zero Hazardous Chemicals",
+    scope: "Elimination of hazardous substances in wet processing, chemical inventory compliance, and discharge water verification.",
+    features: ["MRSL Conformance Level 1-3", "Wastewater Discharge Testing", "Chemical Gateway Validation"]
+  },
+  {
+    id: "en-15343",
+    name: "EN 15343 Recycled Plastics",
+    badgeImg: "/certifications/card/en_15343.png",
+    tagline: "Traceability & Recycled Content",
+    scope: "European standard specifying procedures needed for traceability of recycled plastics and origin conformity assessment.",
+    features: ["Post-Consumer Plastic Audit", "Recycled Content % Verification", "Batch Traceability Protocols"]
+  },
+  {
+    id: "ppwr",
+    name: "EU PPWR Compliance",
+    badgeImg: "/certifications/card/ppwr.png",
+    tagline: "Packaging & Packaging Waste Regulation",
+    scope: "European Union circularity regulations enforcing packaging reduction, recyclability grades, and recycled plastic quotas.",
+    features: ["Circularity Assessment", "Design for Recyclability Audit", "PFAS & Heavy Metal Screening"]
+  },
+  {
     id: "technical-audit",
     name: "Technical Audit Compliance",
     badgeImg: "/certifications/card/technical-audit.png",

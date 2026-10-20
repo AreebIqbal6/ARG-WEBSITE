@@ -10,6 +10,11 @@ const auditStandards = [
   { name: "ISO 14001:2015", badge: "/certifications/card/iso-14001.jpg", title: "Environmental Management Audits", desc: "Assessment of ecological impacts, waste treatment compliance, resource conservation, and environmental legal obligations." },
   { name: "ISO 45001:2018", badge: "/certifications/card/iso-45001.jpg", title: "Occupational Safety Audits", desc: "Workplace hazard prevention, emergency response protocols, industrial hygiene, and worker wellness safeguards." },
   { name: "C-TPAT Certified", badge: "/certifications/card/ctpat.jpg", title: "Supply Chain Security Audits", desc: "End-to-end security audits according to US Customs criteria, covering container integrity, physical perimeter security, and logistics." },
+  { name: "GOTS Certified", badge: "/certifications/card/gots.png", title: "Organic Textile Standard", desc: "Third-party inspection of organic fiber chain of custody, chemical inputs, and environmental management." },
+  { name: "GRS Standard", badge: "/certifications/card/grs.png", title: "Recycled Content Verification", desc: "Accredited tracking of recycled content % in manufacturing, environmental criteria, and chemical restrictions." },
+  { name: "ZDHC Gateway & MRSL", badge: "/certifications/card/zdhc.png", title: "Hazardous Chemical Verification", desc: "Wastewater discharge conformance and input chemical management aligned with the Zero Discharge roadmap." },
+  { name: "EN 15343", badge: "/certifications/card/en_15343.png", title: "Recycled Plastics Traceability", desc: "European compliance audits verifying procedures for post-consumer recycled plastic origin and batch traceability." },
+  { name: "EU PPWR", badge: "/certifications/card/ppwr.png", title: "Packaging Waste Regulations", desc: "Circularity and recyclability evaluation adhering to European Union packaging reduction mandates." },
   { name: "Technical Audit", badge: "/certifications/card/technical-audit.png", title: "Factory Capability Reviews", desc: "In-depth machinery inspection, labor practices, quality control room protocols, and overall factory manufacturing capacity." },
   { name: "FSNS & SQF", badge: "/certifications/card/fsns-sqf.png", title: "Hygiene & Food Safety Standards", desc: "Comprehensive auditing for food contact materials, sanitation practices, traceability, and global safety standards." },
   { name: "ISO 17025", badge: "/certifications/card/iso_17025.png", title: "Laboratory Competence Audits", desc: "Scrutiny of testing methodologies, environmental controls, equipment calibration curves, and measurement uncertainty." },
@@ -98,15 +103,15 @@ export default function Audits() {
               </div>
             </div>
 
-            <div className="lg:w-1/2 flex items-center justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                {auditStandards.slice(0, 6).map((std, idx) => (
+            <div className="lg:w-1/2 flex items-center justify-center w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-h-[640px] overflow-y-auto pr-1">
+                {auditStandards.map((std, idx) => (
                   <motion.div 
                     key={idx}
                     whileHover={{ y: -5 }}
-                    className="bg-white p-6 rounded-3xl flex flex-col justify-between border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40"
+                    className="bg-white p-5 rounded-3xl flex flex-col justify-between border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40"
                   >
-                    <div className="flex items-center gap-3.5 mb-3.5">
+                    <div className="flex items-center gap-3.5 mb-3">
                       <div className="relative w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl p-1 shrink-0 shadow-sm">
                         <Image src={std.badge} alt={std.name} fill className="object-contain p-0.5" />
                       </div>

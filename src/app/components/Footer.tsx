@@ -4,10 +4,15 @@ import Image from 'next/image';
 import { Mail, MapPin, MessageCircle, ShieldCheck, Globe } from 'lucide-react';
 
 const footerCertLogos = [
-  { name: "ISO 9001 Quality Management", src: "/certifications/card/iso-9001.png" },
-  { name: "ISO 14001 Environmental Management", src: "/certifications/card/iso-14001.jpg" },
-  { name: "ISO 45001 Health & Safety", src: "/certifications/card/iso-45001.jpg" },
+  { name: "ISO 9001:2015 Quality Management", src: "/certifications/card/iso-9001.png" },
+  { name: "ISO 14001:2015 Environmental EMS", src: "/certifications/card/iso-14001.jpg" },
+  { name: "ISO 45001:2018 Health & Safety", src: "/certifications/card/iso-45001.jpg" },
   { name: "C-TPAT Supply Chain Security", src: "/certifications/card/ctpat.jpg" },
+  { name: "GOTS Organic Textile Standard", src: "/certifications/card/gots.png" },
+  { name: "GRS Global Recycled Standard", src: "/certifications/card/grs.png" },
+  { name: "ZDHC Zero Discharge of Chemicals", src: "/certifications/card/zdhc.png" },
+  { name: "EN 15343 Recycled Plastics", src: "/certifications/card/en_15343.png" },
+  { name: "EU PPWR Packaging Compliance", src: "/certifications/card/ppwr.png" },
   { name: "Technical Audit Certified", src: "/certifications/card/technical-audit.png" },
   { name: "FSNS Quality Standards", src: "/certifications/card/fsns-sqf.png" },
   { name: "ISO 17025 Laboratory Testing", src: "/certifications/card/iso_17025.png" },
@@ -131,7 +136,7 @@ export default function Footer() {
           <div className="text-center text-xs font-display font-bold tracking-[0.25em] text-[#00873E] uppercase mb-6">
             Accredited Certification Frameworks &bull; Recognized Standards
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 max-w-5xl mx-auto items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 max-w-6xl mx-auto items-center">
             {footerCertLogos.map((logo, idx) => (
               <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-sm hover:scale-105 transition-transform duration-300">
                 <div className="relative w-full h-9">
