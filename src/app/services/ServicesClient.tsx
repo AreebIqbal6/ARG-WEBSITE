@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2, ShieldCheck, MessageCircle, Search, Award } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ShieldCheck, Search, Award } from 'lucide-react';
 import Link from 'next/link';
 import CertificateVerifyModal from '../components/ui/CertificateVerifyModal';
 
@@ -211,7 +211,7 @@ export default function Services() {
             ))}
           </div>
 
-          {/* Bottom WhatsApp CTA */}
+          {/* Bottom Proposal CTA */}
           <div className="mt-20 p-8 md:p-12 rounded-3xl bg-white text-slate-900 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-200 shadow-sm relative overflow-hidden">
             <div>
               <h3 className="text-2xl md:text-3xl font-display font-black mb-2 text-slate-900">
@@ -221,15 +221,13 @@ export default function Services() {
                 Speak directly with an ARG Registrars lead auditor to structure combined audits, gap analysis, and tailored surveillance timelines.
               </p>
             </div>
-            <a
-              href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20discuss%20a%20certification%20scope."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-xl transition-all shrink-0 shadow-md hover:scale-105"
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-[#00873E] hover:bg-[#059669] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-xl transition-all shrink-0 shadow-md hover:scale-105"
             >
-              <MessageCircle size={18} />
-              <span>WHATSAPP TECHNICAL DESK</span>
-            </a>
+              <span>REQUEST TECHNICAL AUDIT PROPOSAL</span>
+              <ArrowUpRight size={18} />
+            </Link>
           </div>
 
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useActionState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2, MessageCircle, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { sendEmail } from '../actions/sendEmail';
 
 export default function Contact() {
@@ -68,16 +68,7 @@ export default function Contact() {
                   Plot No. 2118, Street No. 06, Johan Colony, Block E, Millat Road, Faisalabad.
                 </p>
                 <div className="pt-3 border-t border-slate-100 text-xs font-sans flex flex-col gap-2">
-                  <div>
-                    <span className="text-slate-500">Phone: </span>
-                    <a href="tel:+9231459101614" className="text-slate-900 hover:text-[#00873E] font-semibold transition-colors">+92 314 59101614</a>
-                  </div>
-                  <div>
-                    <a href="https://wa.me/9231459101614" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:underline flex items-center gap-1.5 font-semibold">
-                      <MessageCircle size={14} />
-                      WhatsApp: +92 314 59101614
-                    </a>
-                  </div>
+                  
                 </div>
               </motion.div>
 

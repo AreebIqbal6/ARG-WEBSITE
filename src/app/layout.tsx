@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SmoothScrolling from "./components/SmoothScrolling";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 // High-authority, precision-engineered geometric display font
 const displayFont = Outfit({
@@ -147,13 +146,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans bg-[#030906] text-white selection:bg-[#00873E] selection:text-white flex flex-col min-h-screen`}
+        className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans bg-slate-50 text-slate-900 selection:bg-[#00873E] selection:text-white flex flex-col min-h-screen`}
       >
         <SmoothScrolling>
           <Header />
           <main id="page-wrapper" className="flex-grow">{children}</main>
           <Footer />
-          <FloatingWhatsApp />
           <StickyMobileCta />
         </SmoothScrolling>
       </body>

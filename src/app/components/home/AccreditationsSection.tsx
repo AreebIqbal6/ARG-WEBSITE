@@ -255,14 +255,12 @@ export default function AccreditationsSection() {
               <ArrowUpRight size={15} />
             </Link>
 
-            <a 
-              href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20am%20interested%20in%20ISO%20certification." 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-slate-50 hover:bg-slate-100 text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 border border-slate-200 w-full sm:w-auto"
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 border border-slate-200 shadow-sm w-full sm:w-auto"
             >
-              <span>WHATSAPP INQUIRY</span>
-            </a>
+              <span>REQUEST AUDIT QUOTATION</span>
+            </Link>
           </div>
         </motion.div>
 

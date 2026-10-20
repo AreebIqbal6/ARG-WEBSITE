@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, MessageCircle, ShieldCheck, Globe } from 'lucide-react';
+import { Mail, MapPin, ShieldCheck, Globe } from 'lucide-react';
 
 const footerCertLogos = [
   { name: "ISO 9001:2015 Quality Management", src: "/certifications/card/iso-9001.png" },
@@ -113,19 +113,14 @@ export default function Footer() {
                 </div>
               </li>
 
-              {/* Email & WhatsApp */}
+              {/* Corporate Communication */}
               <li className="flex items-center gap-2.5 pt-1 border-t border-slate-200">
                 <Mail size={14} className="text-[#00873E] shrink-0" />
                 <a href="mailto:info@argregistrars.com" className="hover:text-[#00873E] transition-colors font-medium">
                   info@argregistrars.com
                 </a>
               </li>
-              <li className="flex items-center gap-2.5">
-                <MessageCircle size={14} className="text-[#25D366] shrink-0" />
-                <a href="https://wa.me/9231459101614" target="_blank" rel="noopener noreferrer" className="hover:text-[#00873E] transition-colors font-semibold">
-                  WhatsApp: +92 314 59101614
-                </a>
-              </li>
+              
             </ul>
           </div>
 

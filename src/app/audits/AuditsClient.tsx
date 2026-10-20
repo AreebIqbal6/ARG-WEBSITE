@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2, ShieldCheck, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -91,15 +91,13 @@ export default function Audits() {
                   <ArrowUpRight size={16} />
                 </Link>
 
-                <a 
-                  href="https://wa.me/9231459101614?text=Hello%20ARG%20Registrars,%20I%20would%20like%20to%20request%20an%20audit%20inquiry."
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  href="/contact" 
                   className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
                 >
-                  <MessageCircle size={16} className="text-[#25D366]" />
-                  <span>WhatsApp Inquiry</span>
-                </a>
+                  <ShieldCheck size={16} className="text-[#00873E]" />
+                  <span>Request Audit Schedule</span>
+                </Link>
               </div>
             </div>
 

@@ -78,6 +78,6 @@ https://argregistrars.com/admin/inquiries
     };
   } catch (error: any) {
     console.error('Inquiry Submission Error:', error);
-    return { error: 'Unable to register audit inquiry. Please try again or contact our desk directly via WhatsApp.' };
+    return { error: 'Unable to register audit inquiry. Please try again or contact our desk directly via official email or telephone.' };
   }
 }

@@ -84,14 +84,12 @@ export default function About() {
                   <ArrowUpRight size={16} />
                 </Link>
 
-                <a 
-                  href="https://wa.me/9231459101614"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/services"
                   className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-8 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
                 >
-                  <span>WHATSAPP DESK</span>
-                </a>
+                  <span>VIEW ACCREDITED SCOPES</span>
+                </Link>
               </div>
             </div>
 
