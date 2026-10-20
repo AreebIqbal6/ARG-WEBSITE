@@ -2,6 +2,7 @@
 import React, { useActionState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2, ShieldCheck } from 'lucide-react';
+import Link from 'next/link';
 import { sendEmail } from '../actions/sendEmail';
 
 export default function Contact() {
@@ -121,12 +122,12 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <a
+                    <Link
                       href="/"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-display font-bold text-xs tracking-wider border border-slate-200 transition-all shadow-sm"
                     >
                       <span>RETURN TO OVERVIEW</span>
-                    </a>
+                    </Link>
                   </div>
                 ) : (
                   <form action={formAction} className="flex flex-col justify-between flex-1 gap-6 md:gap-8">

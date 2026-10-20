@@ -735,8 +735,9 @@ Email: records@argregistrars.com
           {/* Footer Bar */}
           <div className="p-4 sm:p-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-50 shrink-0">
             <button
+              type="button"
               onClick={handleDownload}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-xs cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-xs cursor-pointer active:scale-95"
             >
               <Download size={14} className="text-[#00873E]" />
               <span>{downloaded ? "Specification Downloaded!" : "Download Criteria Sheet (.TXT)"}</span>
@@ -753,8 +754,9 @@ Email: records@argregistrars.com
                 <span>Ask Auditor</span>
               </a>
               <button
+                type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans text-xs transition-all border border-slate-200 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans text-xs transition-all border border-slate-200 cursor-pointer active:scale-95"
               >
                 Close
               </button>

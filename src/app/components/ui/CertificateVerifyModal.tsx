@@ -331,8 +331,9 @@ export default function CertificateVerifyModal({
                         Security Hash: {result.hash}
                       </div>
                       <button
+                        type="button"
                         onClick={handleCopyLink}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-sans text-xs transition-all border border-slate-200"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-sans text-xs transition-all border border-slate-200 cursor-pointer active:scale-95"
                       >
                         {copied ? <Check size={14} className="text-[#00873E]" /> : <ExternalLink size={14} />}
                         <span>{copied ? "Link Copied" : "Share Verification Record"}</span>
