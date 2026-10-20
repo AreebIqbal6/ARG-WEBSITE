@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import AuditJourney from '../components/home/AuditJourney';
 
 const auditStandards = [
   { name: "ISO 9001:2015", badge: "/certifications/card/iso-9001.png", title: "Quality Management Audits", desc: "Rigorous evaluation of operational workflows, defect minimization, risk analysis, and customer satisfaction loops." },
@@ -126,6 +127,9 @@ export default function Audits() {
           </div>
         </div>
       </section>
+
+      {/* 4-STAGE ACCREDITED CERTIFICATION ROADMAP */}
+      <AuditJourney />
 
     </div>
   );

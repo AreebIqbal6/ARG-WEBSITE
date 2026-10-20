@@ -46,7 +46,8 @@ const steps = [
 
 export default function AuditJourney() {
   return (
-    <section className="py-28 relative z-20 overflow-hidden bg-white border-t border-slate-200 ">
+    <section id="four-stage-protocol" className="py-28 relative z-20 overflow-hidden bg-white border-t border-slate-200 scroll-mt-24">
+      <span id="audit-roadmap" className="absolute -top-24" />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
         {/* Section Header */}
