@@ -87,6 +87,12 @@ const services = [
   }
 ];
 
+const serviceCardIds: Record<number, string> = {
+  0: "iso-systems",
+  3: "ctpat-security",
+  4: "technical-audits",
+};
+
 export default function Services() {
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
   return (
@@ -156,16 +162,19 @@ export default function Services() {
         <div className="container mx-auto px-4 lg:px-8">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((srv, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.08 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col justify-between group border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 relative"
-              >
+            {services.map((srv, idx) => {
+              const cardId = serviceCardIds[idx];
+              return (
+                <motion.div
+                  key={idx}
+                  id={cardId}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.08 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col justify-between group border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 relative scroll-mt-36"
+                >
                 <div className="relative h-52 w-full overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-90" 
@@ -212,7 +221,8 @@ export default function Services() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            );
+          })}
           </div>
 
           {/* Bottom Proposal CTA */}

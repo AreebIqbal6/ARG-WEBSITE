@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ShieldCheck, ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
@@ -10,13 +10,18 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    };
   }, []);
 
   return (
@@ -56,16 +61,69 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
             </Link>
             
-            <div className="group relative cursor-pointer flex items-center gap-1.5 hover:text-[#00873E] transition-colors duration-300 py-2">
-              SERVICES 
-              <ChevronDown size={13} className="group-hover:rotate-180 transition-transform duration-300 text-[#00873E]" />
+            <div 
+              className="group relative flex items-center py-2"
+              onMouseEnter={() => {
+                if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+                setServicesDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                dropdownTimeoutRef.current = setTimeout(() => {
+                  setServicesDropdownOpen(false);
+                }, 200);
+              }}
+            >
+              <Link 
+                href="/services" 
+                className="flex items-center gap-1.5 hover:text-[#00873E] transition-colors duration-300 relative group cursor-pointer"
+                onClick={() => setServicesDropdownOpen(false)}
+              >
+                <span>SERVICES</span>
+                <ChevronDown size={13} className={`transition-transform duration-300 text-[#00873E] ${servicesDropdownOpen ? 'rotate-180' : 'group-hover:rotate-180'}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
+              </Link>
               
-              {/* Dropdown menu */}
-              <div className="absolute top-full left-0 mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 rounded-2xl p-3 flex flex-col gap-1.5 shadow-[0_16px_40px_rgba(15,23,42,0.12)] border border-slate-200 bg-white">
-                <Link href="/services" className="text-slate-700 hover:text-[#00873E] hover:bg-slate-50 px-3 py-2 rounded-xl text-xs font-medium transition-all">All Certification Services</Link>
-                <Link href="/services" className="text-slate-700 hover:text-[#00873E] hover:bg-slate-50 px-3 py-2 rounded-xl text-xs font-medium transition-all">ISO 9001 / 14001 / 45001</Link>
-                <Link href="/audits" className="text-slate-700 hover:text-[#00873E] hover:bg-slate-50 px-3 py-2 rounded-xl text-xs font-medium transition-all">C-TPAT Supply Chain Audits</Link>
-                <Link href="/audits" className="text-slate-700 hover:text-[#00873E] hover:bg-slate-50 px-3 py-2 rounded-xl text-xs font-medium transition-all">Factory Technical Evaluations</Link>
+              {/* Dropdown menu with hover bridge */}
+              <div 
+                className={`absolute top-full left-0 pt-2 w-72 z-[60] transition-all duration-200 ${
+                  servicesDropdownOpen 
+                    ? 'opacity-100 visible translate-y-0 pointer-events-auto' 
+                    : 'opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto'
+                }`}
+              >
+                {/* Invisible hover bridge connecting trigger to dropdown */}
+                <div className="absolute -top-2 left-0 right-0 h-3 pointer-events-auto" />
+                
+                <div className="rounded-2xl p-2.5 flex flex-col gap-1 shadow-[0_20px_45px_rgba(15,23,42,0.15)] border border-slate-200 bg-white/98 backdrop-blur-xl">
+                  <Link 
+                    href="/services" 
+                    onClick={() => setServicesDropdownOpen(false)} 
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                  >
+                    All Certification Services
+                  </Link>
+                  <Link 
+                    href="/services#iso-systems" 
+                    onClick={() => setServicesDropdownOpen(false)} 
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                  >
+                    ISO 9001 / 14001 / 45001
+                  </Link>
+                  <Link 
+                    href="/services#ctpat-security" 
+                    onClick={() => setServicesDropdownOpen(false)} 
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                  >
+                    C-TPAT Supply Chain Audits
+                  </Link>
+                  <Link 
+                    href="/services#technical-audits" 
+                    onClick={() => setServicesDropdownOpen(false)} 
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                  >
+                    Factory Technical Evaluations
+                  </Link>
+                </div>
               </div>
             </div>
 
