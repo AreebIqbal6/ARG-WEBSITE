@@ -175,7 +175,8 @@ export default function Header() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.nav 
+            aria-label="Mobile navigation"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -194,7 +195,7 @@ export default function Header() {
                   setMobileMenuOpen(false);
                   setIsVerifyOpen(true);
                 }}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold tracking-wider bg-slate-50 border border-slate-200 text-slate-800 hover:bg-slate-100"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold tracking-wider bg-slate-50 border border-slate-200 text-slate-800 hover:bg-slate-100 cursor-pointer"
               >
                 <ShieldCheck size={15} className="text-[#00873E]" />
                 <span>VERIFY CERTIFICATE</span>
@@ -207,7 +208,7 @@ export default function Header() {
                 REQUEST AN AUDIT
               </Link>
             </div>
-          </motion.div>
+          </motion.nav>
         )}
       </AnimatePresence>
 
