@@ -151,18 +151,18 @@ export default function AccreditationsSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
             <Link 
-              href="/services" 
+              href="/contact" 
               className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,135,62,0.4)] hover:-translate-y-0.5 border border-emerald-500/30 w-full sm:w-auto"
             >
-              <span>EXPLORE ACCREDITED SCOPES</span>
+              <span>REQUEST AUDIT QUOTATION</span>
               <ArrowUpRight size={15} />
             </Link>
 
             <Link 
-              href="/contact" 
+              href="/services" 
               className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 border border-slate-200 shadow-sm w-full sm:w-auto"
             >
-              <span>REQUEST AUDIT QUOTATION</span>
+              <span>EXPLORE ACCREDITED SCOPES</span>
             </Link>
           </div>
         </motion.div>
