@@ -67,6 +67,16 @@ export function checkRateLimit(
   limit: number,
   windowSeconds: number
 ): RateLimitResult {
+  // Allow unrestricted testing in local development environment
+  if (process.env.NODE_ENV === 'development') {
+    return {
+      success: true,
+      limit: 9999,
+      remaining: 9999,
+      resetSeconds: 0
+    };
+  }
+
   purgeExpiredEntries();
   const now = Date.now();
   const windowMs = windowSeconds * 1000;
