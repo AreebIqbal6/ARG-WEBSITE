@@ -2,11 +2,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { ShieldCheck, ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CertificateVerifyModal from './ui/CertificateVerifyModal';
 
 export default function Header() {
+  const pathname = usePathname();
+  const isAdmin = pathname?.startsWith('/admin');
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
@@ -23,6 +27,32 @@ export default function Header() {
       if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
     };
   }, []);
+
+  // Sleek, minimal dedicated header for administrative routes (No public links, no CTA buttons)
+  if (isAdmin) {
+    return (
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 py-3.5 px-4 lg:px-8 shadow-xs">
+        <div className="container mx-auto flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="bg-white rounded-xl p-1 border border-slate-200 shadow-xs flex items-center justify-center shrink-0">
+              <Image src="/arg_logo.png" alt="ARG Registrars" width={32} height={32} className="w-7 h-7 object-contain" />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-sm tracking-wider text-slate-900">ARG REGISTRARS</span>
+              <span className="font-mono text-[9px] tracking-wider text-[#00873E] font-bold uppercase">ADMINISTRATIVE DESK</span>
+            </div>
+          </Link>
+
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 font-sans font-semibold text-xs border border-slate-200 transition-all shadow-xs"
+          >
+            <span>&larr; Return to Public Website</span>
+          </Link>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'py-3' : 'py-5'}`}>
