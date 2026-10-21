@@ -61,7 +61,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-16 w-full sm:w-auto"
           >
             <Link 
-              href="/contact" 
+              href="/schedule" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-sans font-semibold text-xs tracking-wider bg-[#00873E] hover:bg-[#059669] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
             >
               <span>SCHEDULE AN AUDIT</span>

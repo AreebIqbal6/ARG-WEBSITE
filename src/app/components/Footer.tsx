@@ -48,6 +48,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-[#00873E] transition-colors inline-block font-medium">About ARG Registrars</Link></li>
               <li><Link href="/services" className="hover:text-[#00873E] transition-colors inline-block font-medium">ISO Certifications</Link></li>
               <li><Link href="/audits" className="hover:text-[#00873E] transition-colors inline-block font-medium">Technical &amp; C-TPAT Audits</Link></li>
+              <li><Link href="/schedule" className="hover:text-[#00873E] transition-colors inline-block font-medium">Schedule An Audit</Link></li>
               <li><Link href="/contact" className="hover:text-[#00873E] transition-colors inline-block font-medium">Contact &amp; Offices</Link></li>
             </ul>
           </div>
@@ -58,11 +59,11 @@ export default function Footer() {
               Accredited Scopes
             </h3>
             <ul className="flex flex-col gap-3 text-slate-600 font-sans text-xs">
-              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 9001:2026 (Quality QMS)</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 14001:2015 (Environmental EMS)</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">ISO 45001:2018 (Health &amp; Safety)</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">C-TPAT Supply Chain Security</Link></li>
-              <li><Link href="/#accreditations" className="hover:text-[#00873E] transition-colors font-medium">Technical Audits &amp; SQF Standards</Link></li>
+              <li><Link href="/standards/iso-9001" className="hover:text-[#00873E] transition-colors font-medium">ISO 9001:2026 (Quality QMS)</Link></li>
+              <li><Link href="/standards/iso-14001" className="hover:text-[#00873E] transition-colors font-medium">ISO 14001:2015 (Environmental EMS)</Link></li>
+              <li><Link href="/standards/iso-45001" className="hover:text-[#00873E] transition-colors font-medium">ISO 45001:2018 (Health &amp; Safety)</Link></li>
+              <li><Link href="/standards/ctpat" className="hover:text-[#00873E] transition-colors font-medium">C-TPAT Supply Chain Security</Link></li>
+              <li><Link href="/standards/technical-audit" className="hover:text-[#00873E] transition-colors font-medium">Technical Audits &amp; SQF Standards</Link></li>
             </ul>
           </div>
 
@@ -120,14 +121,16 @@ export default function Footer() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 max-w-6xl mx-auto items-center">
             {footerCertLogos.map((logo, idx) => (
-              <div 
+              <Link 
                 key={idx} 
-                className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-xs hover:shadow-md hover:scale-105 transition-all duration-300 w-full h-[58px]"
+                href={`/standards/${logo.id}`}
+                title={`${logo.name} – Official Accreditation Scope`}
+                className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-xs hover:shadow-md hover:border-emerald-400 hover:scale-105 transition-all duration-300 w-full h-[58px] cursor-pointer group"
               >
                 <div className="relative w-full h-9">
-                  <Image src={logo.src} alt={logo.name} fill sizes="(max-width: 768px) 50vw, 15vw" className="object-contain" />
+                  <Image src={logo.src} alt={logo.name} fill sizes="(max-width: 768px) 50vw, 15vw" className="object-contain group-hover:scale-105 transition-transform" />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

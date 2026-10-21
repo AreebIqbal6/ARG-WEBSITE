@@ -153,7 +153,7 @@ export default function Header() {
             </button>
 
             <Link 
-              href="/contact" 
+              href="/schedule" 
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold font-sans text-xs tracking-wider transition-all duration-300 bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_4px_20px_rgba(0,135,62,0.4)] hover:scale-105"
             >
               <span>GET QUOTE</span>
@@ -201,11 +201,11 @@ export default function Header() {
                 <span>VERIFY CERTIFICATE</span>
               </button>
               <Link 
-                href="/contact" 
+                href="/schedule" 
                 className="w-full text-center px-7 py-3 rounded-xl font-bold text-xs tracking-widest transition-all bg-[#00873E] text-white hover:bg-[#059669] shadow-[0_4px_16px_rgba(0,135,62,0.3)]" 
                 onClick={() => setMobileMenuOpen(false)}
               >
-                REQUEST AN AUDIT
+                SCHEDULE AN AUDIT
               </Link>
             </div>
           </motion.nav>

@@ -118,15 +118,24 @@ export default function AccreditationsSection() {
                   ))}
                 </ul>
 
-                {/* View Specification Button */}
-                <button
-                  type="button"
-                  onClick={() => setSpecModalId(cert.id)}
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-[#00873E] font-display font-semibold text-xs border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer active:scale-[0.98] group/btn"
-                >
-                  <FileCheck2 size={14} className="text-[#00873E] group-hover/btn:scale-110 transition-transform" />
-                  <span>VIEW SPECIFICATION</span>
-                </button>
+                {/* View Specification Button & Direct Page Link */}
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setSpecModalId(cert.id)}
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-[#00873E] font-display font-semibold text-xs border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer active:scale-[0.98] group/btn"
+                  >
+                    <FileCheck2 size={14} className="text-[#00873E] group-hover/btn:scale-110 transition-transform" />
+                    <span>VIEW SPECIFICATION</span>
+                  </button>
+                  <Link
+                    href={`/standards/${cert.id}`}
+                    className="inline-flex items-center justify-center px-3 py-2.5 rounded-xl bg-slate-50 hover:bg-[#00873E] text-slate-600 hover:text-white font-sans font-semibold text-xs border border-slate-200 hover:border-emerald-600 transition-all"
+                    title={`View dedicated ${cert.name} scope page`}
+                  >
+                    <ArrowUpRight size={14} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -145,24 +154,24 @@ export default function AccreditationsSection() {
               Ready to Certify Your Organization or Supply Chain?
             </h4>
             <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
-              Contact our registrar desks in Riyadh, KSA or Faisalabad, Pakistan for auditor deployment, certification timelines, and official registrar issuance.
+              Submit your facility details for Stage 1 gap evaluation or contact our dual registrar desks in Riyadh, KSA and Faisalabad, Pakistan.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
             <Link 
-              href="/contact" 
+              href="/schedule" 
               className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,135,62,0.4)] hover:-translate-y-0.5 border border-emerald-500/30 w-full sm:w-auto"
             >
-              <span>REQUEST AUDIT QUOTATION</span>
+              <span>SCHEDULE AN AUDIT</span>
               <ArrowUpRight size={15} />
             </Link>
 
             <Link 
-              href="/services" 
+              href="/contact" 
               className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 border border-slate-200 shadow-sm w-full sm:w-auto"
             >
-              <span>EXPLORE ACCREDITED SCOPES</span>
+              <span>CONTACT REGISTRAR DESK</span>
             </Link>
           </div>
         </motion.div>

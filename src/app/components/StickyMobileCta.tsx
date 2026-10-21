@@ -44,7 +44,7 @@ export default function StickyMobileCta() {
 
             {/* Quote Action */}
             <Link
-              href="/contact"
+              href="/schedule"
               className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs shadow-md border border-emerald-600 active:scale-95 transition-all"
             >
               <FileText size={14} />

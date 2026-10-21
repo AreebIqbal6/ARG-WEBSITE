@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next';
+import { STANDARDS_CATALOG } from '@/data/standards';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://argregistrars.com';
   const currentDate = new Date();
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}`,
       lastModified: currentDate,
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/schedule`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -48,4 +55,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ];
+
+  const standardRoutes: MetadataRoute.Sitemap = STANDARDS_CATALOG.map((s) => ({
+    url: `${baseUrl}/standards/${s.id}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...standardRoutes];
 }

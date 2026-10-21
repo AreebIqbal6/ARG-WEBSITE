@@ -130,13 +130,13 @@ export default function InteractiveHeroAudit() {
                   <FileCheck2 size={15} />
                   <span>VIEW SPECIFICATION</span>
                 </button>
-                <a
-                  href="#four-stage-protocol"
+                <Link
+                  href={`/standards/${activeStandard.id}`}
                   className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs font-sans font-medium border border-slate-200 transition-all cursor-pointer"
                 >
-                  <span>Audit Roadmap</span>
+                  <span>Full Standard Page</span>
                   <ArrowUpRight size={14} />
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>

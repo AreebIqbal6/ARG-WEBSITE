@@ -80,7 +80,7 @@ export default function Audits() {
                 </Link>
 
                 <Link 
-                  href="/contact" 
+                  href="/schedule" 
                   className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
                 >
                   <ShieldCheck size={16} className="text-[#00873E]" />
@@ -110,14 +110,23 @@ export default function Audits() {
                       <p className="text-slate-600 font-sans text-xs leading-relaxed font-light mb-4">{std.desc}</p>
                     </div>
 
-                    <button
-                      type="button"
-                      onClick={() => setSpecModalId(std.id)}
-                      className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-[#00873E] font-display font-semibold text-[11px] border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer active:scale-[0.98] group/btn mt-auto"
-                    >
-                      <FileCheck2 size={13} className="text-[#00873E] group-hover/btn:scale-110 transition-transform" />
-                      <span>VIEW SPECIFICATION</span>
-                    </button>
+                    <div className="flex gap-2 mt-auto">
+                      <button
+                        type="button"
+                        onClick={() => setSpecModalId(std.id)}
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-[#00873E] font-display font-semibold text-[11px] border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer active:scale-[0.98] group/btn"
+                      >
+                        <FileCheck2 size={13} className="text-[#00873E] group-hover/btn:scale-110 transition-transform" />
+                        <span>VIEW SPECIFICATION</span>
+                      </button>
+                      <Link
+                        href={`/standards/${std.id}`}
+                        className="inline-flex items-center justify-center px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-[#00873E] text-slate-600 hover:text-white font-sans font-semibold text-xs border border-slate-200 hover:border-emerald-600 transition-all"
+                        title={`View ${std.name} official criteria page`}
+                      >
+                        <ArrowUpRight size={13} />
+                      </Link>
+                    </div>
                   </motion.div>
                 ))}
               </div>

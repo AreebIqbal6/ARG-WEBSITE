@@ -158,16 +158,22 @@ export default function Services() {
             <button
               type="button"
               onClick={() => setSpecModalId(srv.standardId)}
-              className="inline-flex items-center justify-center gap-2 flex-1 py-3 px-4 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-800 hover:text-[#00873E] font-sans font-semibold text-xs tracking-wider transition-all duration-300 border border-slate-200 hover:border-emerald-300 cursor-pointer active:scale-95"
+              className="inline-flex items-center justify-center gap-1.5 flex-1 py-3 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-800 hover:text-[#00873E] font-sans font-semibold text-xs tracking-wider transition-all duration-300 border border-slate-200 hover:border-emerald-300 cursor-pointer active:scale-95"
             >
               <FileCheck2 size={14} className="text-[#00873E]" />
               <span>VIEW SPECIFICATION</span>
             </button>
             <Link
-              href={`/contact?scope=${encodeURIComponent(srv.standardId)}`}
+              href={`/standards/${srv.standardId}`}
+              className="inline-flex items-center justify-center gap-1 py-3 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans font-semibold text-xs tracking-wider transition-all duration-300 border border-slate-200 cursor-pointer active:scale-95"
+            >
+              <span>Scope Page</span>
+            </Link>
+            <Link
+              href={`/schedule?standard=${encodeURIComponent(srv.standardId)}`}
               className="inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-[#00873E] hover:bg-[#059669] text-white font-sans font-semibold text-xs tracking-wider transition-all duration-300 shadow-xs cursor-pointer active:scale-95"
             >
-              <span>Request Quote</span>
+              <span>Schedule Audit</span>
               <ArrowUpRight size={14} />
             </Link>
           </div>
@@ -305,7 +311,7 @@ export default function Services() {
                   <span>Inspect Security Criteria Sheet</span>
                 </button>
                 <Link
-                  href="/contact?standard=ctpat"
+                  href="/schedule?standard=ctpat"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#00873E] hover:bg-[#059669] text-white font-sans font-semibold text-xs shadow-xs"
                 >
                   <span>Schedule C-TPAT Audit</span>
@@ -348,7 +354,7 @@ export default function Services() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/schedule?standard=technical-audit"
               className="inline-flex items-center gap-2 bg-[#00873E] hover:bg-[#059669] text-white font-sans font-bold text-xs tracking-widest px-8 py-4 rounded-xl transition-all shrink-0 shadow-md hover:scale-105"
             >
               <span>REQUEST TECHNICAL AUDIT PROPOSAL</span>

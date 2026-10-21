@@ -140,10 +140,10 @@ export default function AuditJourney() {
             </div>
           </div>
           <Link
-            href="/contact"
+            href="/schedule"
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00873E] hover:bg-[#059669] text-white font-display font-bold text-xs tracking-wider transition-all shadow-sm hover:shadow-md hover:scale-105 active:scale-[0.98] shrink-0 w-full md:w-auto"
           >
-            <span>REQUEST AUDIT INTAKE</span>
+            <span>SUBMIT STAGE 1 APPLICATION</span>
             <ArrowRight size={14} />
           </Link>
         </motion.div>

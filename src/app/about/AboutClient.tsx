@@ -83,15 +83,15 @@ export default function About() {
 
               <div className="flex flex-wrap gap-4">
                 <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                  <span>VIEW ACCREDITED SCOPES</span>
+                  <span>EXPLORE ACCREDITED SCOPES</span>
                   <ArrowUpRight size={16} />
                 </Link>
 
                 <Link
-                  href="/services"
+                  href="/contact"
                   className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-8 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
                 >
-                  <span>VIEW ACCREDITED SCOPES</span>
+                  <span>OFFICES &amp; REGIONAL DIRECTORY</span>
                 </Link>
               </div>
             </div>

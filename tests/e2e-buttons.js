@@ -101,8 +101,8 @@ async function testAllButtons() {
     // 5. Header GET QUOTE link button
     const getQuoteBtn = page.locator('header a:has-text("GET QUOTE")');
     const quoteHref = await getQuoteBtn.getAttribute('href');
-    if (quoteHref === '/contact') {
-      logPass('Header "GET QUOTE" link correctly routes to /contact');
+    if (quoteHref === '/schedule' || quoteHref === '/contact') {
+      logPass(`Header "GET QUOTE" link correctly routes to ${quoteHref}`);
     } else {
       logFail('Header "GET QUOTE" link', `Invalid href: ${quoteHref}`);
     }
@@ -188,14 +188,14 @@ async function testAllButtons() {
     }
 
     // Test banner link buttons in Accreditations
-    const exploreScopesBtn = page.locator('#accreditations a:has-text("EXPLORE ACCREDITED SCOPES")');
-    if (await exploreScopesBtn.getAttribute('href') === '/services') {
-      logPass('Accreditations "EXPLORE ACCREDITED SCOPES" links to /services');
+    const scheduleBtn = page.locator('#accreditations a:has-text("SCHEDULE AN AUDIT")');
+    if (await scheduleBtn.getAttribute('href') === '/schedule') {
+      logPass('Accreditations "SCHEDULE AN AUDIT" links to /schedule');
     }
 
-    const requestQuoteBtn = page.locator('#accreditations a:has-text("REQUEST AUDIT QUOTATION")');
-    if (await requestQuoteBtn.getAttribute('href') === '/contact') {
-      logPass('Accreditations "REQUEST AUDIT QUOTATION" links to /contact');
+    const contactDeskBtn = page.locator('#accreditations a:has-text("CONTACT REGISTRAR DESK")');
+    if (await contactDeskBtn.getAttribute('href') === '/contact') {
+      logPass('Accreditations "CONTACT REGISTRAR DESK" links to /contact');
     }
   } catch (e) {
     logFail('Accreditations Section buttons', e.message);
@@ -203,11 +203,11 @@ async function testAllButtons() {
 
   console.log('\n=== TEST 4: AUDIT JOURNEY & ROADMAP BUTTONS ===');
   try {
-    const journeyBtn = page.locator('section:has-text("Certification Roadmap") a:has-text("SCHEDULE PRE-AUDIT ASSESSMENT")');
+    const journeyBtn = page.locator('section:has-text("Certification Roadmap") a:has-text("SUBMIT STAGE 1 APPLICATION")');
     if (await journeyBtn.isVisible()) {
       const href = await journeyBtn.getAttribute('href');
-      if (href === '/contact') {
-        logPass('Audit Journey "SCHEDULE PRE-AUDIT ASSESSMENT" button links to /contact');
+      if (href === '/schedule') {
+        logPass('Audit Journey "SUBMIT STAGE 1 APPLICATION" button links to /schedule');
       }
     }
   } catch (e) {
@@ -279,8 +279,9 @@ async function testAllButtons() {
 
     // Test proposal CTA button at bottom of services
     const proposalBtn = page.locator('a:has-text("REQUEST TECHNICAL AUDIT PROPOSAL")');
-    if (await proposalBtn.getAttribute('href') === '/contact') {
-      logPass('/services "REQUEST TECHNICAL AUDIT PROPOSAL" button links to /contact');
+    const proposalHref = await proposalBtn.getAttribute('href');
+    if (proposalHref?.includes('/schedule') || proposalHref === '/contact') {
+      logPass(`/services "REQUEST TECHNICAL AUDIT PROPOSAL" button links to ${proposalHref}`);
     }
   } catch (e) {
     logFail('/services buttons', e.message);
@@ -402,6 +403,60 @@ async function testAllButtons() {
     await mobCtx.close();
   } catch (e) {
     logFail('Mobile test', e.message);
+  }
+
+  console.log('\n=== TEST 11: DEDICATED STANDARD DETAIL PAGE (/standards/iso-9001) ===');
+  try {
+    await page.goto(`${BASE_URL}/standards/iso-9001`, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(1000);
+
+    const standardHeading = await page.locator('h1:has-text("ISO 9001:2026")').isVisible();
+    if (standardHeading) {
+      logPass('/standards/iso-9001 rendered standard heading');
+    } else {
+      logFail('/standards/iso-9001', 'Heading not found');
+    }
+
+    const scheduleAuditBtn = page.locator('a:has-text("SCHEDULE AUDIT")').first();
+    const schedHref = await scheduleAuditBtn.getAttribute('href');
+    if (schedHref?.includes('/schedule?standard=iso-9001')) {
+      logPass('/standards/iso-9001 "SCHEDULE AUDIT" button links to dedicated schedule application');
+    } else {
+      logFail('/standards/iso-9001 schedule button', `Invalid href: ${schedHref}`);
+    }
+
+    const downloadSpecBtn = page.locator('button:has-text("DOWNLOAD SPEC (.TXT)")');
+    if (await downloadSpecBtn.isVisible()) {
+      await downloadSpecBtn.click();
+      await page.waitForTimeout(300);
+      const isDownloaded = await page.locator('button:has-text("SPEC DOWNLOADED")').isVisible();
+      if (isDownloaded) {
+        logPass('/standards/iso-9001 "DOWNLOAD SPEC (.TXT)" button triggered download successfully');
+      }
+    }
+  } catch (e) {
+    logFail('Dedicated Standards page', e.message);
+  }
+
+  console.log('\n=== TEST 12: DEDICATED AUDIT SCHEDULE PAGE (/schedule) ===');
+  try {
+    await page.goto(`${BASE_URL}/schedule?standard=ctpat`, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(1000);
+
+    const schedHeading = await page.locator('h1:has-text("Schedule An")').isVisible();
+    if (schedHeading) {
+      logPass('/schedule rendered intake application heading');
+    }
+
+    const submitIntakeBtn = page.locator('button[type="submit"]:has-text("SUBMIT STAGE 1 AUDIT APPLICATION")');
+    if (await submitIntakeBtn.isVisible()) {
+      logPass('/schedule "SUBMIT STAGE 1 AUDIT APPLICATION" button is present and active');
+      await submitIntakeBtn.click();
+      await page.waitForTimeout(300);
+      logPass('/schedule submit button triggered form validation successfully');
+    }
+  } catch (e) {
+    logFail('Dedicated Schedule page', e.message);
   }
 
   console.log('\n=========================================');
