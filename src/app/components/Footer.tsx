@@ -2,23 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, MapPin, ShieldCheck, Globe } from 'lucide-react';
+import { getFooterCertLogos } from '@/data/standards';
 
-const footerCertLogos = [
-  { name: "ISO 9001:2026 Quality Management", src: "/certifications/card/iso-9001.png" },
-  { name: "ISO 14001:2015 Environmental EMS", src: "/certifications/card/iso-14001.jpg" },
-  { name: "ISO 45001:2018 Health & Safety", src: "/certifications/card/iso-45001.jpg" },
-  { name: "C-TPAT Supply Chain Security", src: "/certifications/card/ctpat.jpg" },
-  { name: "GOTS Organic Textile Standard", src: "/certifications/card/gots.png" },
-  { name: "GRS Global Recycled Standard", src: "/certifications/card/grs.png" },
-  { name: "ZDHC Zero Discharge of Chemicals", src: "/certifications/card/zdhc.png" },
-  { name: "EN 15343 Recycled Plastics", src: "/certifications/card/en_15343.png" },
-  { name: "EU PPWR Packaging Compliance", src: "/certifications/card/ppwr.png" },
-  { name: "Technical Audit Certified", src: "/certifications/card/technical-audit.png" },
-  { name: "FSNS Quality Standards", src: "/certifications/card/fsns-sqf.png" },
-  { name: "ISO 17025 Laboratory Testing", src: "/certifications/card/iso_17025.png" },
-  { name: "CE Marking Conformity", src: "/certifications/card/ce_marking.png" },
-  { name: "ISO 22000:2018 Food Safety", src: "/certifications/card/iso-22000.png" }
-];
+const footerCertLogos = getFooterCertLogos();
 
 export default function Footer() {
   return (

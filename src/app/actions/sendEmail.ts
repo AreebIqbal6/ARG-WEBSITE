@@ -2,6 +2,7 @@
 
 import { Resend } from 'resend';
 import { saveInquiry } from '@/lib/supabase';
+import { checkInquiryRateLimit } from '@/lib/rateLimit';
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const notificationEmail = process.env.NOTIFICATION_EMAIL || 'info@argregistrars.com';
@@ -9,6 +10,12 @@ const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
 export async function sendEmail(prevState: any, formData: FormData) {
   try {
+    // Sliding-window rate limit check per IP (5 submissions per 10 mins)
+    const rateLimit = await checkInquiryRateLimit();
+    if (!rateLimit.success) {
+      return { error: rateLimit.error || 'Submission limit exceeded. Please wait before submitting again.' };
+    }
+
     const firstName = (formData.get('firstName') as string)?.trim();
     const lastName = (formData.get('lastName') as string)?.trim() || '';
     const company = (formData.get('company') as string)?.trim() || '';

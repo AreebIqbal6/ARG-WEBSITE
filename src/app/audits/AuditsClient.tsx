@@ -6,23 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AuditJourney from '../components/home/AuditJourney';
 import AuditSpecModal from '../components/ui/AuditSpecModal';
+import { getAuditStandards } from '@/data/standards';
 
-const auditStandards = [
-  { id: "iso-9001", name: "ISO 9001:2026", badge: "/certifications/card/iso-9001.png", title: "Quality Management Audits", desc: "Rigorous evaluation of operational workflows, defect minimization, risk analysis, and customer satisfaction loops." },
-  { id: "iso-14001", name: "ISO 14001:2015", badge: "/certifications/card/iso-14001.jpg", title: "Environmental Management Audits", desc: "Assessment of ecological impacts, waste treatment compliance, resource conservation, and environmental legal obligations." },
-  { id: "iso-45001", name: "ISO 45001:2018", badge: "/certifications/card/iso-45001.jpg", title: "Occupational Safety Audits", desc: "Workplace hazard prevention, emergency response protocols, industrial hygiene, and worker wellness safeguards." },
-  { id: "ctpat", name: "C-TPAT Certified", badge: "/certifications/card/ctpat.jpg", title: "Supply Chain Security Audits", desc: "End-to-end security audits according to US Customs criteria, covering container integrity, physical perimeter security, and logistics." },
-  { id: "gots", name: "GOTS Certified", badge: "/certifications/card/gots.png", title: "Organic Textile Standard", desc: "Third-party inspection of organic fiber chain of custody, chemical inputs, and environmental management." },
-  { id: "grs", name: "GRS Standard", badge: "/certifications/card/grs.png", title: "Recycled Content Verification", desc: "Accredited tracking of recycled content % in manufacturing, environmental criteria, and chemical restrictions." },
-  { id: "zdhc", name: "ZDHC Gateway & MRSL", badge: "/certifications/card/zdhc.png", title: "Hazardous Chemical Verification", desc: "Wastewater discharge conformance and input chemical management aligned with the Zero Discharge roadmap." },
-  { id: "en-15343", name: "EN 15343", badge: "/certifications/card/en_15343.png", title: "Recycled Plastics Traceability", desc: "European compliance audits verifying procedures for post-consumer recycled plastic origin and batch traceability." },
-  { id: "ppwr", name: "EU PPWR", badge: "/certifications/card/ppwr.png", title: "Packaging Waste Regulations", desc: "Circularity and recyclability evaluation adhering to European Union packaging reduction mandates." },
-  { id: "technical-audit", name: "Technical Audit", badge: "/certifications/card/technical-audit.png", title: "Factory Capability Reviews", desc: "In-depth machinery inspection, labor practices, quality control room protocols, and overall factory manufacturing capacity." },
-  { id: "fsns-sqf", name: "FSNS & SQF", badge: "/certifications/card/fsns-sqf.png", title: "Hygiene & Food Safety Standards", desc: "Comprehensive auditing for food contact materials, sanitation practices, traceability, and global safety standards." },
-  { id: "iso-17025", name: "ISO 17025", badge: "/certifications/card/iso_17025.png", title: "Laboratory Competence Audits", desc: "Scrutiny of testing methodologies, environmental controls, equipment calibration curves, and measurement uncertainty." },
-  { id: "ce-marking", name: "CE Marking", badge: "/certifications/card/ce_marking.png", title: "European Conformity Directives", desc: "Technical file scrutiny, risk mitigation records, and safety conformity declarations for European export compliance." },
-  { id: "iso-22000", name: "ISO 22000:2018", badge: "/certifications/card/iso-22000.png", title: "Food Safety Audits", desc: "Comprehensive evaluation of prerequisite programs (PRPs), critical control points (CCPs), and farm-to-fork food chain safety." }
-];
+const auditStandards = getAuditStandards();
 
 export default function Audits() {
   const [specModalId, setSpecModalId] = useState<string | null>(null);

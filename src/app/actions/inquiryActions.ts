@@ -1,6 +1,7 @@
 "use server";
 
 import { fetchAllInquiries, updateInquiryStatus, InquiryRecord } from '@/lib/supabase';
+import { checkAdminAuthRateLimit } from '@/lib/rateLimit';
 
 const ADMIN_PASSCODE = process.env.ADMIN_PASSCODE || 'arg2026';
 
@@ -15,6 +16,12 @@ export async function getAdminInquiries(passcode: string): Promise<{
   isLiveDb?: boolean;
   error?: string;
 }> {
+  // Check brute force throttling
+  const rateLimit = await checkAdminAuthRateLimit();
+  if (!rateLimit.success) {
+    return { success: false, error: rateLimit.error || 'Authentication attempts locked. Please try again later.' };
+  }
+
   if (!verifyAuth(passcode)) {
     return { success: false, error: 'Invalid registrar passcode. Access denied.' };
   }
@@ -34,6 +41,12 @@ export async function setInquiryStatus(
   status: InquiryRecord['status'],
   notes?: string
 ): Promise<{ success: boolean; error?: string }> {
+  // Check brute force throttling
+  const rateLimit = await checkAdminAuthRateLimit();
+  if (!rateLimit.success) {
+    return { success: false, error: rateLimit.error || 'Authentication attempts locked. Please try again later.' };
+  }
+
   if (!verifyAuth(passcode)) {
     return { success: false, error: 'Invalid registrar passcode. Access denied.' };
   }
