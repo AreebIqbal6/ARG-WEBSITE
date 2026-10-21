@@ -8,8 +8,8 @@ import InteractiveHeroAudit from './InteractiveHeroAudit';
 export default function HeroSection() {
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center pt-44 md:pt-48 pb-24 overflow-hidden bg-white">
-      {/* Background Editorial Auditor Inspection Picture */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Background Editorial Auditor Inspection Picture (Decoupled from dynamic card height to prevent background zoom/resizing on tab switch) */}
+      <div className="absolute top-0 left-0 right-0 h-[1000px] sm:h-[1100px] lg:h-[1200px] z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[url('/images/auditor_inspection.jpg')] bg-cover bg-center opacity-[0.45] contrast-105" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/35 to-white" />
       </div>

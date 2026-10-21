@@ -53,8 +53,8 @@ export default function InteractiveHeroAudit() {
         })}
       </div>
 
-      {/* Dynamic Console Panel */}
-      <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm overflow-hidden">
+      {/* Dynamic Console Panel (Locked Minimum Height to prevent layout jitter and background resizing) */}
+      <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm overflow-hidden min-h-[870px] sm:min-h-[820px] lg:min-h-[485px] flex flex-col justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStandard.id}
@@ -62,7 +62,7 @@ export default function InteractiveHeroAudit() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col lg:flex-row gap-8 items-center justify-between"
+            className="flex flex-col lg:flex-row gap-8 items-center justify-between w-full"
           >
             {/* Left Info Column */}
             <div className="lg:w-7/12 text-left">
@@ -76,11 +76,11 @@ export default function InteractiveHeroAudit() {
                 </span>
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-display font-semibold text-slate-900 mb-3 tracking-tight">
+              <h3 className="text-2xl md:text-3xl font-display font-semibold text-slate-900 mb-3 tracking-tight sm:min-h-[2.5rem] lg:min-h-[2.25rem]">
                 {activeStandard.title}
               </h3>
 
-              <p className="text-slate-600 font-sans text-sm md:text-base font-light leading-relaxed mb-6">
+              <p className="text-slate-600 font-sans text-sm md:text-base font-light leading-relaxed mb-6 sm:min-h-[4.5rem] lg:min-h-[3.25rem]">
                 {activeStandard.scopeSummary}
               </p>
 
