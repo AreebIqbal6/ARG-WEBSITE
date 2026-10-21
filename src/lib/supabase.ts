@@ -35,33 +35,8 @@ export const isSupabaseConfigured = (): boolean => {
   );
 };
 
-// Global in-memory fallback for development or before Supabase credentials are wired
-const fallbackInquiries: InquiryRecord[] = [
-  {
-    id: 'demo-sample-01',
-    created_at: new Date(Date.now() - 3600000 * 2).toISOString(),
-    first_name: 'Tariq',
-    last_name: 'Mansoor',
-    company: 'Continental Apparel Exporters',
-    email: 'tariq.mansoor@continental-apparel.example.com',
-    message: 'Requesting quotation and Stage 1 timeline for C-TPAT supply chain security audit across Faisalabad manufacturing unit.',
-    status: 'new',
-    source: 'web_contact_form',
-    notes: 'Initial inquiry via website contact desk.'
-  },
-  {
-    id: 'demo-sample-02',
-    created_at: new Date(Date.now() - 3600000 * 18).toISOString(),
-    first_name: 'Engr. Khalid',
-    last_name: 'Al-Otaibi',
-    company: 'Al-Riyadh Polymer & Specialty Chemicals',
-    email: 'khalid.otaibi@alriyadh-chem.example.com',
-    message: 'Seeking renewal and surveillance audit schedule for ISO 9001:2026 and ISO 14001:2015 Integrated Management System.',
-    status: 'in_review',
-    source: 'web_contact_form',
-    notes: 'Followed up via technical director.'
-  }
-];
+// In-memory inquiry store for real-time submissions when external DB is connecting
+const fallbackInquiries: InquiryRecord[] = [];
 
 let cachedClient: SupabaseClient | null = null;
 
