@@ -1,0 +1,29 @@
+name: Keep Alive Supabase & Sites
+
+on:
+  schedule:
+    # Runs every 12 hours (at 00:00 and 12:00 UTC) to prevent Supabase 7-day inactivity pause
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase REST API Directly (Prevents 7-Day Inactivity Auto-Pause)
+        run: |
+          echo "Pinging Supabase database to reset inactivity timer..."
+          curl -s -f -X GET "https://eoyqwchuhbfhbcrhudgh.supabase.co/rest/v1/inquiries?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVveXF3Y2h1aGJmaGJjcmh1ZGdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1ODEyNzMsImV4cCI6MjEwODE1NzI3M30.y89VBYLXgK3d9rjcJIVtoOrfFH-TLD_2j0ED1gFE0_A" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVveXF3Y2h1aGJmaGJjcmh1ZGdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1ODEyNzMsImV4cCI6MjEwODE1NzI3M30.y89VBYLXgK3d9rjcJIVtoOrfFH-TLD_2j0ED1gFE0_A" \
+            || echo "Supabase responded or is currently being restored."
+
+      - name: Warm Up ARG Registrars Website (Prevents Vercel Cold Starts)
+        run: |
+          echo "Warming up ARG Registrars website..."
+          curl -s -I "https://www.argregistrars.com/api/keep-alive" || true
+
+      - name: Warm Up ARG Style Store (Prevents Vercel Cold Starts)
+        run: |
+          echo "Warming up ARG Style store..."
+          curl -s -I "https://argstyle.vercel.app/api/keep-alive" || curl -s -I "https://argstyle.vercel.app" || true
