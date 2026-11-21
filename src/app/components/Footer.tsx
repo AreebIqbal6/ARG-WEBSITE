@@ -136,8 +136,8 @@ export default function Footer() {
                 title={`${logo.name} – Official Accreditation Scope`}
                 className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-xs hover:shadow-md hover:border-emerald-400 hover:scale-105 transition-all duration-300 w-full h-[58px] cursor-pointer group"
               >
-                <div className="relative w-full h-9">
-                  <Image src={logo.src} alt={logo.name} fill sizes="(max-width: 768px) 50vw, 15vw" className="object-contain group-hover:scale-105 transition-transform" />
+                <div className="w-full h-9 flex items-center justify-center overflow-hidden" style={{ height: '36px', overflow: 'hidden' }}>
+                  <Image src={logo.src} alt={logo.name} width={120} height={36} className="h-8 w-auto max-w-full object-contain group-hover:scale-105 transition-transform" />
                 </div>
               </Link>
             ))}

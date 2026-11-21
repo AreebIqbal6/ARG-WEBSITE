@@ -147,6 +147,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Defensive Anti-Explosion Critical Styles */
+              img { max-width: 100% !important; height: auto; }
+              #hero-badge-cradle { width: 224px !important; height: 224px !important; max-width: 100% !important; overflow: hidden !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+              #hero-badge-cradle img { max-width: 180px !important; max-height: 180px !important; width: auto !important; height: auto !important; object-fit: contain !important; }
+            `
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

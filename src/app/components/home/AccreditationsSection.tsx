@@ -79,15 +79,14 @@ export default function AccreditationsSection() {
               <div>
                 {/* Top Status & Badge Cradle */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="bg-slate-50 rounded-2xl p-2.5 shadow-xs border border-slate-200 flex items-center justify-center shrink-0 w-16 h-16 group-hover:scale-105 transition-transform duration-300">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src={cert.badgeImg} 
-                        alt={cert.name} 
-                        fill 
-                        className="object-contain" 
-                      />
-                    </div>
+                  <div className="bg-slate-50 rounded-2xl p-2.5 shadow-xs border border-slate-200 flex items-center justify-center shrink-0 w-16 h-16 group-hover:scale-105 transition-transform duration-300 overflow-hidden" style={{ width: '64px', height: '64px', overflow: 'hidden' }}>
+                    <Image 
+                      src={cert.badgeImg} 
+                      alt={cert.name} 
+                      width={48}
+                      height={48}
+                      className="w-10 h-10 object-contain max-w-full max-h-full" 
+                    />
                   </div>
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-sans font-semibold text-[10px] tracking-wider uppercase bg-emerald-50 border border-emerald-200/80 text-[#00873E]">
                     <span className="w-1.5 h-1.5 bg-[#00873E]" />

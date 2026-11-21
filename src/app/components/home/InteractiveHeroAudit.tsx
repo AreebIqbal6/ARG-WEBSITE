@@ -110,15 +110,17 @@ export default function InteractiveHeroAudit() {
             {/* Right Badge Preview & Action */}
             <div className="lg:w-5/12 w-full flex flex-col items-center">
               <div 
-                className="relative w-48 h-48 md:w-56 md:h-56 rounded-3xl p-6 bg-slate-50 border border-slate-200/80 flex items-center justify-center group mb-6 shadow-sm"
-                style={{ position: 'relative', maxWidth: '100%' }}
+                id="hero-badge-cradle"
+                className="relative w-48 h-48 md:w-56 md:h-56 rounded-3xl p-6 bg-slate-50 border border-slate-200/80 flex items-center justify-center group mb-6 shadow-sm overflow-hidden"
+                style={{ position: 'relative', width: '224px', height: '224px', maxWidth: '100%', overflow: 'hidden' }}
               >
-                <div className="relative w-full h-full" style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <div className="w-full h-full flex items-center justify-center" style={{ width: '100%', height: '100%' }}>
                   <Image
                     src={activeStandard.badge}
                     alt={`${activeStandard.title} Official Badge`}
-                    fill
-                    className="object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-500"
+                    width={200}
+                    height={200}
+                    className="w-auto h-auto max-w-[180px] max-h-[180px] object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-500"
                     priority
                   />
                 </div>

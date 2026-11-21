@@ -1,4 +1,12 @@
+/* ARG REGISTRARS - BUILD V2.1.0 - MOBILE RESPONSIVENESS HARDENING */
 @import "tailwindcss";
+
+@layer base {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 @theme {
   --font-display: var(--font-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
