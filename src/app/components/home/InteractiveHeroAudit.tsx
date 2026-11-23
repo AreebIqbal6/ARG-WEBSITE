@@ -54,7 +54,7 @@ export default function InteractiveHeroAudit() {
       </div>
 
       {/* Dynamic Console Panel (Locked Minimum Height to prevent layout jitter and background resizing) */}
-      <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm overflow-hidden min-h-[870px] sm:min-h-[820px] lg:min-h-[485px] flex flex-col justify-center">
+      <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm overflow-hidden min-h-[560px] sm:min-h-[500px] lg:min-h-[440px] flex flex-col justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStandard.id}
