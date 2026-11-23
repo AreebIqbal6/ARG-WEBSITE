@@ -31,67 +31,40 @@ export default function SplitInfoSection() {
           
           {/* Left Copy */}
           <div className="lg:w-1/2">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="flex items-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-6"
-            >
+            <div className="flex items-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
               <span>The ARG Registrars advantage</span>
-            </motion.div>
+            </div>
 
-            <motion.h2 
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-8 tracking-tight leading-[1.08]"
-            >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-8 tracking-tight leading-[1.08]">
               Uncompromising rigor. <br />
               <span className="text-[#00873E]">
                 Global market access.
               </span>
-            </motion.h2>
+            </h2>
             
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-slate-600 font-sans text-base md:text-lg mb-10 leading-relaxed font-light"
-            >
+            <p className="text-slate-600 font-sans text-base md:text-lg mb-10 leading-relaxed font-light">
               ARG Registrars Pakistan pairs deep technical industry acumen with international accreditation standards. With active corporate hubs in Riyadh, KSA and Faisalabad, Pakistan, we deliver verification and registrar credentials trusted by multinational buyers and government regulators.
-            </motion.p>
+            </p>
 
             <div className="flex flex-col gap-4">
               {features.map((text, i) => (
-                <motion.div 
+                <div 
                   key={i} 
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.08 + i * 0.06 }}
-                  whileHover={{ x: 2 }} 
                   className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:border-slate-300 hover:bg-white hover:shadow-xs transition-colors duration-150"
                 >
                   <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
                     <CheckCircle2 className="text-[#00873E]" size={16} />
                   </div>
                   <span className="font-sans font-medium text-sm md:text-base text-slate-800">{text}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
           {/* Right Visual Image with Glass Stats */}
           <div className="lg:w-1/2 w-full relative">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9 }}
+            <div 
               className="relative w-full aspect-square rounded-[3rem] overflow-hidden border-2 border-slate-200 shadow-xl group bg-slate-100"
             >
               <div 
@@ -114,7 +87,7 @@ export default function SplitInfoSection() {
                   <div className="text-[#00873E] font-sans font-medium text-xs mt-1">Dual hubs</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>

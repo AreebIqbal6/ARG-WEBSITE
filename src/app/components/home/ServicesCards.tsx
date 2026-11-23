@@ -56,12 +56,7 @@ export default function ServicesCards() {
             const Icon = item.icon;
             return (
               <Link key={index} href={item.link}>
-                <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  whileHover={{ y: -2 }}
+                <div 
                   className={`bg-white rounded-2xl p-8 md:p-9 group relative overflow-hidden h-full flex flex-col justify-between border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-150 ${index === 1 ? 'md:translate-y-4' : ''}`}
                 >
                   <div>
@@ -91,7 +86,7 @@ export default function ServicesCards() {
                       <ArrowUpRight size={15} />
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </Link>
             );
           })}

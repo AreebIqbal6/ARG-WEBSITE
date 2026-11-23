@@ -62,13 +62,7 @@ export default function TestimonialsSection() {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {endorsements.map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.12 }}
-            >
+            <div key={idx}>
               <SpotlightCard className="p-8 h-full flex flex-col justify-between">
                 <div>
                   {/* Rating Stars & Badge */}
@@ -104,7 +98,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               </SpotlightCard>
-            </motion.div>
+            </div>
           ))}
         </div>
 

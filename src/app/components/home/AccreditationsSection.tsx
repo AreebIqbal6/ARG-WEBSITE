@@ -26,51 +26,28 @@ export default function AccreditationsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-3"
-          >
+          <div className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-3">
             <span className="w-1.5 h-1.5 bg-[#00873E] rounded-full" />
             <span>Recognized global conformity</span>
-          </motion.div>
+          </div>
 
-          <motion.h2 
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight tracking-tight mb-6"
-          >
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight tracking-tight mb-6">
             Accredited Registrar Scopes &amp; <br className="hidden md:block" />
             <span className="text-[#00873E]">
               International Standards
             </span>
-          </motion.h2>
+          </h2>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-slate-600 font-sans text-base md:text-lg font-light leading-relaxed"
-          >
+          <p className="text-slate-600 font-sans text-base md:text-lg font-light leading-relaxed">
             ARG Registrars Pakistan certifies, audits, and validates organizations against premier ISO standards, US C-TPAT security criteria, and factory technical benchmarks.
-          </motion.p>
+          </p>
         </div>
 
         {/* 8 Bento-Style Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {certifications.map((cert, index) => (
-            <motion.div 
+          {certifications.map((cert) => (
+            <div 
               key={cert.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-5%" }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              whileHover={{ y: -2 }}
               className="bg-white rounded-2xl p-6 flex flex-col justify-between group relative overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-150"
             >
               {/* Shimmer line top */}
@@ -136,16 +113,12 @@ export default function AccreditationsSection() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom Callout Banner */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="mt-16 rounded-2xl bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-200 shadow-sm relative overflow-hidden"
         >
           <div className="max-w-2xl text-center md:text-left">
@@ -173,7 +146,7 @@ export default function AccreditationsSection() {
               <span>Contact registrar desk</span>
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {/* Specification Modal for Selected Certification */}
         <AuditSpecModal

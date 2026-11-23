@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/unslop-story/
 
 # debug
 npm-debug.log*

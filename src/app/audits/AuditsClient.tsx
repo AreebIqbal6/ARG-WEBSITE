@@ -21,7 +21,7 @@ export default function Audits() {
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/65 to-transparent"></div>
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
+          <div className="max-w-4xl">
             <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-sans font-semibold text-xs tracking-wider uppercase border-b border-slate-200 pb-2 max-w-full">
               <span className="text-[#00873E] font-bold">ON-SITE AUDIT EVALUATIONS</span>
               <span className="hidden sm:inline text-slate-400">&bull;</span>
@@ -36,7 +36,7 @@ export default function Audits() {
             <p className="text-slate-600 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Objective, accredited evaluations of manufacturing facilities, supply chain security, and quality management systems.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

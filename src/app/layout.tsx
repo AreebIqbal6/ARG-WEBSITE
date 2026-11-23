@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import SmoothScrolling from "./components/SmoothScrolling";
 
 // High-precision architectural display typeface
 const displayFont = Geist({
@@ -165,12 +164,10 @@ export default function RootLayout({
       <body
         className={`${displayFont.variable} ${sansFont.variable} ${monoFont.variable} antialiased font-sans bg-slate-50 text-slate-900 selection:bg-[#00873E] selection:text-white flex flex-col min-h-screen`}
       >
-        <SmoothScrolling>
-          <Header />
-          <main id="page-wrapper" className="flex-grow">{children}</main>
-          <Footer />
-          <StickyMobileCta />
-        </SmoothScrolling>
+        <Header />
+        <main id="page-wrapper" className="flex-grow">{children}</main>
+        <Footer />
+        <StickyMobileCta />
       </body>
     </html>
   );

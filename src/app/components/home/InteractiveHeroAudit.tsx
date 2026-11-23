@@ -55,13 +55,13 @@ export default function InteractiveHeroAudit() {
 
       {/* Dynamic Console Panel (Locked Minimum Height to prevent layout jitter and background resizing) */}
       <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm overflow-hidden min-h-[560px] sm:min-h-[500px] lg:min-h-[440px] flex flex-col justify-center">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={activeStandard.id}
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col lg:flex-row gap-8 items-center justify-between w-full"
           >
             {/* Left Info Column */}

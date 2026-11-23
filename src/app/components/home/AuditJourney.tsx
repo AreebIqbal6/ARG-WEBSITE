@@ -78,13 +78,7 @@ export default function AuditJourney() {
           {steps.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+              <div key={index}>
                 <SpotlightCard className="p-8 h-full flex flex-col justify-between group">
                   <div>
                     {/* Top Step Number & Tag */}
@@ -118,16 +112,13 @@ export default function AuditJourney() {
                     <span>{item.subtitle}</span>
                   </div>
                 </SpotlightCard>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
         {/* Commitment Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="mt-14 bg-slate-50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-200 shadow-sm max-w-4xl mx-auto"
         >
           <div className="flex items-center gap-4 text-left">
@@ -146,7 +137,7 @@ export default function AuditJourney() {
             <span>Submit stage 1 application</span>
             <ArrowRight size={14} />
           </Link>
-        </motion.div>
+        </div>
 
       </div>
     </section>

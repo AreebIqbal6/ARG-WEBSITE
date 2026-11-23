@@ -26,10 +26,7 @@ export default function NotFound() {
       </div>
 
       <div className="relative z-10 max-w-lg w-full text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-200 shadow-xl"
         >
           {/* Status Badge */}
@@ -70,7 +67,7 @@ export default function NotFound() {
           <div className="pt-4 border-t border-slate-100 text-xs font-sans text-slate-500">
             Need direct assistance? <Link href="/contact" className="text-[#00873E] hover:underline font-semibold">Contact Registrars Desk</Link>
           </div>
-        </motion.div>
+        </div>
       </div>
 
     </div>

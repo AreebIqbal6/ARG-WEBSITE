@@ -1,0 +1,26 @@
+# ARG-WEBSITE Autonomous Progress Log
+Date: 2026-11-23
+
+## Problem Statement
+User reported that on mobile phone (Android Chrome), the entire site did not load properly (blank/ghost areas below header).
+Investigation revealed that 50+ elements across home and subpage components were configured with Framer Motion `initial={{ opacity: 0 }}`. When Next.js server-side renders or pre-renders static HTML, it outputs `style="opacity: 0; transform: translateY(...)"`. On mobile devices with latency, delayed hydration, or failed intersection observer callbacks due to negative margins (`margin: "-5%"`), elements remained 100% invisible. Furthermore, Lenis smooth scrolling was adding an unnecessary wrapper around the DOM.
+
+## Plan
+1. MOB-01: Remove Lenis SmoothScrolling wrapper from RootLayout.
+2. MOB-02: Eliminate `initial={{ opacity: 0 }}` and negative viewport margins from all home components.
+3. MOB-03: Eliminate `initial={{ opacity: 0 }}` from subpages (Services, Audits, About, 404).
+4. MOB-04: Run next build to ensure zero compilation or type errors.
+5. MOB-05: Push to origin/main, verify live mobile deployment on www.argregistrars.com with Playwright.
+
+## Actions Taken
+- Removed `<SmoothScrolling>` from `src/app/layout.tsx`. Native browser touch scrolling restored.
+- In `src/app/components/home/InteractiveHeroAudit.tsx`: Added `initial={false}` to AnimatePresence and set `initial={false}` so the verification console panel renders visible with `opacity: 1` on initial mount.
+- In `src/app/components/home/AccreditationsSection.tsx`: Removed all `initial={{ opacity: 0 }}` and negative viewport margins from header, the 8 accreditation cards, and the bottom CTA banner.
+- In `src/app/components/home/AuditJourney.tsx`: Removed `initial={{ opacity: 0, y: 30 }}` from all 4 steps and the commitment banner.
+- In `src/app/components/home/ServicesCards.tsx`: Removed `initial={{ opacity: 0, y: 30 }}` from all 3 capability cards.
+- In `src/app/components/home/SplitInfoSection.tsx`: Removed `initial={{ opacity: 0 }}` from left copy, all 4 checklist items, and the right-hand bureau stats card.
+- In `src/app/components/home/TestimonialsSection.tsx`: Removed `initial={{ opacity: 0, y: 30 }}` from all 3 stakeholder endorsement cards.
+- In `src/app/services/ServicesClient.tsx`: Removed `initial={{ opacity: 0 }}` from service cards and header.
+- In `src/app/audits/AuditsClient.tsx`: Removed `initial={{ opacity: 0 }}` from header.
+- In `src/app/about/AboutClient.tsx`: Removed `initial={{ opacity: 0 }}` from header.
+- In `src/app/not-found.tsx`: Removed `initial={{ opacity: 0 }}` from 404 card.

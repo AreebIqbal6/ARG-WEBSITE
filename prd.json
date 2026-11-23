@@ -1,0 +1,60 @@
+{
+  "project": "ARG-WEBSITE Mobile SSR & Flawless Phone Rendering Hardening",
+  "goal": "Eliminate all causes of mobile rendering failure, ghost opacity blocks, and scroll hijacking so the entire website renders flawlessly on mobile phones.",
+  "stories": [
+    {
+      "id": "MOB-01",
+      "title": "Remove Lenis scroll hijacking from RootLayout",
+      "acceptanceCriteria": [
+        "SmoothScrolling wrapper is removed from RootLayout",
+        "Native browser touch scrolling is uninhibited",
+        "Zero script contention with mobile gesture events"
+      ],
+      "passes": true
+    },
+    {
+      "id": "MOB-02",
+      "title": "Eliminate SSR opacity-zero blocks across all home components",
+      "acceptanceCriteria": [
+        "AccreditationsSection cards and headers are visible by default in SSR HTML",
+        "AuditJourney steps 01-04 render immediately without opacity delay",
+        "ServicesCards render visible by default in SSR HTML",
+        "SplitInfoSection features and bureau cards render visible by default",
+        "TestimonialsSection endorsement cards render visible by default",
+        "InteractiveHeroAudit console panel renders visible by default (opacity: 1) on initial mount"
+      ],
+      "passes": true
+    },
+    {
+      "id": "MOB-03",
+      "title": "Eliminate SSR opacity-zero blocks across subpages (Services, Audits, About, 404)",
+      "acceptanceCriteria": [
+        "ServicesClient cards and headers render visible by default",
+        "AuditsClient header renders visible by default",
+        "AboutClient header renders visible by default",
+        "NotFound 404 card renders visible by default"
+      ],
+      "passes": true
+    },
+    {
+      "id": "MOB-04",
+      "title": "Build verification and zero TypeScript errors",
+      "acceptanceCriteria": [
+        "next build succeeds with zero errors",
+        "Static HTML generation succeeds for all routes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "MOB-05",
+      "title": "Deploy to origin/main and verify live production on mobile",
+      "acceptanceCriteria": [
+        "Changes committed and pushed to GitHub main",
+        "Production domain https://www.argregistrars.com verified via Playwright mobile viewport (390x844)",
+        "Zero opacity-zero ghost elements on production mobile",
+        "Full page screenshots confirm complete visual visibility from Hero to Footer"
+      ],
+      "passes": false
+    }
+  ]
+}

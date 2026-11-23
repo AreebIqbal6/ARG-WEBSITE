@@ -39,7 +39,7 @@ export default function About() {
         </div>
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
+          <div className="max-w-4xl">
             <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-sans font-semibold text-xs tracking-wider uppercase border-b border-slate-200 pb-2 max-w-full">
               <span className="text-[#00873E] font-bold">INSTITUTIONAL REGISTRAR PROFILE</span>
               <span className="hidden sm:inline text-slate-400">&bull;</span>
@@ -54,7 +54,7 @@ export default function About() {
             <p className="text-slate-600 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Delivering accredited ISO management certifications, C-TPAT security audits, and factory technical assessments across international supply chains.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

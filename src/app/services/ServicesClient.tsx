@@ -107,16 +107,11 @@ export default function Services() {
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
   const [specModalId, setSpecModalId] = useState<string | null>(null);
 
-  const renderServiceCard = (srv: ServiceItem, idx: number) => (
-    <motion.div
+  const renderServiceCard = (srv: ServiceItem) => (
+    <div
       key={srv.id}
       id={srv.id}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: idx * 0.08 }}
-      whileHover={{ y: -6 }}
-      className="bg-white rounded-3xl overflow-hidden flex flex-col justify-between group border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 relative scroll-mt-36"
+      className="bg-white rounded-3xl overflow-hidden flex flex-col justify-between group border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 relative scroll-mt-36 transition-all duration-150"
     >
       <div className="relative h-52 w-full overflow-hidden">
         <div 
@@ -179,7 +174,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
@@ -191,7 +186,7 @@ export default function Services() {
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/65 to-transparent"></div>
         
         <div className="container mx-auto px-4 lg:px-8 relative z-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
+          <div className="max-w-4xl">
             <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-6 text-[11px] sm:text-xs font-sans font-semibold text-xs tracking-wider uppercase border-b border-slate-200 pb-2 max-w-full">
               <span className="text-[#00873E] font-bold">ACCREDITED CERTIFICATION SCOPES</span>
               <span className="hidden sm:inline text-slate-400">&bull;</span>
@@ -206,7 +201,7 @@ export default function Services() {
             <p className="text-slate-600 font-sans text-lg max-w-2xl font-light leading-relaxed">
               Accredited ISO certifications, supply chain security, and technical assessments verifying conformity for global markets.
             </p>
-          </motion.div>
+          </div>
 
           {/* Quick Registry Verification Callout */}
           <div className="mt-12 p-6 md:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl">
