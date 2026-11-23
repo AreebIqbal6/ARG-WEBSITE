@@ -43,7 +43,7 @@
         "next build succeeds with zero errors",
         "Static HTML generation succeeds for all routes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "MOB-05",
@@ -54,7 +54,7 @@
         "Zero opacity-zero ghost elements on production mobile",
         "Full page screenshots confirm complete visual visibility from Hero to Footer"
       ],
-      "passes": false
+      "passes": true
     }
   ]
 }
