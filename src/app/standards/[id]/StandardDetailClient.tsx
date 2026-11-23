@@ -126,18 +126,18 @@ Email: records@argregistrars.com
             <div className="flex flex-wrap sm:flex-nowrap gap-3 shrink-0 w-full lg:w-auto">
               <Link
                 href={`/schedule?standard=${encodeURIComponent(standard.id)}`}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150 w-full sm:w-auto"
               >
                 <CalendarCheck size={15} />
-                <span>SCHEDULE AUDIT</span>
+                <span>Schedule audit</span>
               </Link>
               <button
                 type="button"
                 onClick={handleDownload}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-sans font-semibold text-xs border border-slate-200 shadow-xs transition-all w-full sm:w-auto cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-sans font-medium text-xs border border-slate-200 shadow-xs active:scale-[0.98] transition-colors duration-150 w-full sm:w-auto cursor-pointer"
               >
                 {downloaded ? <Check size={15} className="text-[#00873E]" /> : <Download size={15} className="text-[#00873E]" />}
-                <span>{downloaded ? "SPEC DOWNLOADED" : "DOWNLOAD SPEC (.TXT)"}</span>
+                <span>{downloaded ? "Spec downloaded" : "Download spec (.txt)"}</span>
               </button>
             </div>
 
@@ -294,9 +294,9 @@ Email: records@argregistrars.com
 
                 <Link
                   href={`/schedule?standard=${encodeURIComponent(standard.id)}`}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-md hover:shadow-lg transition-all mb-3"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150 mb-3"
                 >
-                  <span>SUBMIT AUDIT APPLICATION</span>
+                  <span>Submit audit application</span>
                   <ArrowRight size={14} />
                 </Link>
 

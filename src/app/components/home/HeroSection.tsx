@@ -58,22 +58,22 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-16 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 mb-16 w-full sm:w-auto"
           >
             <Link 
               href="/schedule" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-sans font-semibold text-xs tracking-wider bg-[#00873E] hover:bg-[#059669] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-sans font-semibold text-xs tracking-normal bg-[#00873E] hover:bg-[#007536] text-white shadow-xs active:scale-[0.98] transition-colors duration-150"
             >
-              <span>SCHEDULE AN AUDIT</span>
+              <span>Schedule an audit</span>
               <ArrowUpRight size={15} />
             </Link>
 
             <Link 
               href="/services" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-sans font-semibold text-xs tracking-wider bg-white hover:bg-slate-50 text-slate-800 hover:text-slate-950 border border-slate-300 shadow-xs transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-sans font-medium text-xs tracking-normal bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 shadow-xs active:scale-[0.98] transition-colors duration-150"
             >
               <ShieldCheck size={15} className="text-[#00873E]" />
-              <span>EXPLORE ACCREDITED SCOPES</span>
+              <span>Explore accredited scopes</span>
             </Link>
           </motion.div>
 

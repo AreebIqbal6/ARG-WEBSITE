@@ -251,10 +251,10 @@ export default function InquiriesClient() {
                 <button
                   type="submit"
                   disabled={isPending}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer disabled:opacity-50"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150 cursor-pointer disabled:opacity-50"
                 >
                   <Unlock size={14} />
-                  <span>{isPending ? 'AUTHENTICATING...' : 'AUTHENTICATE ACCESS'}</span>
+                  <span>{isPending ? 'Authenticating...' : 'Authenticate access'}</span>
                 </button>
               </form>
 
@@ -565,10 +565,10 @@ export default function InquiriesClient() {
                       <div className="pt-4">
                         <a
                           href={`mailto:${selectedInquiry.email}?subject=ARG%20Registrars%20Audit%20Inquiry%20Response%20[%20Ref%20${selectedInquiry.id}%20]&body=Dear%20${encodeURIComponent(selectedInquiry.first_name)},%0D%0A%0D%0AThank%20you%20for%20contacting%20ARG%20Registrars%20regarding%20your%20certification%20and%20audit%20scope.%0D%0A%0D%0ARegards,%0D%0AARG%20Registrars%20Technical%20Audit%20Desk`}
-                          className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:shadow-md transition-all"
+                          className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150"
                         >
                           <Mail size={15} />
-                          <span>REPLY VIA EMAIL TO {selectedInquiry.email.toUpperCase()}</span>
+                          <span>Reply via email to {selectedInquiry.email}</span>
                           <ExternalLink size={14} />
                         </a>
                       </div>

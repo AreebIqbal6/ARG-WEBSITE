@@ -44,9 +44,9 @@ export default function TestimonialsSection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
+          <div className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
-            <span>EXECUTIVE STAKEHOLDER REVIEWS</span>
+            <span>Executive stakeholder reviews</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight mb-4">
             Trusted by Industrial Leaders <br />
@@ -78,8 +78,8 @@ export default function TestimonialsSection() {
                         <Star key={i} size={14} fill="#00873E" />
                       ))}
                     </div>
-                    <span className="text-[10px] font-mono text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200 uppercase">
-                      VERIFIED AUDIT
+                    <span className="text-[10px] font-mono text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200">
+                      Verified audit
                     </span>
                   </div>
 

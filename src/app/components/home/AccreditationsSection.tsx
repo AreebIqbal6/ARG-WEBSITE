@@ -31,10 +31,10 @@ export default function AccreditationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4"
+            className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-3"
           >
-            <span className="w-1.5 h-1.5 bg-[#00873E]" />
-            <span>RECOGNIZED GLOBAL CONFORMITY</span>
+            <span className="w-1.5 h-1.5 bg-[#00873E] rounded-full" />
+            <span>Recognized global conformity</span>
           </motion.div>
 
           <motion.h2 
@@ -66,12 +66,12 @@ export default function AccreditationsSection() {
           {certifications.map((cert, index) => (
             <motion.div 
               key={cert.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-5%" }}
-              transition={{ duration: 0.6, delay: index * 0.07 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-white rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all"
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              whileHover={{ y: -2 }}
+              className="bg-white rounded-2xl p-6 flex flex-col justify-between group relative overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-150"
             >
               {/* Shimmer line top */}
               
@@ -79,18 +79,18 @@ export default function AccreditationsSection() {
               <div>
                 {/* Top Status & Badge Cradle */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="bg-slate-50 rounded-2xl p-2.5 shadow-xs border border-slate-200 flex items-center justify-center shrink-0 w-16 h-16 group-hover:scale-105 transition-transform duration-300 overflow-hidden" style={{ width: '64px', height: '64px', overflow: 'hidden' }}>
+                  <div className="bg-slate-50 rounded-xl p-2 shadow-xs border border-slate-200 flex items-center justify-center shrink-0 w-14 h-14 overflow-hidden" style={{ width: '56px', height: '56px', overflow: 'hidden' }}>
                     <Image 
                       src={cert.badgeImg} 
                       alt={cert.name} 
-                      width={48}
-                      height={48}
-                      className="w-10 h-10 object-contain max-w-full max-h-full" 
+                      width={44}
+                      height={44}
+                      className="w-9 h-9 object-contain max-w-full max-h-full" 
                     />
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-sans font-semibold text-[10px] tracking-wider uppercase bg-emerald-50 border border-emerald-200/80 text-[#00873E]">
-                    <span className="w-1.5 h-1.5 bg-[#00873E]" />
-                    VERIFIED
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-sans font-medium bg-emerald-50 border border-emerald-200/80 text-[#00873E]">
+                    <span className="w-1.5 h-1.5 bg-[#00873E] rounded-full" />
+                    Verified
                   </span>
                 </div>
 
@@ -98,10 +98,10 @@ export default function AccreditationsSection() {
                 <h3 className="text-lg font-display font-semibold text-slate-900 group-hover:text-[#00873E] transition-colors mb-1">
                   {cert.name}
                 </h3>
-                <div className="text-[#00873E] font-sans text-xs font-semibold tracking-wide uppercase mb-3">
+                <div className="text-[#00873E] font-sans text-xs font-medium mb-3">
                   {cert.tagline}
                 </div>
-                <p className="text-slate-600 font-sans text-xs leading-relaxed mb-6 font-light">
+                <p className="text-slate-600 font-sans text-xs leading-relaxed mb-6 font-normal">
                   {cert.scope}
                 </p>
               </div>
@@ -122,14 +122,14 @@ export default function AccreditationsSection() {
                   <button
                     type="button"
                     onClick={() => setSpecModalId(cert.id)}
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-[#00873E] font-display font-semibold text-xs border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer active:scale-[0.98] group/btn"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 font-sans font-medium text-xs border border-slate-200 transition-colors cursor-pointer active:scale-[0.98]"
                   >
-                    <FileCheck2 size={14} className="text-[#00873E] group-hover/btn:scale-110 transition-transform" />
-                    <span>VIEW SPECIFICATION</span>
+                    <FileCheck2 size={14} className="text-[#00873E]" />
+                    <span>View specification</span>
                   </button>
                   <Link
                     href={`/standards/${cert.id}`}
-                    className="inline-flex items-center justify-center px-3 py-2.5 rounded-xl bg-slate-50 hover:bg-[#00873E] text-slate-600 hover:text-white font-sans font-semibold text-xs border border-slate-200 hover:border-emerald-600 transition-all"
+                    className="inline-flex items-center justify-center px-2.5 py-2 rounded-lg bg-slate-50 hover:bg-[#00873E] text-slate-600 hover:text-white font-sans font-medium text-xs border border-slate-200 hover:border-emerald-600 transition-colors active:scale-[0.98]"
                     title={`View dedicated ${cert.name} scope page`}
                   >
                     <ArrowUpRight size={14} />
@@ -142,35 +142,35 @@ export default function AccreditationsSection() {
 
         {/* Bottom Callout Banner */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-16 rounded-3xl bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-200 shadow-md relative overflow-hidden"
+          transition={{ duration: 0.6 }}
+          className="mt-16 rounded-2xl bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-200 shadow-sm relative overflow-hidden"
         >
           <div className="max-w-2xl text-center md:text-left">
-            <h4 className="text-2xl md:text-3xl font-display font-black text-slate-900 mb-2">
+            <h4 className="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-2">
               Ready to Certify Your Organization or Supply Chain?
             </h4>
-            <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
+            <p className="text-slate-600 font-sans text-sm font-normal leading-relaxed">
               Submit your facility details for Stage 1 gap evaluation or contact our dual registrar desks in Riyadh, KSA and Faisalabad, Pakistan.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full sm:w-auto">
             <Link 
               href="/schedule" 
-              className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,135,62,0.4)] hover:-translate-y-0.5 border border-emerald-500/30 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-[#00873E] hover:bg-[#007536] text-white font-sans font-semibold text-xs px-6 py-3.5 rounded-xl transition-colors duration-150 active:scale-[0.98] shadow-xs w-full sm:w-auto"
             >
-              <span>SCHEDULE AN AUDIT</span>
+              <span>Schedule an audit</span>
               <ArrowUpRight size={15} />
             </Link>
 
             <Link 
               href="/contact" 
-              className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl transition-all duration-300 border border-slate-200 shadow-sm w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-sans font-medium text-xs px-6 py-3.5 rounded-xl transition-colors duration-150 border border-slate-200 shadow-xs active:scale-[0.98] w-full sm:w-auto"
             >
-              <span>CONTACT REGISTRAR DESK</span>
+              <span>Contact registrar desk</span>
             </Link>
           </div>
         </motion.div>

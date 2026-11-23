@@ -74,17 +74,17 @@ export default function Audits() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                  <span>COMPARE ISO SCOPES</span>
-                  <ArrowUpRight size={16} />
+                <Link href="/services" className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-medium text-xs bg-[#00873E] hover:bg-[#007536] text-white shadow-xs active:scale-[0.98] transition-colors duration-150">
+                  <span>Compare ISO scopes</span>
+                  <ArrowUpRight size={15} />
                 </Link>
 
                 <Link 
                   href="/schedule" 
-                  className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-7 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
+                  className="inline-flex items-center gap-2 bg-white text-slate-800 font-medium text-xs px-6 py-3.5 rounded-xl border border-slate-200 shadow-xs hover:bg-slate-50 active:scale-[0.98] transition-colors duration-150"
                 >
-                  <ShieldCheck size={16} className="text-[#00873E]" />
-                  <span>Request Audit Schedule</span>
+                  <ShieldCheck size={15} className="text-[#00873E]" />
+                  <span>Request audit schedule</span>
                 </Link>
               </div>
             </div>

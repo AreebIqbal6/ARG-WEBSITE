@@ -204,7 +204,7 @@ export default function Services() {
               </span>
             </h1>
             <p className="text-slate-600 font-sans text-lg max-w-2xl font-light leading-relaxed">
-              Accredited ISO certifications, supply chain security, and technical assessments to unlock global markets.
+              Accredited ISO certifications, supply chain security, and technical assessments verifying conformity for global markets.
             </p>
           </motion.div>
 
@@ -226,10 +226,10 @@ export default function Services() {
             <button
               type="button"
               onClick={() => setIsVerifyOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer shrink-0"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150 cursor-pointer shrink-0"
             >
               <Search size={15} />
-              <span>SEARCH CERTIFICATE REGISTRY</span>
+              <span>Search certificate registry</span>
             </button>
           </div>
         </div>

@@ -363,14 +363,14 @@ function ScheduleContent() {
                     <button
                       type="submit"
                       disabled={isPending}
-                      className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-8 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] hover:from-[#007536] hover:to-[#047857] text-white font-display font-bold text-xs tracking-wider shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-60 cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-8 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150 disabled:opacity-60 cursor-pointer"
                     >
                       {isPending ? (
-                        <span>PROCESSING AUDIT INTAKE...</span>
+                        <span>Processing audit intake...</span>
                       ) : (
                         <>
                           <CalendarCheck size={16} />
-                          <span>SUBMIT STAGE 1 AUDIT APPLICATION</span>
+                          <span>Submit stage 1 audit application</span>
                         </>
                       )}
                     </button>

@@ -41,9 +41,9 @@ export default function ServicesCards() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
-            <span className="w-1.5 h-1.5 bg-[#00873E]" />
-            <span>CORE REGISTRAR CAPABILITIES</span>
+          <div className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-3">
+            <span className="w-1.5 h-1.5 bg-[#00873E] rounded-full" />
+            <span>Core registrar capabilities</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight">
             Comprehensive Registrar &amp; <br />
@@ -60,35 +60,35 @@ export default function ServicesCards() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.12 }}
-                  whileHover={{ y: -8 }}
-                  className={`bg-white rounded-2xl md:rounded-[2.5rem] p-8 md:p-10 group relative overflow-hidden h-full flex flex-col justify-between border border-slate-200 shadow-[0_4px_25px_-5px_rgba(15,23,42,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(0,135,62,0.12)] hover:border-emerald-500/40 transition-all ${index === 1 ? 'md:translate-y-6' : ''}`}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  whileHover={{ y: -2 }}
+                  className={`bg-white rounded-2xl p-8 md:p-9 group relative overflow-hidden h-full flex flex-col justify-between border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-150 ${index === 1 ? 'md:translate-y-4' : ''}`}
                 >
                   <div>
                     {/* Top Tag & Icon */}
-                    <div className="flex items-center justify-between mb-8">
-                      <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] group-hover:scale-110 transition-transform duration-300 shadow-xs">
-                        <Icon size={28} />
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="w-14 h-14 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] shadow-xs">
+                        <Icon size={26} />
                       </div>
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200">
+                      <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200">
                         {item.tag}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 group-hover:text-[#00873E] transition-colors leading-snug">
+                    <h3 className="text-xl font-display font-semibold mb-3 text-slate-900 group-hover:text-[#00873E] transition-colors leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 font-sans text-sm leading-relaxed mb-10 font-light">
+                    <p className="text-slate-600 font-sans text-sm leading-relaxed mb-8 font-normal">
                       {item.desc}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between border-t border-slate-100 pt-6 mt-auto">
-                    <span className="text-xs font-sans font-semibold tracking-wider text-slate-500 group-hover:text-[#00873E] transition-colors">
-                      LEARN MORE
+                  <div className="flex items-center justify-between border-t border-slate-100 pt-5 mt-auto">
+                    <span className="text-xs font-sans font-medium text-slate-600 group-hover:text-[#00873E] transition-colors">
+                      Learn more
                     </span>
-                    <div className="w-10 h-10 rounded-full bg-slate-100 group-hover:bg-[#00873E] text-slate-600 group-hover:text-white flex items-center justify-center transition-all duration-300">
-                      <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 group-hover:bg-[#00873E] text-slate-600 group-hover:text-white flex items-center justify-center transition-colors duration-150">
+                      <ArrowUpRight size={15} />
                     </div>
                   </div>
                 </motion.div>

@@ -64,7 +64,7 @@ export default function Header() {
         }`}>
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group relative z-50">
-            <div className="bg-white rounded-xl p-1 shadow-sm border border-slate-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+            <div className="bg-white rounded-xl p-1 shadow-xs border border-slate-200 flex items-center justify-center shrink-0">
               <Image 
                 src="/arg_logo.png" 
                 alt="ARG Registrars Pakistan Logo" 
@@ -75,20 +75,20 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-extrabold text-sm md:text-base tracking-wider text-slate-900 leading-tight">
+              <span className="font-display font-bold text-sm md:text-base tracking-tight text-slate-900 leading-tight">
                 ARG REGISTRARS
               </span>
-              <span className="font-sans text-[9px] tracking-[0.28em] uppercase font-bold text-[#00873E] leading-tight">
+              <span className="font-sans text-[9px] tracking-[0.24em] uppercase font-semibold text-[#00873E] leading-tight">
                 PAKISTAN
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8 font-sans font-semibold text-xs tracking-wider text-slate-600">
-            <Link href="/" className="hover:text-[#00873E] transition-colors duration-300 relative group py-2">
-              HOME
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
+          <nav className="hidden lg:flex items-center gap-7 font-sans font-medium text-xs tracking-normal text-slate-600">
+            <Link href="/" className="hover:text-[#00873E] transition-colors duration-200 relative group py-2">
+              Home
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-200 group-hover:w-full rounded-full"></span>
             </Link>
             
             <div 
@@ -105,12 +105,12 @@ export default function Header() {
             >
               <Link 
                 href="/services" 
-                className="flex items-center gap-1.5 hover:text-[#00873E] transition-colors duration-300 relative group cursor-pointer"
+                className="flex items-center gap-1.5 hover:text-[#00873E] transition-colors duration-200 relative group cursor-pointer"
                 onClick={() => setServicesDropdownOpen(false)}
               >
-                <span>SERVICES</span>
-                <ChevronDown size={13} className={`transition-transform duration-300 text-[#00873E] ${servicesDropdownOpen ? 'rotate-180' : 'group-hover:rotate-180'}`} />
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
+                <span>Services</span>
+                <ChevronDown size={13} className={`transition-transform duration-200 text-[#00873E] ${servicesDropdownOpen ? 'rotate-180' : 'group-hover:rotate-180'}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-200 group-hover:w-full rounded-full"></span>
               </Link>
               
               {/* Dropdown menu with hover bridge */}
@@ -124,32 +124,32 @@ export default function Header() {
                 {/* Invisible hover bridge connecting trigger to dropdown */}
                 <div className="absolute -top-2 left-0 right-0 h-3 pointer-events-auto" />
                 
-                <div className="rounded-2xl p-2.5 flex flex-col gap-1 shadow-[0_20px_45px_rgba(15,23,42,0.15)] border border-slate-200 bg-white/98 backdrop-blur-xl">
+                <div className="rounded-2xl p-2.5 flex flex-col gap-1 shadow-lg border border-slate-200 bg-white/98 backdrop-blur-xl">
                   <Link 
                     href="/services" 
                     onClick={() => setServicesDropdownOpen(false)} 
-                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-medium transition-colors block cursor-pointer"
                   >
                     All Certification Services
                   </Link>
                   <Link 
                     href="/services#iso-systems" 
                     onClick={() => setServicesDropdownOpen(false)} 
-                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-medium transition-colors block cursor-pointer"
                   >
                     ISO 9001 / 14001 / 45001
                   </Link>
                   <Link 
                     href="/services#ctpat-security" 
                     onClick={() => setServicesDropdownOpen(false)} 
-                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-medium transition-colors block cursor-pointer"
                   >
                     C-TPAT Supply Chain Audits
                   </Link>
                   <Link 
                     href="/services#technical-audits" 
                     onClick={() => setServicesDropdownOpen(false)} 
-                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all block cursor-pointer"
+                    className="text-slate-700 hover:text-[#00873E] hover:bg-emerald-50/80 px-3.5 py-2.5 rounded-xl text-xs font-medium transition-colors block cursor-pointer"
                   >
                     Factory Technical Evaluations
                   </Link>
@@ -157,36 +157,36 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/audits" className="hover:text-[#00873E] transition-colors duration-300 relative group py-2">
-              AUDITS
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
+            <Link href="/audits" className="hover:text-[#00873E] transition-colors duration-200 relative group py-2">
+              Audits
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-200 group-hover:w-full rounded-full"></span>
             </Link>
-            <Link href="/about" className="hover:text-[#00873E] transition-colors duration-300 relative group py-2">
-              ABOUT US
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
+            <Link href="/about" className="hover:text-[#00873E] transition-colors duration-200 relative group py-2">
+              About us
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-200 group-hover:w-full rounded-full"></span>
             </Link>
-            <Link href="/contact" className="hover:text-[#00873E] transition-colors duration-300 relative group py-2">
-              OFFICES &amp; CONTACT
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-300 group-hover:w-full rounded-full"></span>
+            <Link href="/contact" className="hover:text-[#00873E] transition-colors duration-200 relative group py-2">
+              Offices &amp; Contact
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00873E] transition-all duration-200 group-hover:w-full rounded-full"></span>
             </Link>
           </nav>
 
           {/* Right Action */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5">
             <button
               type="button"
               onClick={() => setIsVerifyOpen(true)}
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-semibold font-sans text-xs tracking-wider transition-all duration-300 text-slate-700 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 cursor-pointer shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl font-medium font-sans text-xs transition-colors duration-150 text-slate-700 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 active:scale-[0.98] cursor-pointer shadow-xs"
             >
               <ShieldCheck size={14} className="text-[#00873E]" />
-              <span>VERIFY CERTIFICATE</span>
+              <span>Verify certificate</span>
             </button>
 
             <Link 
               href="/schedule" 
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold font-sans text-xs tracking-wider transition-all duration-300 bg-gradient-to-r from-[#00873E] to-[#059669] text-white hover:shadow-[0_4px_20px_rgba(0,135,62,0.4)] hover:scale-105"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl font-semibold font-sans text-xs transition-colors duration-150 bg-[#00873E] hover:bg-[#007536] text-white shadow-xs active:scale-[0.98]"
             >
-              <span>GET QUOTE</span>
+              <span>Get quote</span>
               <ArrowUpRight size={14} />
             </Link>
           </div>
@@ -210,32 +210,32 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white border-t border-slate-200 text-slate-800 flex flex-col items-center justify-start py-8 px-6 gap-6 font-sans z-50 overflow-y-auto shadow-2xl"
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white border-t border-slate-200 text-slate-800 flex flex-col items-center justify-start py-8 px-6 gap-5 font-sans z-50 overflow-y-auto shadow-xl"
           >
-            <Link href="/" className="text-base font-bold tracking-widest text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
-            <Link href="/services" className="text-base font-bold tracking-widest text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>SERVICES</Link>
-            <Link href="/audits" className="text-base font-bold tracking-widest text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>AUDITS</Link>
-            <Link href="/about" className="text-base font-bold tracking-widest text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
-            <Link href="/contact" className="text-base font-bold tracking-widest text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
-            <div className="flex flex-col gap-3 w-full max-w-xs mt-2">
+            <Link href="/" className="text-base font-medium text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/services" className="text-base font-medium text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link href="/audits" className="text-base font-medium text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>Audits</Link>
+            <Link href="/about" className="text-base font-medium text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>About us</Link>
+            <Link href="/contact" className="text-base font-medium text-slate-900 hover:text-[#00873E] transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <div className="flex flex-col gap-2.5 w-full max-w-xs mt-3">
               <button
                 type="button"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   setIsVerifyOpen(true);
                 }}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold tracking-wider bg-slate-50 border border-slate-200 text-slate-800 hover:bg-slate-100 cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-50 border border-slate-200 text-slate-800 hover:bg-slate-100 cursor-pointer shadow-xs active:scale-[0.98]"
               >
                 <ShieldCheck size={15} className="text-[#00873E]" />
-                <span>VERIFY CERTIFICATE</span>
+                <span>Verify certificate</span>
               </button>
               <Link 
                 href="/schedule" 
-                className="w-full text-center px-7 py-3 rounded-xl font-bold text-xs tracking-widest transition-all bg-[#00873E] text-white hover:bg-[#059669] shadow-[0_4px_16px_rgba(0,135,62,0.3)]" 
+                className="w-full text-center px-4 py-2.5 rounded-xl font-semibold text-xs transition-colors bg-[#00873E] text-white hover:bg-[#007536] shadow-xs active:scale-[0.98]" 
                 onClick={() => setMobileMenuOpen(false)}
               >
-                SCHEDULE AN AUDIT
+                Schedule an audit
               </Link>
             </div>
           </motion.nav>

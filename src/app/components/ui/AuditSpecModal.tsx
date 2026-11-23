@@ -154,7 +154,7 @@ Email: records@argregistrars.com
                 />
               </div>
               <div className="min-w-0">
-                <div className="text-[10px] sm:text-[11px] font-sans font-bold uppercase tracking-widest text-[#00873E] truncate">
+                <div className="text-[10px] sm:text-[11px] font-sans font-medium text-[#00873E] truncate">
                   {data.category} &bull; {data.iafSector}
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-slate-900 tracking-tight truncate">
@@ -215,34 +215,34 @@ Email: records@argregistrars.com
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-sans">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs font-sans">
               <div className="flex items-center gap-2.5">
                 <Clock size={16} className="text-[#00873E] shrink-0" />
                 <div>
-                  <div className="text-slate-500 text-[10px] uppercase">Turnaround Time</div>
-                  <div className="text-slate-900 font-semibold">{data.turnaround}</div>
+                  <div className="text-slate-500 text-[10px]">Turnaround time</div>
+                  <div className="text-slate-900 font-medium">{data.turnaround}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <CalendarCheck size={16} className="text-[#00873E] shrink-0" />
                 <div>
-                  <div className="text-slate-500 text-[10px] uppercase">Validity Cycle</div>
-                  <div className="text-slate-900 font-semibold">{data.validity}</div>
+                  <div className="text-slate-500 text-[10px]">Validity cycle</div>
+                  <div className="text-slate-900 font-medium">{data.validity}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Award size={16} className="text-[#00873E] shrink-0" />
                 <div>
-                  <div className="text-slate-500 text-[10px] uppercase">Registrar Recognition</div>
-                  <div className="text-[#00873E] font-semibold">EIAC / IAS Aligned</div>
+                  <div className="text-slate-500 text-[10px]">Registrar recognition</div>
+                  <div className="text-[#00873E] font-medium">EIAC / IAS Aligned</div>
                 </div>
               </div>
             </div>
 
             {/* Person-Day Formula Note */}
             <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200 text-xs font-sans">
-              <span className="font-bold text-slate-900 uppercase tracking-wider text-[11px] block mb-1">
-                Auditor Person-Days Formula:
+              <span className="font-semibold text-slate-900 text-xs block mb-1">
+                Auditor person-days formula:
               </span>
               <p className="text-slate-700 leading-relaxed font-light">
                 {data.personDaysGuide}
@@ -283,8 +283,8 @@ Email: records@argregistrars.com
 
             {/* Deliverables */}
             <div>
-              <div className="text-xs font-sans font-bold uppercase tracking-wider text-slate-500 mb-2">
-                Certified Deliverables &amp; Artifacts
+              <div className="text-xs font-sans font-semibold text-slate-500 mb-2">
+                Certified deliverables &amp; artifacts
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {data.deliverables.map((item, idx) => (
@@ -301,26 +301,26 @@ Email: records@argregistrars.com
             <button
               type="button"
               onClick={handleDownload}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs tracking-wider transition-all border border-slate-200 shadow-xs cursor-pointer active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-sans text-xs transition-colors duration-150 border border-slate-200 shadow-xs cursor-pointer active:scale-[0.98]"
             >
               <Download size={14} className="text-[#00873E]" />
-              <span>{downloaded ? "Specification Downloaded!" : "Download Criteria Sheet (.TXT)"}</span>
+              <span>{downloaded ? "Specification downloaded!" : "Download criteria sheet (.txt)"}</span>
             </button>
 
             <div className="flex items-center justify-end gap-2.5 w-full sm:w-auto">
               <a
                 href="/contact"
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#00873E] font-sans text-xs border border-emerald-200 font-medium transition-all"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-sans text-xs font-medium shadow-xs active:scale-[0.98] transition-colors duration-150"
               >
                 <ShieldCheck size={14} />
-                <span>Request Scope Audit</span>
+                <span>Schedule scope audit</span>
               </a>
               <button
                 type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-sans text-xs transition-all border border-slate-200 cursor-pointer active:scale-95"
+                className="px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-sans text-xs transition-colors duration-150 border border-slate-200 shadow-xs cursor-pointer active:scale-[0.98]"
               >
-                Close Protocol
+                Close specification
               </button>
             </div>
           </div>

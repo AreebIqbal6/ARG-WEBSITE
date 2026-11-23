@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3.5 mb-5 group">
-              <div className="bg-white rounded-xl p-1.5 shadow-sm border border-slate-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              <div className="bg-white rounded-xl p-1.5 shadow-sm border border-slate-200 flex items-center justify-center shrink-0">
                 <Image src="/arg_logo.png" alt="ARG Registrars Pakistan Logo" width={44} height={44} className="w-9 h-9 object-contain" />
               </div>
               <div className="flex flex-col">
@@ -57,7 +57,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-[#00873E] transition-colors inline-block font-medium">About ARG Registrars</Link></li>
               <li><Link href="/services" className="hover:text-[#00873E] transition-colors inline-block font-medium">ISO Certifications</Link></li>
               <li><Link href="/audits" className="hover:text-[#00873E] transition-colors inline-block font-medium">Technical &amp; C-TPAT Audits</Link></li>
-              <li><Link href="/schedule" className="hover:text-[#00873E] transition-colors inline-block font-medium">Schedule An Audit</Link></li>
+              <li><Link href="/schedule" className="hover:text-[#00873E] transition-colors inline-block font-medium">Schedule an audit</Link></li>
               <li><Link href="/contact" className="hover:text-[#00873E] transition-colors inline-block font-medium">Contact &amp; Offices</Link></li>
             </ul>
           </div>
@@ -125,8 +125,8 @@ export default function Footer() {
 
         {/* Global Certifications & Badges Row */}
         <div className="border-t border-slate-200 pt-8 pb-10">
-          <div className="text-center text-xs font-display font-bold tracking-[0.25em] text-[#00873E] uppercase mb-6">
-            Accredited Certification Frameworks &bull; Recognized Standards
+          <div className="text-center text-xs font-sans font-medium text-slate-500 mb-6">
+            Accredited certification frameworks &bull; Recognized standards
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 max-w-6xl mx-auto items-center">
             {footerCertLogos.map((logo, idx) => (
@@ -134,10 +134,10 @@ export default function Footer() {
                 key={idx} 
                 href={`/standards/${logo.id}`}
                 title={`${logo.name} – Official Accreditation Scope`}
-                className="bg-white border border-slate-200 rounded-2xl p-2.5 flex items-center justify-center shadow-xs hover:shadow-md hover:border-emerald-400 hover:scale-105 transition-all duration-300 w-full h-[58px] cursor-pointer group"
+                className="bg-white border border-slate-200 rounded-xl p-2.5 flex items-center justify-center shadow-xs hover:shadow-sm hover:border-slate-300 transition-colors duration-150 w-full h-[58px] cursor-pointer"
               >
                 <div className="w-full h-9 flex items-center justify-center overflow-hidden" style={{ height: '36px', overflow: 'hidden' }}>
-                  <Image src={logo.src} alt={logo.name} width={120} height={36} className="h-8 w-auto max-w-full object-contain group-hover:scale-105 transition-transform" />
+                  <Image src={logo.src} alt={logo.name} width={120} height={36} className="h-8 w-auto max-w-full object-contain" />
                 </div>
               </Link>
             ))}

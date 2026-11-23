@@ -67,7 +67,7 @@ export default function InteractiveHeroAudit() {
             {/* Left Info Column */}
             <div className="lg:w-7/12 text-left">
               <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-sans font-semibold uppercase tracking-wider text-[#00873E] bg-emerald-50 border border-emerald-200/80">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-sans font-medium text-[#00873E] bg-emerald-50 border border-emerald-200/80">
                   <ShieldCheck size={12} />
                   <span>{activeStandard.category}</span>
                 </span>
@@ -120,26 +120,26 @@ export default function InteractiveHeroAudit() {
                     alt={`${activeStandard.title} Official Badge`}
                     width={200}
                     height={200}
-                    className="w-auto h-auto max-w-[180px] max-h-[180px] object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-500"
+                    className="w-auto h-auto max-w-[180px] max-h-[180px] object-contain filter drop-shadow-sm"
                     priority
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
+              <div className="flex flex-col sm:flex-row gap-2.5 w-full max-w-sm">
                 <button
                   type="button"
                   onClick={() => setIsSpecModalOpen(true)}
-                  className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white text-xs font-display font-bold tracking-wider hover:shadow-[0_4px_16px_rgba(0,135,62,0.35)] transition-all border border-emerald-500/30 cursor-pointer"
+                  className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white text-xs font-sans font-semibold tracking-normal shadow-xs active:scale-[0.98] transition-colors cursor-pointer"
                 >
                   <FileCheck2 size={15} />
-                  <span>VIEW SPECIFICATION</span>
+                  <span>View specification</span>
                 </button>
                 <Link
                   href={`/standards/${activeStandard.id}`}
-                  className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs font-sans font-medium border border-slate-200 transition-all cursor-pointer"
+                  className="flex-1 w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs font-sans font-medium border border-slate-200 active:scale-[0.98] transition-colors cursor-pointer"
                 >
-                  <span>Full Standard Page</span>
+                  <span>Full standard page</span>
                   <ArrowUpRight size={14} />
                 </Link>
               </div>

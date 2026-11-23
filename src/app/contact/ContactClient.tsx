@@ -163,8 +163,8 @@ export default function Contact() {
                     )}
 
                     <div className="mt-2">
-                      <button disabled={isPending} type="submit" className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00873E] to-[#059669] text-white rounded-xl px-10 py-4 overflow-hidden transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-md w-full md:w-auto disabled:opacity-70 disabled:cursor-not-allowed font-display font-bold text-xs tracking-widest border border-emerald-600">
-                        <span>{isPending ? 'TRANSMITTING...' : 'SUBMIT AUDIT REQUEST'}</span>
+                      <button disabled={isPending} type="submit" className="inline-flex items-center justify-center gap-2.5 bg-[#00873E] hover:bg-[#007536] text-white rounded-xl px-8 py-3.5 shadow-xs w-full md:w-auto disabled:opacity-70 disabled:cursor-not-allowed font-medium text-xs active:scale-[0.98] transition-colors duration-150 cursor-pointer">
+                        <span>{isPending ? 'Transmitting...' : 'Submit audit request'}</span>
                         {!isPending && <ArrowUpRight size={15} />}
                       </button>
                     </div>

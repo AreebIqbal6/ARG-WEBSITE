@@ -62,9 +62,9 @@ export default function FaqSection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
+          <div className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
-            <span>TECHNICAL REGISTRAR FAQ</span>
+            <span>Technical registrar FAQ</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight mb-4">
             Frequently Asked <br />
@@ -84,7 +84,7 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden transition-all duration-300 hover:border-emerald-500/40"
+                className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden transition-colors duration-150 hover:border-slate-300"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
@@ -92,14 +92,14 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex flex-col gap-1 text-left">
-                    <span className="text-[11px] font-mono text-[#00873E] font-semibold uppercase tracking-wider">
+                    <span className="text-[11px] font-mono text-[#00873E] font-medium">
                       {faq.category}
                     </span>
                     <span className="text-base md:text-lg font-display font-bold text-slate-900">
                       {faq.question}
                     </span>
                   </div>
-                  <div className={`w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 text-slate-600 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[#00873E] text-white' : ''}`}>
+                  <div className={`w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 text-slate-600 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#00873E] text-white' : ''}`}>
                     <ChevronDown size={18} />
                   </div>
                 </button>
@@ -110,7 +110,7 @@ export default function FaqSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                     >
                       <div className="px-6 pb-6 pt-2 text-slate-600 font-sans text-sm md:text-base font-light leading-relaxed border-t border-slate-100">
                         {faq.answer}
@@ -131,9 +131,9 @@ export default function FaqSection() {
             </span>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150"
             >
-              <span>CONTACT REGISTRAR DESK</span>
+              <span>Contact registrar desk</span>
               <ArrowUpRight size={14} />
             </Link>
           </div>

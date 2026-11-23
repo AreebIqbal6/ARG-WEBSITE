@@ -130,16 +130,16 @@ async function testAllButtons() {
         logPass('Hero "VIEW SPECIFICATION" button opens AuditSpecModal');
 
         // Test Download criteria sheet button inside modal
-        const downloadBtn = page.locator('button:has-text("Download Full Criteria Sheet (.txt)")');
-        if (await downloadBtn.isVisible()) {
-          logPass('AuditSpecModal "Download Full Criteria Sheet" button is present and active');
+        const downloadBtn = page.locator('button:has-text("Download")');
+        if (await downloadBtn.first().isVisible()) {
+          logPass('AuditSpecModal "Download Criteria Sheet" button is present and active');
         }
 
-        // Test Close Protocol bottom button
-        const closeProtocolBtn = page.locator('button:has-text("Close Protocol")');
+        // Test Close bottom button
+        const closeProtocolBtn = page.locator('button:has-text("Close specification"), button:has-text("Close Protocol")').first();
         await closeProtocolBtn.click();
         await page.waitForTimeout(400);
-        logPass('AuditSpecModal "Close Protocol" button closes modal');
+        logPass('AuditSpecModal close button closes modal');
       } else {
         logFail('Hero "VIEW SPECIFICATION" button', 'Modal did not open');
       }

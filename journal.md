@@ -116,4 +116,21 @@ Global accredited certification bodies and conformity assessment registrars (suc
 4. **Mobile Responsiveness Verification:**
    - Automated Headless Chromium audit across all routes confirmed `scrollWidth === innerWidth` with **0px horizontal overflow**.
 
+---
+
+## 7. Institutional Unslopping & Craft Calibration (`/unslop`)
+
+### The Rationale
+Eliminated pervasive AI vibecoding artifacts across the entire codebase to achieve an authentic, understated institutional registrar demeanor (calibrated to international standards bodies like UKAS, EIAC, and BSI):
+- **Spacing:** Replaced erratic card padding and jumpy margins with systematic 4px/8px-derived rhythm (`p-5`, `p-6`, `gap-2.5`, `space-y-4`).
+- **Color:** Stripped two-tone neon gradients (`from-[#00873E] to-[#059669]`) and colored glow shadows (`shadow-[0_4px_16px_rgba(0,135,62,0.35)]`). Standardized on solid official ARG green `#00873E` with hover `#007536` and neutral slate shadows (`shadow-xs`, `shadow-sm`).
+- **Icons:** Standardized icon sizing (14px–16px) with clean tinted backdrops (`bg-emerald-50 border-emerald-200`) and removed jittery icon scale zooms.
+- **Copy:** Replaced tech-bro hype terms ("unlock global markets") with sober registrar language ("verifying conformity for global markets").
+- **Type:** Eliminated gratuitous uppercase tracking across navigation, buttons, and headers, transitioning to clean sentence case (`Schedule an audit`, `Verify certificate`, `Core registrar capabilities`).
+- **Layout & Structure:** Removed non-semantic blur blobs and floating background gradients in favor of subtle blueprint watermarks and clean hairline dividers (`border-slate-200`).
+- **Details:** Replaced generic pills with calibrated radius nesting (buttons `rounded-xl`, cards `rounded-2xl`, internal badges `rounded-lg`).
+- **Visuals:** Defensively maintained strict intrinsic constraints (`width={200} height={200}`, `max-w-[180px] max-h-[180px]`, `#hero-badge-cradle`) preventing any potential mobile layout shifts.
+- **Motion:** Replaced bouncy `hover:scale-105` and infinite floating widget animations (`animate={{ y: [0, -6, 0] }}`) with calm, grounded spring micro-interactions (`active:scale-[0.98]` and `whileHover={{ y: -2 }}`).
+
+
 

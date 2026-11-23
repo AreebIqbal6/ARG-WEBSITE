@@ -202,17 +202,17 @@ export default function CertificateVerifyModal({
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider border border-emerald-600 hover:shadow-md transition-all shrink-0 text-center justify-center flex items-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs border border-[#007536] shadow-xs active:scale-[0.98] transition-colors duration-150 shrink-0 text-center justify-center flex items-center gap-2 cursor-pointer"
               >
                 {loading && <Loader2 size={14} className="animate-spin" />}
-                <span>VERIFY</span>
+                <span>Verify certificate</span>
               </button>
             </form>
 
             {/* Quick Sample Queries */}
             <div>
-              <div className="text-[11px] font-sans font-semibold uppercase tracking-wider text-slate-500 mb-2">
-                Sample Verified Certificates (Click to test):
+              <div className="text-[11px] font-sans font-medium text-slate-500 mb-2">
+                Sample verified certificates (click to test):
               </div>
               <div className="flex flex-wrap gap-2">
                 {Object.keys(VERIFIED_REGISTRY).map((certKey) => (
@@ -223,7 +223,7 @@ export default function CertificateVerifyModal({
                       setQuery(certKey);
                       handleSearch(certKey);
                     }}
-                    className="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-[#00873E] border border-slate-200 transition-all cursor-pointer"
+                    className="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-[#00873E] border border-slate-200 transition-colors duration-150 cursor-pointer"
                   >
                     {certKey}
                   </button>
@@ -242,9 +242,9 @@ export default function CertificateVerifyModal({
                   >
                     {/* Status Badge */}
                     <div className="flex flex-wrap items-center justify-between gap-3">
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-100 border border-emerald-300 text-[#00873E] text-xs font-mono font-semibold uppercase tracking-wider">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-100 border border-emerald-300 text-[#00873E] text-xs font-mono font-medium">
                         <CheckCircle2 size={14} />
-                        <span>ACTIVE &amp; ACCREDITED CERTIFICATE</span>
+                        <span>Active &amp; accredited certificate</span>
                       </div>
                       <span className="font-mono text-xs text-slate-500">
                         REG-ID: <strong className="text-slate-900">{result.id}</strong>
@@ -265,27 +265,27 @@ export default function CertificateVerifyModal({
                     {/* Standard & Accreditation */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-white border border-slate-200 text-xs font-sans">
                       <div>
-                        <div className="text-slate-500 uppercase text-[10px] tracking-wider mb-0.5">Certified Standard</div>
-                        <div className="text-slate-900 font-semibold">{result.standard}</div>
+                        <div className="text-slate-500 text-[10px] mb-0.5">Certified standard</div>
+                        <div className="text-slate-900 font-medium">{result.standard}</div>
                       </div>
                       <div>
-                        <div className="text-slate-500 uppercase text-[10px] tracking-wider mb-0.5">Accreditation Body</div>
-                        <div className="text-[#00873E] font-semibold">{result.accreditationBody}</div>
+                        <div className="text-slate-500 text-[10px] mb-0.5">Accreditation body</div>
+                        <div className="text-[#00873E] font-medium">{result.accreditationBody}</div>
                       </div>
                       <div>
-                        <div className="text-slate-500 uppercase text-[10px] tracking-wider mb-0.5">Issue Date</div>
+                        <div className="text-slate-500 text-[10px] mb-0.5">Issue date</div>
                         <div className="text-slate-700">{result.issueDate}</div>
                       </div>
                       <div>
-                        <div className="text-slate-500 uppercase text-[10px] tracking-wider mb-0.5">Next Surveillance Due</div>
-                        <div className="text-[#00873E] font-semibold">{result.nextSurveillance}</div>
+                        <div className="text-slate-500 text-[10px] mb-0.5">Next surveillance due</div>
+                        <div className="text-[#00873E] font-medium">{result.nextSurveillance}</div>
                       </div>
                     </div>
 
                     {/* Certified Scope */}
                     <div>
-                      <div className="text-[11px] font-sans font-bold uppercase tracking-wider text-slate-700 mb-1">
-                        Certified Technical Scope:
+                      <div className="text-[11px] font-sans font-medium text-slate-700 mb-1">
+                        Certified technical scope:
                       </div>
                       <p className="text-xs text-slate-700 font-sans leading-relaxed bg-white p-3 rounded-xl border border-slate-200">
                         {result.scope}
@@ -300,10 +300,10 @@ export default function CertificateVerifyModal({
                       <button
                         type="button"
                         onClick={handleCopyLink}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-sans text-xs transition-all border border-slate-200 cursor-pointer active:scale-95"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-sans text-xs transition-colors duration-150 border border-slate-200 cursor-pointer active:scale-[0.98]"
                       >
                         {copied ? <Check size={14} className="text-[#00873E]" /> : <ExternalLink size={14} />}
-                        <span>{copied ? "Link Copied" : "Share Verification Record"}</span>
+                        <span>{copied ? "Link Copied" : "Share verification record"}</span>
                       </button>
                     </div>
                   </motion.div>

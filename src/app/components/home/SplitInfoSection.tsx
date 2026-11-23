@@ -36,10 +36,10 @@ export default function SplitInfoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="flex items-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-6"
+              className="flex items-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-6"
             >
-              <span className="w-1.5 h-1.5 bg-[#00873E]" />
-              <span>THE ARG REGISTRARS ADVANTAGE</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
+              <span>The ARG Registrars advantage</span>
             </motion.div>
 
             <motion.h2 
@@ -69,17 +69,17 @@ export default function SplitInfoSection() {
               {features.map((text, i) => (
                 <motion.div 
                   key={i} 
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -16 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-                  whileHover={{ x: 6 }} 
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-emerald-500/40 hover:bg-white hover:shadow-md transition-all duration-300"
+                  transition={{ duration: 0.4, delay: 0.08 + i * 0.06 }}
+                  whileHover={{ x: 2 }} 
+                  className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:border-slate-300 hover:bg-white hover:shadow-xs transition-colors duration-150"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="text-[#00873E]" size={18} />
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="text-[#00873E]" size={16} />
                   </div>
-                  <span className="font-sans font-semibold text-sm md:text-base text-slate-800">{text}</span>
+                  <span className="font-sans font-medium text-sm md:text-base text-slate-800">{text}</span>
                 </motion.div>
               ))}
             </div>
@@ -95,27 +95,25 @@ export default function SplitInfoSection() {
               className="relative w-full aspect-square rounded-[3rem] overflow-hidden border-2 border-slate-200 shadow-xl group bg-slate-100"
             >
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-[2.5s] ease-out group-hover:scale-105 opacity-90"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-[1.02] opacity-90"
                 style={{ backgroundImage: "url('/images/auditor_inspection.jpg')" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent"></div>
               
-              {/* Floating Light Stats Bar */}
-              <motion.div 
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-8 left-8 right-8 bg-white/95 rounded-2xl p-6 flex justify-between items-center border border-slate-200 shadow-2xl backdrop-blur-2xl"
+              {/* Grounded Light Stats Bar */}
+              <div 
+                className="absolute bottom-6 left-6 right-6 bg-white/95 rounded-xl p-5 flex justify-between items-center border border-slate-200/90 shadow-lg backdrop-blur-md"
               >
                 <div>
-                  <div className="text-[#00873E] font-black text-3xl md:text-4xl font-display">100%</div>
-                  <div className="text-slate-600 font-sans font-bold text-xs uppercase tracking-widest mt-1">Accredited Rigor</div>
+                  <div className="text-[#00873E] font-bold text-3xl md:text-4xl font-display">100%</div>
+                  <div className="text-slate-600 font-sans font-medium text-xs mt-1">Accredited rigor</div>
                 </div>
-                <div className="w-[1px] h-12 bg-slate-200"></div>
+                <div className="w-[1px] h-10 bg-slate-200"></div>
                 <div>
-                  <div className="text-slate-900 font-black text-3xl md:text-4xl font-display">KSA &bull; PK</div>
-                  <div className="text-[#00873E] font-sans font-bold text-xs uppercase tracking-widest mt-1">Dual Hubs</div>
+                  <div className="text-slate-900 font-bold text-3xl md:text-4xl font-display">KSA &bull; PK</div>
+                  <div className="text-[#00873E] font-sans font-medium text-xs mt-1">Dual hubs</div>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
 

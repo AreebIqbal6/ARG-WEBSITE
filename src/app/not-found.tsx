@@ -52,18 +52,18 @@ export default function NotFound() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs tracking-wider shadow-sm hover:shadow-md transition-all"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-medium text-xs shadow-xs active:scale-[0.98] transition-colors duration-150"
             >
               <Home size={15} />
-              <span>RETURN HOME</span>
+              <span>Return to home</span>
             </Link>
 
             <Link
               href="/audits"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-display font-semibold text-xs border border-slate-200 transition-all shadow-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-medium text-xs border border-slate-200 active:scale-[0.98] transition-colors duration-150 shadow-xs"
             >
               <FileSearch size={15} className="text-[#00873E]" />
-              <span>AUDIT SCOPES</span>
+              <span>Explore audit scopes</span>
             </Link>
           </div>
 

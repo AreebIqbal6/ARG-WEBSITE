@@ -82,16 +82,16 @@ export default function About() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-xs tracking-wider bg-gradient-to-r from-[#00873E] to-[#059669] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                  <span>EXPLORE ACCREDITED SCOPES</span>
-                  <ArrowUpRight size={16} />
+                <Link href="/services" className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-medium text-xs bg-[#00873E] hover:bg-[#007536] text-white shadow-xs active:scale-[0.98] transition-colors duration-150">
+                  <span>Explore accredited scopes</span>
+                  <ArrowUpRight size={15} />
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2.5 bg-white text-slate-800 font-sans font-semibold text-xs tracking-wider px-8 py-4 rounded-xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all"
+                  className="inline-flex items-center gap-2 bg-white text-slate-800 font-medium text-xs px-6 py-3.5 rounded-xl border border-slate-200 shadow-xs hover:bg-slate-50 active:scale-[0.98] transition-colors duration-150"
                 >
-                  <span>OFFICES &amp; REGIONAL DIRECTORY</span>
+                  <span>Offices &amp; regional directory</span>
                 </Link>
               </div>
             </div>

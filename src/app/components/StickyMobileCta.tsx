@@ -42,19 +42,19 @@ export default function StickyMobileCta() {
             {/* Call Registrar Operations */}
             <a
               href="tel:+966558004287"
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-display font-semibold text-xs border border-slate-200 active:scale-95 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-sans font-medium text-xs border border-slate-200 active:scale-[0.98] transition-colors duration-150"
             >
               <Phone size={14} className="text-[#00873E]" />
-              <span>Call Operations</span>
+              <span>Call operations</span>
             </a>
 
             {/* Quote Action */}
             <Link
               href="/schedule"
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-gradient-to-r from-[#00873E] to-[#059669] text-white font-display font-bold text-xs shadow-md border border-emerald-600 active:scale-95 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-sans font-medium text-xs shadow-xs border border-[#007536] active:scale-[0.98] transition-colors duration-150"
             >
               <FileText size={14} />
-              <span>Request Audit Quote</span>
+              <span>Request audit quote</span>
             </Link>
 
           </div>

@@ -18,9 +18,9 @@ export default function CaseStudiesBento() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
+          <div className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
-            <span>PROVEN ACCREDITATION TRACK RECORD</span>
+            <span>Proven accreditation track record</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight mb-4">
             Auditing Impact &amp; <br />
@@ -38,31 +38,29 @@ export default function CaseStudiesBento() {
           
           {/* Card 1: Main Highlight - C-TPAT Supply Chain Case Study */}
           <div className="md:col-span-2 lg:col-span-2">
-            <SpotlightCard className="p-8 md:p-10 flex flex-col justify-between h-full relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-              
+            <SpotlightCard className="p-8 md:p-9 flex flex-col justify-between h-full relative overflow-hidden group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-sans text-[#00873E] font-semibold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
-                    CASE STUDY &bull; SUPPLY CHAIN
+                  <span className="text-xs font-sans text-[#00873E] font-medium bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
+                    Case study &bull; Supply chain
                   </span>
                   <span className="text-slate-500 font-sans text-xs">Tier-3 US Trade</span>
                 </div>
 
-                <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-3">
+                <h3 className="text-2xl md:text-3xl font-display font-semibold text-slate-900 mb-3">
                   Textile &amp; Apparel Export Cluster
                 </h3>
-                <p className="text-slate-600 font-sans text-sm font-light leading-relaxed mb-6">
+                <p className="text-slate-600 font-sans text-sm font-normal leading-relaxed mb-6">
                   Successfully implemented C-TPAT 7-point security protocols across 14 manufacturing facilities, eliminating border inspection delays at US ports of entry and saving an estimated $1.2M in annual demurrage penalties.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 py-4 border-y border-slate-100 mb-6">
                   <div>
-                    <div className="text-3xl font-display font-black text-[#00873E]">100%</div>
+                    <div className="text-3xl font-display font-bold text-[#00873E]">100%</div>
                     <div className="text-slate-500 font-sans text-xs">Customs Clearance Rate</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-display font-black text-slate-900">0 Days</div>
+                    <div className="text-3xl font-display font-bold text-slate-900">0 Days</div>
                     <div className="text-slate-500 font-sans text-xs">Port Clearance Delays</div>
                   </div>
                 </div>
@@ -85,17 +83,17 @@ export default function CaseStudiesBento() {
           <div className="md:col-span-1 lg:col-span-1">
             <SpotlightCard className="p-8 flex flex-col justify-between h-full">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] mb-6">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] mb-6 shadow-xs">
                   <Building2 size={24} />
                 </div>
-                <div className="text-4xl lg:text-5xl font-display font-black text-slate-900 mb-2">500+</div>
-                <div className="text-sm font-display font-bold text-[#00873E] uppercase tracking-wider mb-2">Facilities Certified</div>
-                <p className="text-slate-600 font-sans text-xs leading-relaxed font-light">
+                <div className="text-4xl font-display font-bold text-slate-900 mb-1">500+</div>
+                <div className="text-xs font-sans font-medium text-[#00873E] mb-2">Facilities certified</div>
+                <p className="text-slate-600 font-sans text-xs leading-relaxed font-normal">
                   Independent assessments executed across industrial manufacturing, automotive parts, polymers, and food packaging.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-400">
-                AUDIT REGISTRY ID: ARG-PK-GCC
+              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-500">
+                Audit Registry ID: ARG-PK-GCC
               </div>
             </SpotlightCard>
           </div>
@@ -104,17 +102,17 @@ export default function CaseStudiesBento() {
           <div className="md:col-span-1 lg:col-span-1">
             <SpotlightCard className="p-8 flex flex-col justify-between h-full">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] mb-6">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#00873E] mb-6 shadow-xs">
                   <ShieldCheck size={24} />
                 </div>
-                <div className="text-4xl lg:text-5xl font-display font-black text-slate-900 mb-2">99.8%</div>
-                <div className="text-sm font-display font-bold text-[#00873E] uppercase tracking-wider mb-2">Buyer Acceptance</div>
-                <p className="text-slate-600 font-sans text-xs leading-relaxed font-light">
+                <div className="text-4xl font-display font-bold text-slate-900 mb-1">99.8%</div>
+                <div className="text-xs font-sans font-medium text-[#00873E] mb-2">Buyer acceptance</div>
+                <p className="text-slate-600 font-sans text-xs leading-relaxed font-normal">
                   Uncompromised recognition from European, American, and Gulf tier-1 retail brands and regulatory ministries.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-400">
-                GLOBAL AUDIT ACCREDITATION
+              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-500">
+                Global Audit Accreditation
               </div>
             </SpotlightCard>
           </div>
@@ -124,15 +122,15 @@ export default function CaseStudiesBento() {
             <SpotlightCard className="p-8 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono text-[#00873E] font-semibold uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
-                    CASE STUDY &bull; ISO 14001:2015
+                  <span className="text-xs font-mono text-[#00873E] font-medium bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
+                    Case study &bull; ISO 14001:2015
                   </span>
                   <span className="text-slate-500 font-sans text-xs">Chemicals &amp; Plastics</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 mb-2">
+                <h3 className="text-xl md:text-2xl font-display font-semibold text-slate-900 mb-2">
                   Zero-Liquid Discharge &amp; Waste Audit
                 </h3>
-                <p className="text-slate-600 font-sans text-xs md:text-sm font-light leading-relaxed mb-4">
+                <p className="text-slate-600 font-sans text-xs md:text-sm font-normal leading-relaxed mb-4">
                   Conducted comprehensive EMS surveillance on industrial wastewater treatment and hazardous material safeguards, qualifying the client for EU circular economy import exemptions.
                 </p>
               </div>

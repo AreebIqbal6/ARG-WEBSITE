@@ -58,9 +58,9 @@ export default function AuditJourney() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="flex items-center justify-center gap-2.5 text-xs font-sans font-semibold text-xs tracking-wider uppercase text-[#00873E] mb-4">
+          <div className="flex items-center justify-center gap-2 text-xs font-sans font-semibold text-[#00873E] mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00873E]" />
-            <span>AUDITING METHODOLOGY</span>
+            <span>Auditing methodology</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight mb-4">
             The 4-Stage Accredited <br />
@@ -98,11 +98,11 @@ export default function AuditJourney() {
                     </div>
 
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-5 text-[#00873E] group-hover:scale-110 group-hover:bg-[#00873E] group-hover:text-white transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-5 text-[#00873E] group-hover:bg-[#00873E] group-hover:text-white transition-colors duration-200">
                       <Icon size={22} />
                     </div>
 
-                    <span className="text-[#00873E] text-[11px] font-sans font-bold uppercase tracking-wider block mb-1">
+                    <span className="text-[#00873E] text-xs font-sans font-medium block mb-1">
                       {item.tag}
                     </span>
                     <h3 className="text-xl font-display font-bold text-slate-900 mb-2 leading-snug">
@@ -141,9 +141,9 @@ export default function AuditJourney() {
           </div>
           <Link
             href="/schedule"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00873E] hover:bg-[#059669] text-white font-display font-bold text-xs tracking-wider transition-all shadow-sm hover:shadow-md hover:scale-105 active:scale-[0.98] shrink-0 w-full md:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#00873E] hover:bg-[#007536] text-white font-sans font-semibold text-xs transition-colors duration-150 shadow-xs active:scale-[0.98] shrink-0 w-full md:w-auto"
           >
-            <span>SUBMIT STAGE 1 APPLICATION</span>
+            <span>Submit stage 1 application</span>
             <ArrowRight size={14} />
           </Link>
         </motion.div>
