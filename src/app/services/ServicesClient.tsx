@@ -107,7 +107,7 @@ export default function Services() {
   const [isVerifyOpen, setIsVerifyOpen] = useState(false);
   const [specModalId, setSpecModalId] = useState<string | null>(null);
 
-  const renderServiceCard = (srv: ServiceItem) => (
+  const renderServiceCard = (srv: ServiceItem, idx?: number) => (
     <div
       key={srv.id}
       id={srv.id}
